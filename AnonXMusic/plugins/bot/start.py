@@ -5,12 +5,12 @@ from youtubesearchpython.__future__ import VideosSearch
 import config
 from config import BANNED_USERS
 from strings import get_string
-from YukkiMusic import app
-from YukkiMusic.plugins.sudo.sudoers import sudoers_list
-from YukkiMusic.utils.database import (add_served_chat, add_served_user,
+from AnonXMusic import app
+from AnonXMusic.plugins.sudo.sudoers import sudoers_list
+from AnonXMusic.utils.database import (add_served_chat, add_served_user,
                                        blacklisted_chats, get_lang, is_on_off, is_banned_user)
-from YukkiMusic.utils.decorators.language import LanguageStart
-from YukkiMusic.utils.inline import help_pannel, private_panel, start_pannel
+from AnonXMusic.utils.decorators.language import LanguageStart
+from AnonXMusic.utils.inline import help_pannel, private_panel, start_pannel
 
 
 @app.on_message(

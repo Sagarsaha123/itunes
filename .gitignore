@@ -1,12 +1,10 @@
 .env
 .cache
-Yukkilogs.txt
+log.txt
 .DS_Store
 *.session
 raw_files/
 cache/
 downloads/
-playback/
-output.txt
 __pycache__/
 *.session-journal

@@ -1,6 +1,6 @@
 from pyrogram.enums import ParseMode
 
-from config import LOG, LOG_GROUP_ID, MUSIC_BOT_NAME
+from config import LOG, LOGGER_ID, MUSIC_BOT_NAME
 from AnonXMusic import app
 from AnonXMusic.utils.database import is_on_off
 
@@ -20,7 +20,7 @@ async def play_logs(message, streamtype):
 
 <b>ǫᴜᴇʀʏ :</b> {message.text.split(None, 1)[1]}
 <b>sᴛʀᴇᴀᴍᴛʏᴘᴇ :</b> {streamtype}"""
-        if message.chat.id != LOG_GROUP_ID:
+        if message.chat.id != LOGGER_ID:
             try:
                 await app.send_message(
                     chat_id=LOGGER_ID,

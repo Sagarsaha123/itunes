@@ -13,9 +13,9 @@ from AnonXMusic.utils.database import (add_active_chat, add_active_video_chat,
 from AnonXMusic.utils.exceptions import AssistantErr
 from AnonXMusic.utils.inline.play import stream_markup, telegram_markup
 from AnonXMusic.utils.inline.playlist import close_markup
-from AnonXMusic.utils.pastebin import Yukkibin
+from AnonXMusic.utils.pastebin import AnonyBin
 from AnonXMusic.utils.stream.queue import put_queue, put_queue_index
-from AnonXMusic.utils.thumbnails import gen_thumb
+from AnonXMusic.utils.thumbnails import get_thumb
 
 
 async def stream(
@@ -100,7 +100,7 @@ async def stream(
                     "video" if video else "audio",
                     forceplay=forceplay,
                 )
-                img = await gen_thumb(vidid)
+                img = await get_thumb(vidid)
                 button = stream_markup(_, vidid, chat_id)
                 run = await app.send_photo(
                     original_chat_id,
@@ -118,7 +118,7 @@ async def stream(
         if count == 0:
             return
         else:
-            link = await Yukkibin(msg)
+            link = await AnonyBin(msg)
             lines = msg.count("\n")
             if lines >= 17:
                 car = os.linesep.join(msg.split(os.linesep)[:17])
@@ -184,7 +184,7 @@ async def stream(
                 "video" if video else "audio",
                 forceplay=forceplay,
             )
-            img = await gen_thumb(vidid)
+            img = await get_thumb(vidid)
             button = stream_markup(_, vidid, chat_id)
             run = await app.send_photo(
                 original_chat_id,
@@ -344,7 +344,7 @@ async def stream(
                 "video" if video else "audio",
                 forceplay=forceplay,
             )
-            img = await gen_thumb(vidid)
+            img = await get_thumb(vidid)
             button = telegram_markup(_, chat_id)
             run = await app.send_photo(
                 original_chat_id,

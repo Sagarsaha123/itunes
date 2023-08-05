@@ -5,7 +5,7 @@ from pyrogram.errors import (ChatAdminRequired, FloodWait,
                              UserAlreadyParticipant, UserNotParticipant)
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from config import LOG_GROUP_ID, PLAYLIST_IMG_URL, adminlist, MUSIC_BOT_NAME, SUPPORT_GROUP
+from config import LOGGER_ID, PLAYLIST_IMG_URL, adminlist, MUSIC_BOT_NAME, SUPPORT_GROUP
 from strings import get_string
 from AnonXMusic import YouTube, app
 from AnonXMusic.misc import SUDOERS

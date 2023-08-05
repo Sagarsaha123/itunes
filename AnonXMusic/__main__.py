@@ -41,7 +41,7 @@ async def init():
     try:
         await Anony.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
-        await app.send_message(chat_id=config.LOG_GROUP_ID, text="Please turn on the videochat.\n\nStopping Bot...")
+        await app.send_message(chat_id=config.LOGGER_ID, text="Please turn on the videochat.\n\nStopping Bot...")
         raise SystemExit()
     except:
         pass

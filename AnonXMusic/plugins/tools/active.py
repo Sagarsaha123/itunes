@@ -2,9 +2,9 @@ from unidecode import unidecode
 from pyrogram import filters
 from pyrogram.types import Message
 
-from YukkiMusic import app
-from YukkiMusic.misc import SUDOERS
-from YukkiMusic.utils.database.memorydatabase import (
+from AnonXMusic import app
+from AnonXMusic.misc import SUDOERS
+from AnonXMusic.utils.database.memorydatabase import (
     get_active_chats,
     get_active_video_chats,
     remove_active_chat,

@@ -20,11 +20,11 @@ from AnonXMusic.utils.database import (
 from AnonXMusic.utils.decorators.language import languageCB
 from AnonXMusic.utils.formatters import seconds_to_min
 from AnonXMusic.utils.inline import (
+    close_markup,
     stream_markup,
     stream_markup_timer,
     telegram_markup,
     telegram_markup_timer,
-    close_markup,
 )
 from AnonXMusic.utils.stream.autoclear import auto_clean
 from AnonXMusic.utils.thumbnails import get_thumb
@@ -142,19 +142,25 @@ async def del_back_playlist(client, CallbackQuery, _):
         await CallbackQuery.answer()
         await music_off(chat_id)
         await Anony.pause_stream(chat_id)
-        await CallbackQuery.message.reply_text(_["admin_2"].format(mention), reply_markup=close_markup(_))
+        await CallbackQuery.message.reply_text(
+            _["admin_2"].format(mention), reply_markup=close_markup(_)
+        )
     elif command == "Resume":
         if await is_music_playing(chat_id):
             return await CallbackQuery.answer(_["admin_3"], show_alert=True)
         await CallbackQuery.answer()
         await music_on(chat_id)
         await Anony.resume_stream(chat_id)
-        await CallbackQuery.message.reply_text(_["admin_4"].format(mention), reply_markup=close_markup(_))
+        await CallbackQuery.message.reply_text(
+            _["admin_4"].format(mention), reply_markup=close_markup(_)
+        )
     elif command == "Stop" or command == "End":
         await CallbackQuery.answer()
         await Anony.stop_stream(chat_id)
         await set_loop(chat_id, 0)
-        await CallbackQuery.message.reply_text(_["admin_9"].format(mention), reply_markup=close_markup(_))
+        await CallbackQuery.message.reply_text(
+            _["admin_9"].format(mention), reply_markup=close_markup(_)
+        )
     elif command == "Skip" or command == "Replay":
         check = db.get(chat_id)
         if command == "Skip":
@@ -169,7 +175,9 @@ async def del_back_playlist(client, CallbackQuery, _):
                         f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
                     )
                     await CallbackQuery.message.reply_text(
-                        text=_["admin_10"].format(mention, CallbackQuery.message.chat.title),
+                        text=_["admin_10"].format(
+                            mention, CallbackQuery.message.chat.title
+                        ),
                         reply_markup=close_markup(_),
                     )
                     try:
@@ -182,7 +190,9 @@ async def del_back_playlist(client, CallbackQuery, _):
                         f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
                     )
                     await CallbackQuery.message.reply_text(
-                        text=_["admin_10"].format(mention, CallbackQuery.message.chat.title),
+                        text=_["admin_10"].format(
+                            mention, CallbackQuery.message.chat.title
+                        ),
                         reply_markup=close_markup(_),
                     )
                     return await Anony.stop_stream(chat_id)

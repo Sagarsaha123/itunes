@@ -28,7 +28,7 @@ class Anony(Client):
         try:
             await self.send_message(config.LOGGER_ID, "Bot Started")
         except errors.PeerIdInvalid:
-            raise SystemExit("Bot has failed to access the log group/channel. Make sure that you have added your bot to your log group/channel.")
+            raise SystemExit("Something")
         except Exception as ex:
             raise SystemExit(f"Bot has failed to access the log group/channel.\nReason : {type(ex).__name__}.")
 

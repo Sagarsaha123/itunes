@@ -14,6 +14,7 @@ from pytgcalls.exceptions import (
 from pytgcalls.types import Update
 from pytgcalls.types.input_stream import AudioImagePiped, AudioPiped, AudioVideoPiped
 from pytgcalls.types.stream import StreamAudioEnded
+from pytgcalls.types.input_stream.quality import HighQualityAudio, MediumQualityVideo
 
 import config
 from AnonXMusic import LOGGER, YouTube, app
@@ -306,31 +307,29 @@ class Call(PyTgCalls):
         assistant = await group_assistant(self, chat_id)
         language = await get_lang(chat_id)
         _ = get_string(language)
-        audio_stream_quality = await get_audio_bitrate(chat_id)
-        video_stream_quality = await get_video_bitrate(chat_id)
         if video:
             stream = AudioVideoPiped(
                 link,
-                audio_parameters=audio_stream_quality,
-                video_parameters=video_stream_quality,
+                audio_parameters=HighQualityAudio(),
+                video_parameters=MediumQualityVideo(),
             )
         else:
             if image and config.PRIVATE_BOT_MODE == str(True):
                 stream = AudioImagePiped(
                     link,
                     image,
-                    audio_parameters=audio_stream_quality,
-                    video_parameters=video_stream_quality,
+                    audio_parameters=HighQualityAudio(),
+                    video_parameters=MediumQualityVideo(),
                 )
             else:
                 stream = (
                     AudioVideoPiped(
                         link,
-                        audio_parameters=audio_stream_quality,
-                        video_parameters=video_stream_quality,
+                        audio_parameters=HighQualityAudio(),
+                        video_parameters=MediumQualityVideo(),
                     )
                     if video
-                    else AudioPiped(link, audio_parameters=audio_stream_quality)
+                    else AudioPiped(link, audio_parameters=HighQualityAudio())
                 )
         try:
             await assistant.join_group_call(

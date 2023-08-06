@@ -11,7 +11,7 @@ dirr()
 git()
 dbb()
 heroku()
-sudo()
+# sudo()
 
 app = Anony()
 userbot = Userbot()

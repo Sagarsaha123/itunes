@@ -4,7 +4,7 @@ from pyrogram.types import Message
 
 from AnonXMusic import app
 from AnonXMusic.misc import SUDOERS
-from AnonXMusic.utils.database.memorydatabase import (
+from AnonXMusic.utils.database import (
     get_active_chats,
     get_active_video_chats,
     remove_active_chat,

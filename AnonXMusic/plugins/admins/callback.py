@@ -12,7 +12,7 @@ from AnonXMusic.misc import SUDOERS, db
 from AnonXMusic.utils.database import (get_active_chats, get_lang, is_active_chat,
                                        is_music_playing, is_nonadmin_chat,
                                        music_off, music_on, set_loop)
-from AnonXMusic.utils.database.memorydatabase import get_upvote_count
+from AnonXMusic.utils.database import get_upvote_count
 from AnonXMusic.utils.decorators.language import languageCB
 from AnonXMusic.utils.formatters import seconds_to_min
 from AnonXMusic.utils.inline.play import (stream_markup,

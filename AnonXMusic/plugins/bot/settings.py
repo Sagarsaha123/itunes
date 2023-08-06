@@ -10,7 +10,7 @@ from AnonXMusic.utils.database import (add_nonadmin_chat, get_authuser, get_auth
                                        get_playmode, get_playtype,
                                        is_nonadmin_chat, is_suggestion,
                                        remove_nonadmin_chat, set_playmode, set_playtype)
-from AnonXMusic.utils.database.memorydatabase import (get_upvote_count, is_skipmode,
+from AnonXMusic.utils.database import (get_upvote_count, is_skipmode,
                                                       set_upvotes, skip_off, skip_on)
 from AnonXMusic.utils.decorators.admins import ActualAdminCB
 from AnonXMusic.utils.decorators.language import language, languageCB

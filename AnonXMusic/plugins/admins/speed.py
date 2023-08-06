@@ -6,7 +6,7 @@ from AnonXMusic import app
 from AnonXMusic.core.call import Anony
 from AnonXMusic.misc import SUDOERS, db
 from AnonXMusic.utils import AdminRightsCheck
-from AnonXMusic.utils.database.memorydatabase import is_active_chat, is_nonadmin_chat
+from AnonXMusic.utils.database import is_active_chat, is_nonadmin_chat
 from AnonXMusic.utils.decorators.language import languageCB
 from AnonXMusic.utils.inline.speed import speed_markup
 

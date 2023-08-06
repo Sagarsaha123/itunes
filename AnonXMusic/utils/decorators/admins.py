@@ -7,7 +7,7 @@ from AnonXMusic.misc import SUDOERS, db
 from AnonXMusic.utils.database import (get_authuser_names, get_cmode, get_lang,
                                        is_active_chat,
                                        is_maintenance, is_nonadmin_chat)
-from AnonXMusic.utils.database.memorydatabase import get_upvote_count, is_skipmode
+from AnonXMusic.utils.database import get_upvote_count, is_skipmode
 
 from ..formatters import int_to_alpha
 

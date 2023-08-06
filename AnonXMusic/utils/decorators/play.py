@@ -11,8 +11,7 @@ from AnonXMusic import YouTube, app
 from AnonXMusic.misc import SUDOERS
 from AnonXMusic.utils.database import (get_cmode, get_lang, get_playmode, get_playtype,
                                        is_active_chat, is_served_user)
-from AnonXMusic.utils.database.assistantdatabase import get_assistant
-from AnonXMusic.utils.database.memorydatabase import is_maintenance
+from AnonXMusic.utils.database import get_assistant, is_maintenance
 from AnonXMusic.utils.inline.playlist import botplaylist_markup
 
 

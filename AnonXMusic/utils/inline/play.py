@@ -85,7 +85,7 @@ def stream_markup(_, videoid, chat_id):
 
 
 def telegram_markup_timer(_, chat_id, played, dur):
-   played_sec = time_to_seconds(played)
+    played_sec = time_to_seconds(played)
     duration_sec = time_to_seconds(dur)
     percentage = (played_sec / duration_sec) * 100
     umm = math.floor(percentage)

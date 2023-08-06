@@ -5,8 +5,8 @@ from pyrogram.types import Message
 
 from AnonXMusic import app
 from AnonXMusic.misc import db
-from AnonXMusic.utils.inline import close_markup
 from AnonXMusic.utils.decorators import AdminRightsCheck
+from AnonXMusic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
@@ -28,4 +28,6 @@ async def admins(Client, message: Message, _, chat_id):
         return await message.reply_text(_["admin_22"], reply_markup=close_markup(_))
     random.shuffle(check)
     check.insert(0, popped)
-    await message.reply_text(_["admin_23"].format(message.from_user.mention), reply_markup=close_markup(_))
+    await message.reply_text(
+        _["admin_23"].format(message.from_user.mention), reply_markup=close_markup(_)
+    )

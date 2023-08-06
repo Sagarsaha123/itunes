@@ -186,6 +186,7 @@ async def stream(
                 forceplay=forceplay,
             )
             img = await get_thumb(vidid)
+            print(img)
             button = stream_markup(_, vidid, chat_id)
             print(6)
             run = await app.send_photo(

@@ -1,4 +1,5 @@
 from pyrogram.types import Message, User
+from pyrogram.enums import MessageEntityType
 
 from AnonXMusic import app
 

@@ -391,7 +391,8 @@ async def markup_timer():
                 except Exception as e:
                     print(e)
                     continue
-            except:
+            except Exception as ex:
+                print(ex)
                 continue
 
 

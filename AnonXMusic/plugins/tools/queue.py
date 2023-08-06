@@ -6,17 +6,16 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 
 import config
-from config import BANNED_USERS
-from strings import get_command
 from AnonXMusic import app
 from AnonXMusic.misc import db
 from AnonXMusic.utils import AnonyBin, get_channeplayCB, seconds_to_min
 from AnonXMusic.utils.database import get_cmode, is_active_chat, is_music_playing
 from AnonXMusic.utils.decorators.language import language, languageCB
 from AnonXMusic.utils.inline import queue_back_markup, queue_markup
-
+from config import BANNED_USERS
 
 basic = {}
+
 
 def get_image(videoid):
     if os.path.isfile(f"cache/{videoid}.png"):
@@ -36,7 +35,11 @@ def get_duration(playing):
         return "Inline"
 
 
-@app.on_message(filters.command(["queue", "cqueue", "player", "cplayer", "playing", "cplaying"]) & filters.group & ~BANNED_USERS)
+@app.on_message(
+    filters.command(["queue", "cqueue", "player", "cplayer", "playing", "cplaying"])
+    & filters.group
+    & ~BANNED_USERS
+)
 @language
 async def get_queue(client, message: Message, _):
     if message.command[0][0] == "c":
@@ -79,11 +82,7 @@ async def get_queue(client, message: Message, _):
             IMAGE = config.SOUNCLOUD_IMG_URL
         else:
             IMAGE = get_image(videoid)
-    send = (
-        _["queue_6"]
-        if DUR == "Unknown"
-        else _["queue_7"]
-    )
+    send = _["queue_6"] if DUR == "Unknown" else _["queue_7"]
     cap = _["queue_8"].format(app.mention, title, typo, user, send)
     upl = (
         queue_markup(_, DUR, "c" if cplay else "g", videoid)
@@ -223,11 +222,7 @@ async def queue_back(client, CallbackQuery: CallbackQuery, _):
             IMAGE = config.SOUNCLOUD_IMG_URL
         else:
             IMAGE = get_image(videoid)
-    send = (
-        _["queue_6"]
-        if DUR == "Unknown"
-        else _["queue_7"]
-    )
+    send = _["queue_6"] if DUR == "Unknown" else _["queue_7"]
     cap = _["queue_8"].format(app.mention, title, typo, user, send)
     upl = (
         queue_markup(_, DUR, cplay, videoid)

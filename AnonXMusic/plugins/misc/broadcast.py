@@ -1,17 +1,21 @@
 import asyncio
 
 from pyrogram import filters
-from pyrogram.errors import FloodWait
 from pyrogram.enums import ChatMembersFilter
+from pyrogram.errors import FloodWait
 
-import config
-from config import adminlist
-from AnonXMusic import app, userbot
+from AnonXMusic import app
 from AnonXMusic.misc import SUDOERS
-from AnonXMusic.utils.database import (get_active_chats, get_authuser_names, get_client, get_served_chats, get_served_users)
+from AnonXMusic.utils.database import (
+    get_active_chats,
+    get_authuser_names,
+    get_client,
+    get_served_chats,
+    get_served_users,
+)
 from AnonXMusic.utils.decorators.language import language
 from AnonXMusic.utils.formatters import alpha_to_int
-
+from config import adminlist
 
 IS_BROADCASTING = False
 
@@ -149,7 +153,9 @@ async def auto_clean():
             for chat_id in served_chats:
                 if chat_id not in adminlist:
                     adminlist[chat_id] = []
-                    async for user in app.get_chat_members(chat_id, filter=ChatMembersFilter.ADMINISTRATORS):
+                    async for user in app.get_chat_members(
+                        chat_id, filter=ChatMembersFilter.ADMINISTRATORS
+                    ):
                         if user.privileges.can_manage_video_chats:
                             adminlist[chat_id].append(user.user.id)
                     authusers = await get_authuser_names(chat_id)

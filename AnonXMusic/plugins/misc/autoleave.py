@@ -31,9 +31,7 @@ async def auto_leave():
                                     continue
                                 if not await is_active_chat(i.chat.id):
                                     try:
-                                        await client.leave_chat(
-                                            i.chat.id
-                                        )
+                                        await client.leave_chat(i.chat.id)
                                         left += 1
                                     except:
                                         continue

@@ -2,18 +2,16 @@ import asyncio
 import time
 
 from pyrogram import filters
-from pyrogram.types import CallbackQuery, Message
 from pyrogram.enums import ChatMembersFilter
+from pyrogram.types import CallbackQuery, Message
 
-from config import BANNED_USERS, adminlist, lyrical
 from AnonXMusic import app
 from AnonXMusic.core.call import Anony
 from AnonXMusic.misc import db
-from AnonXMusic.utils.database import get_authuser_names, get_cmode
-from AnonXMusic.utils.database import get_assistant
+from AnonXMusic.utils.database import get_assistant, get_authuser_names, get_cmode
 from AnonXMusic.utils.decorators import ActualAdminCB, AdminActual, language
 from AnonXMusic.utils.formatters import alpha_to_int, get_readable_time
-
+from config import BANNED_USERS, adminlist, lyrical
 
 rel = {}
 
@@ -30,11 +28,11 @@ async def reload_admin_cache(client, message: Message, _):
             saved = rel[message.chat.id]
             if saved > time.time():
                 left = get_readable_time((int(saved) - int(time.time())))
-                return await message.reply_text(
-                    _["reload_1"].format(left)
-                )
+                return await message.reply_text(_["reload_1"].format(left))
         adminlist[message.chat.id] = []
-        async for user in app.get_chat_membere(message.chat.id, filter=ChatMembersFilter.ADMINISTRATORS):
+        async for user in app.get_chat_membere(
+            message.chat.id, filter=ChatMembersFilter.ADMINISTRATORS
+        ):
             if user.privileges.can_manage_voice_chats:
                 adminlist[message.chat.id].append(user.user.id)
         authusers = await get_authuser_names(message.chat.id)
@@ -48,9 +46,7 @@ async def reload_admin_cache(client, message: Message, _):
         await message.reply_text(_["reload_3"])
 
 
-@app.on_message(
-    filters.command(["reboot"]) & filters.group & ~BANNED_USERS
-)
+@app.on_message(filters.command(["reboot"]) & filters.group & ~BANNED_USERS)
 @AdminActual
 async def restartbot(client, message: Message, _):
     mystic = await message.reply_text(_["reload_4"].format(app.mention))
@@ -95,7 +91,9 @@ async def close_menu(_, CallbackQuery):
     try:
         await CallbackQuery.answer()
         await CallbackQuery.message.delete()
-        await CallbackQuery.message.reply_text(f"Cʟᴏsᴇᴅ ʙʏ : {CallbackQuery.from_user.mention}")
+        await CallbackQuery.message.reply_text(
+            f"Cʟᴏsᴇᴅ ʙʏ : {CallbackQuery.from_user.mention}"
+        )
     except:
         pass
 
@@ -106,9 +104,7 @@ async def stop_download(client, CallbackQuery: CallbackQuery, _):
     message_id = CallbackQuery.message.id
     task = lyrical.get(message_id)
     if not task:
-        return await CallbackQuery.answer(
-            _["tg_4"], show_alert=True
-        )
+        return await CallbackQuery.answer(_["tg_4"], show_alert=True)
     if task.done() or task.cancelled():
         return await CallbackQuery.answer(_["tg_5"], show_alert=True)
     if not task.done():
@@ -123,7 +119,5 @@ async def stop_download(client, CallbackQuery: CallbackQuery, _):
                 _["tg_7"].format(CallbackQuery.from_user.mention)
             )
         except:
-            return await CallbackQuery.answer(
-                _["tg_8"], show_alert=True
-            )
+            return await CallbackQuery.answer(_["tg_8"], show_alert=True)
     await CallbackQuery.answer(_["tg_9"], show_alert=True)

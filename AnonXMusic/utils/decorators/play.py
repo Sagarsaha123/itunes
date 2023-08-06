@@ -1,19 +1,26 @@
 import asyncio
 
-from pyrogram import filters
-from pyrogram.errors import (ChatAdminRequired, FloodWait,
-                             UserAlreadyParticipant, UserNotParticipant)
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from pyrogram.errors import (
+    ChatAdminRequired,
+    UserAlreadyParticipant,
+    UserNotParticipant,
+)
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from config import LOGGER_ID, PLAYLIST_IMG_URL, adminlist, SUPPORT_GROUP
-from strings import get_string
 from AnonXMusic import YouTube, app
 from AnonXMusic.misc import SUDOERS
-from AnonXMusic.utils.database import (get_cmode, get_lang, get_playmode, get_playtype,
-                                       is_active_chat, is_served_user)
-from AnonXMusic.utils.database import get_assistant, is_maintenance
+from AnonXMusic.utils.database import (
+    get_assistant,
+    get_cmode,
+    get_lang,
+    get_playmode,
+    get_playtype,
+    is_active_chat,
+    is_maintenance,
+)
 from AnonXMusic.utils.inline.playlist import botplaylist_markup
-
+from config import PLAYLIST_IMG_URL, SUPPORT_GROUP, adminlist
+from strings import get_string
 
 links = {}
 
@@ -112,7 +119,10 @@ def PlayWrapper(command):
                     return await message.reply_text(
                         "» ʙᴏᴛ ʀᴇǫᴜɪʀᴇs <b>ɪɴᴠɪᴛᴇ ᴜsᴇʀs ᴠɪᴀ ʟɪɴᴋ</b> ᴘᴇʀᴍɪssɪᴏɴ ᴛᴏ ɪɴᴠɪᴛᴇ ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ."
                     )
-                if get.status == ChatMemberStatus.BANNED or get.status == ChatMemberStatus.RESTRICTED:
+                if (
+                    get.status == ChatMemberStatus.BANNED
+                    or get.status == ChatMemberStatus.RESTRICTED
+                ):
                     return await message.reply_text(
                         f"<u>{app.mention} ᴀssɪsᴛᴀɴᴛ ɪs ʙᴀɴɴᴇᴅ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ.</u>\n\n<b>ɪᴅ :</b> <code>{userbot.id}</code>\n<b>ɴᴀᴍᴇ :</b> {userbot.name}\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{userbot.username}\n\nᴘʟᴇᴀsᴇ ᴜɴʙᴀɴ ᴛʜᴇ ᴀssɪsᴛᴀɴᴛ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ.",
                     )

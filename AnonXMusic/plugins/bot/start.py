@@ -3,21 +3,23 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtubesearchpython.__future__ import VideosSearch
 
 import config
-from config import BANNED_USERS
-from strings import get_string
 from AnonXMusic import app
 from AnonXMusic.plugins.sudo.sudoers import sudoers_list
-from AnonXMusic.utils.database import (add_served_chat, add_served_user,
-                                       blacklisted_chats, get_lang, is_on_off, is_banned_user)
+from AnonXMusic.utils.database import (
+    add_served_chat,
+    add_served_user,
+    blacklisted_chats,
+    get_lang,
+    is_banned_user,
+    is_on_off,
+)
 from AnonXMusic.utils.decorators.language import LanguageStart
 from AnonXMusic.utils.inline import help_pannel, private_panel, start_pannel
+from config import BANNED_USERS
+from strings import get_string
 
 
-@app.on_message(
-    filters.command(["start"])
-    & filters.private
-    & ~BANNED_USERS
-)
+@app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
 @LanguageStart
 async def start_pm(client, message: Message, _):
     await add_served_user(message.from_user.id)
@@ -26,8 +28,8 @@ async def start_pm(client, message: Message, _):
         if name[0:4] == "help":
             keyboard = help_pannel(_)
             return await message.reply_text(_["help_1"], reply_markup=keyboard)
-#        if name[0:4] == "song":
-#            return await message.reply_text(_["song_2"])
+        #        if name[0:4] == "song":
+        #            return await message.reply_text(_["song_2"])
         if name[0:3] == "sud":
             await sudoers_list(client=client, message=message, _=_)
             if await is_on_off(config.LOG):
@@ -50,7 +52,9 @@ async def start_pm(client, message: Message, _):
                 channel = result["channel"]["name"]
                 link = result["link"]
                 published = result["publishedTime"]
-            searched_text = _["start_8"].format(title, duration, views, published, channellink, channel, app.mention)
+            searched_text = _["start_8"].format(
+                title, duration, views, published, channellink, channel, app.mention
+            )
             key = InlineKeyboardMarkup(
                 [
                     [
@@ -80,16 +84,12 @@ async def start_pm(client, message: Message, _):
         )
         if await is_on_off(config.LOG):
             return await app.send_message(
-                    chat_id=config.LOGGER_ID,
-                    text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
+                chat_id=config.LOGGER_ID,
+                text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
             )
 
 
-@app.on_message(
-    filters.command(["start"])
-    & filters.group
-    & ~BANNED_USERS
-)
+@app.on_message(filters.command(["start"]) & filters.group & ~BANNED_USERS)
 @LanguageStart
 async def start_gp(client, message: Message, _):
     out = start_pannel(_)
@@ -118,7 +118,11 @@ async def welcome(client, message: Message):
                     return await app.leave_chat(message.chat.id)
                 if message.chat.id in await blacklisted_chats():
                     await message.reply_text(
-                        _["start_5"].format(app.mention, f"https://t.me/{app.username}?start=sudolist", config.SUPPORT_GROUP),
+                        _["start_5"].format(
+                            app.mention,
+                            f"https://t.me/{app.username}?start=sudolist",
+                            config.SUPPORT_GROUP,
+                        ),
                         disable_web_page_preview=True,
                     )
                     return await app.leave_chat(message.chat.id)

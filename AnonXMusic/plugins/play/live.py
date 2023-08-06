@@ -1,11 +1,10 @@
 from pyrogram import filters
-from pyrogram.types import CallbackQuery
 
-from config import BANNED_USERS
 from AnonXMusic import YouTube, app
 from AnonXMusic.utils.channelplay import get_channeplayCB
 from AnonXMusic.utils.decorators.language import languageCB
 from AnonXMusic.utils.stream.stream import stream
+from config import BANNED_USERS
 
 
 @app.on_callback_query(filters.regex("LiveStream") & ~BANNED_USERS)

@@ -1,7 +1,5 @@
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from AnonXMusic import app
-
 
 def stats_buttons(_, status):
     not_sudo = [

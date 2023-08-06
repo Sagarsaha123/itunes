@@ -1,18 +1,22 @@
 import asyncio
-import time
 
 from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 
-from config import BANNED_USERS
 from AnonXMusic import app
 from AnonXMusic.misc import SUDOERS
 from AnonXMusic.utils import get_readable_time
-from AnonXMusic.utils.database import (add_banned_user, get_banned_count,
-                                       get_banned_users, get_served_chats, is_banned_user,
-                                       remove_banned_user)
+from AnonXMusic.utils.database import (
+    add_banned_user,
+    get_banned_count,
+    get_banned_users,
+    get_served_chats,
+    is_banned_user,
+    remove_banned_user,
+)
 from AnonXMusic.utils.decorators.language import language
+from config import BANNED_USERS
 
 
 @app.on_message(filters.command(["gban", "globalban"]) & SUDOERS)
@@ -49,7 +53,17 @@ async def global_ban(client, message: Message, _):
         except:
             continue
     await add_banned_user(user.id)
-    await message.reply_text(_["gban_6"].format(app.mention, message.chat.title, message.chat.id, user.mention, user.id, message.from_user.mention, number_of_chats))
+    await message.reply_text(
+        _["gban_6"].format(
+            app.mention,
+            message.chat.title,
+            message.chat.id,
+            user.mention,
+            user.id,
+            message.from_user.mention,
+            number_of_chats,
+        )
+    )
     await mystic.delete()
 
 

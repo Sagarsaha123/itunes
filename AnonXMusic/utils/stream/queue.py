@@ -1,10 +1,10 @@
 import asyncio
 from typing import Union
 
-from config import autoclean
-from config.config import time_to_seconds
 from AnonXMusic.misc import db
 from AnonXMusic.utils.formatters import check_duration, seconds_to_min
+from config import autoclean
+from config.config import time_to_seconds
 
 
 async def put_queue(
@@ -46,6 +46,7 @@ async def put_queue(
         db[chat_id].append(put)
     autoclean.append(file)
 
+
 async def put_queue_index(
     chat_id,
     original_chat_id,
@@ -59,7 +60,9 @@ async def put_queue_index(
 ):
     if "20.212.146.162" in vidid:
         try:
-            dur = await asyncio.get_event_loop().run_in_executor(None, check_duration, vidid)
+            dur = await asyncio.get_event_loop().run_in_executor(
+                None, check_duration, vidid
+            )
             duration = seconds_to_min(dur)
         except:
             duration = "ᴜʀʟ sᴛʀᴇᴀᴍ"

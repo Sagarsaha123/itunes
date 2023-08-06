@@ -1,15 +1,17 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import BANNED_USERS
 from AnonXMusic import YouTube, app
-from AnonXMusic.misc import db
 from AnonXMusic.core.call import Anony
+from AnonXMusic.misc import db
 from AnonXMusic.utils import AdminRightsCheck, seconds_to_min
+from config import BANNED_USERS
 
 
 @app.on_message(
-    filters.command(["seek", "cseek", "seekback", "cseekback"]) & filters.group & ~BANNED_USERS
+    filters.command(["seek", "cseek", "seekback", "cseekback"])
+    & filters.group
+    & ~BANNED_USERS
 )
 @AdminRightsCheck
 async def seek_comm(cli, message: Message, _, chat_id):
@@ -64,4 +66,6 @@ async def seek_comm(cli, message: Message, _, chat_id):
         db[chat_id][0]["played"] -= duration_to_skip
     else:
         db[chat_id][0]["played"] += duration_to_skip
-    await mystic.edit_text(_["admin_33"].format(seconds_to_min(to_seek), message.from_user.mention))
+    await mystic.edit_text(
+        _["admin_33"].format(seconds_to_min(to_seek), message.from_user.mention)
+    )

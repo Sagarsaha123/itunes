@@ -1,20 +1,39 @@
 from pyrogram import filters
 from pyrogram.errors import MessageNotModified
-from pyrogram.types import (CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup,
-                            Message)
+from pyrogram.types import (
+    CallbackQuery,
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    Message,
+)
 
-from config import BANNED_USERS, OWNER_ID
 from AnonXMusic import app
-from AnonXMusic.utils.database import (add_nonadmin_chat, get_authuser, get_authuser_names,
-                                       get_playmode, get_playtype,
-                                       is_nonadmin_chat,
-                                       remove_nonadmin_chat, set_playmode, set_playtype)
-from AnonXMusic.utils.database import (get_upvote_count, is_skipmode,
-                                                      set_upvotes, skip_off, skip_on)
+from AnonXMusic.utils.database import (
+    add_nonadmin_chat,
+    get_authuser,
+    get_authuser_names,
+    get_playmode,
+    get_playtype,
+    get_upvote_count,
+    is_nonadmin_chat,
+    is_skipmode,
+    remove_nonadmin_chat,
+    set_playmode,
+    set_playtype,
+    set_upvotes,
+    skip_off,
+    skip_on,
+)
 from AnonXMusic.utils.decorators.admins import ActualAdminCB
 from AnonXMusic.utils.decorators.language import language, languageCB
-from AnonXMusic.utils.inline.settings import (auth_users_markup, playmode_users_markup, setting_markup, vote_mode_markup)
+from AnonXMusic.utils.inline.settings import (
+    auth_users_markup,
+    playmode_users_markup,
+    setting_markup,
+    vote_mode_markup,
+)
 from AnonXMusic.utils.inline.start import private_panel
+from config import BANNED_USERS, OWNER_ID
 
 
 @app.on_message(
@@ -311,7 +330,9 @@ async def authusers_mar(client, CallbackQuery, _):
             upl = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=_["BACK_BUTTON"], callback_data=f"AU"),
+                        InlineKeyboardButton(
+                            text=_["BACK_BUTTON"], callback_data=f"AU"
+                        ),
                         InlineKeyboardButton(
                             text=_["CLOSE_BUTTON"],
                             callback_data=f"close",
@@ -343,10 +364,7 @@ async def authusers_mar(client, CallbackQuery, _):
         return
 
 
-@app.on_callback_query(
-    filters.regex("VOMODECHANGE")
-    & ~BANNED_USERS
-)
+@app.on_callback_query(filters.regex("VOMODECHANGE") & ~BANNED_USERS)
 @ActualAdminCB
 async def vote_change(client, CallbackQuery, _):
     command = CallbackQuery.matches[0].group(1)

@@ -1,7 +1,6 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import BANNED_USERS, adminlist
 from AnonXMusic import app
 from AnonXMusic.core.call import Anony
 from AnonXMusic.misc import SUDOERS, db
@@ -9,6 +8,7 @@ from AnonXMusic.utils import AdminRightsCheck
 from AnonXMusic.utils.database import is_active_chat, is_nonadmin_chat
 from AnonXMusic.utils.decorators.language import languageCB
 from AnonXMusic.utils.inline.speed import speed_markup
+from config import BANNED_USERS, adminlist
 
 checker = []
 
@@ -85,7 +85,9 @@ async def del_back_playlist(client, CallbackQuery, _):
     else:
         checker.append(chat_id)
     try:
-        await CallbackQuery.answer(_["admin_40"],)
+        await CallbackQuery.answer(
+            _["admin_40"],
+        )
     except:
         pass
     mystic = await app.send_message(

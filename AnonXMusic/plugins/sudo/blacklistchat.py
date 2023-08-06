@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import BANNED_USERS
 from AnonXMusic import app
 from AnonXMusic.misc import SUDOERS
 from AnonXMusic.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
 from AnonXMusic.utils.decorators.language import language
+from config import BANNED_USERS
 
 
 @app.on_message(filters.command(["blchat", "blacklistchat"]) & SUDOERS)
@@ -27,7 +27,9 @@ async def blacklist_chat_func(client, message: Message, _):
         pass
 
 
-@app.on_message(filters.command(["whitelistchat", "unblacklistchat", "unblchat"]) & SUDOERS)
+@app.on_message(
+    filters.command(["whitelistchat", "unblacklistchat", "unblchat"]) & SUDOERS
+)
 @language
 async def white_funciton(client, message: Message, _):
     if len(message.command) != 2:

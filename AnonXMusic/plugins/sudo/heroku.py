@@ -12,11 +12,13 @@ from pyrogram import filters
 import config
 from AnonXMusic import app
 from AnonXMusic.misc import HAPP, SUDOERS, XCB
-from AnonXMusic.utils.database import (get_active_chats, remove_active_chat,
-                                       remove_active_video_chat)
+from AnonXMusic.utils.database import (
+    get_active_chats,
+    remove_active_chat,
+    remove_active_video_chat,
+)
 from AnonXMusic.utils.decorators.language import language
 from AnonXMusic.utils.pastebin import AnonyBin
-
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -86,11 +88,9 @@ async def update_(client, message, _):
                 await remove_active_video_chat(x)
             except:
                 pass
-        await response.edit(
-            f"{nrs.text}\n\n{_['server_7']}"
-        )
+        await response.edit(f"{nrs.text}\n\n{_['server_7']}")
     except:
-      pass
+        pass
 
     if await is_heroku():
         try:
@@ -99,9 +99,7 @@ async def update_(client, message, _):
             )
             return
         except Exception as err:
-            await response.edit(
-                f"{nrs.text}\n\n{_['server_9']}"
-            )
+            await response.edit(f"{nrs.text}\n\n{_['server_9']}")
             return await app.send_message(
                 chat_id=config.LOGGER_ID,
                 text=_["server_10"].format(err),

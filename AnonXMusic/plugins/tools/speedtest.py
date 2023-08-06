@@ -32,14 +32,14 @@ async def speedtest_function(client, message: Message, _):
     loop = asyncio.get_event_loop()
     result = await loop.run_in_executor(None, testspeed, m)
     output = _["server_15"].format(
-        result['client']['isp'],
-        result['client']['country'],
-        result['server']['name'],
-        result['server']['country'],
-        result['server']['cc'],
-        result['server']['sponsor'],
-        result['server']['latency'],
-        result['ping'],
+        result["client"]["isp"],
+        result["client"]["country"],
+        result["server"]["name"],
+        result["server"]["country"],
+        result["server"]["cc"],
+        result["server"]["sponsor"],
+        result["server"]["latency"],
+        result["ping"],
     )
     msg = await message.reply_photo(photo=result["share"], caption=output)
     await m.delete()

@@ -1,6 +1,6 @@
-from unidecode import unidecode
 from pyrogram import filters
 from pyrogram.types import Message
+from unidecode import unidecode
 
 from AnonXMusic import app
 from AnonXMusic.misc import SUDOERS

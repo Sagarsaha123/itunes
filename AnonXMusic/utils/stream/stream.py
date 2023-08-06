@@ -8,8 +8,7 @@ import config
 from AnonXMusic import Carbon, YouTube, app
 from AnonXMusic.core.call import Anony
 from AnonXMusic.misc import db
-from AnonXMusic.utils.database import (add_active_chat, add_active_video_chat,
-                                       is_active_chat, music_on)
+from AnonXMusic.utils.database import add_active_video_chat, is_active_chat
 from AnonXMusic.utils.exceptions import AssistantErr
 from AnonXMusic.utils.inline.play import stream_markup, telegram_markup
 from AnonXMusic.utils.inline.playlist import close_markup
@@ -190,11 +189,11 @@ async def stream(
                 original_chat_id,
                 photo=img,
                 caption=_["stream_1"].format(
-                        f"https://t.me/{app.username}?start=info_{vidid}",
-                        title,
-                        duration_min,
-                        user_name,
-                    ),
+                    f"https://t.me/{app.username}?start=info_{vidid}",
+                    title,
+                    duration_min,
+                    user_name,
+                ),
                 reply_markup=InlineKeyboardMarkup(button),
             )
             db[chat_id][0]["mystic"] = run
@@ -240,7 +239,9 @@ async def stream(
             run = await app.send_photo(
                 original_chat_id,
                 photo=config.SOUNCLOUD_IMG_URL,
-                caption=_["stream_1"].format(config.SUPPORT_GROUP, title, duration_min, user_name),
+                caption=_["stream_1"].format(
+                    config.SUPPORT_GROUP, title, duration_min, user_name
+                ),
                 reply_markup=InlineKeyboardMarkup(button),
             )
             db[chat_id][0]["mystic"] = run
@@ -350,11 +351,11 @@ async def stream(
                 original_chat_id,
                 photo=img,
                 caption=_["stream_1"].format(
-                        f"https://t.me/{app.username}?start=info_{vidid}",
-                        title,
-                        duration_min,
-                        user_name,
-                    ),
+                    f"https://t.me/{app.username}?start=info_{vidid}",
+                    title,
+                    duration_min,
+                    user_name,
+                ),
                 reply_markup=InlineKeyboardMarkup(button),
             )
             db[chat_id][0]["mystic"] = run

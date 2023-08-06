@@ -1,15 +1,13 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import BANNED_USERS
 from AnonXMusic import app
 from AnonXMusic.utils.database import get_loop, set_loop
 from AnonXMusic.utils.decorators import AdminRightsCheck
+from config import BANNED_USERS
 
 
-@app.on_message(
-    filters.command(["loop", "cloop"]) & filters.group & ~BANNED_USERS
-)
+@app.on_message(filters.command(["loop", "cloop"]) & filters.group & ~BANNED_USERS)
 @AdminRightsCheck
 async def admins(cli, message: Message, _, chat_id):
     usage = _["admin_24"]

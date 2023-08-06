@@ -1,13 +1,19 @@
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from config import adminlist, confirmer, SUPPORT_GROUP
-from strings import get_string
 from AnonXMusic import app
 from AnonXMusic.misc import SUDOERS, db
-from AnonXMusic.utils.database import (get_authuser_names, get_cmode, get_lang,
-                                       is_active_chat,
-                                       is_maintenance, is_nonadmin_chat)
-from AnonXMusic.utils.database import get_upvote_count, is_skipmode
+from AnonXMusic.utils.database import (
+    get_authuser_names,
+    get_cmode,
+    get_lang,
+    get_upvote_count,
+    is_active_chat,
+    is_maintenance,
+    is_nonadmin_chat,
+    is_skipmode,
+)
+from config import SUPPORT_GROUP, adminlist, confirmer
+from strings import get_string
 
 from ..formatters import int_to_alpha
 
@@ -139,7 +145,9 @@ def AdminActual(mystic):
             return await message.reply_text(_["general_4"], reply_markup=upl)
         if message.from_user.id not in SUDOERS:
             try:
-                member = (await app.get_chat_member(message.chat.id, message.from_user.id)).privileges
+                member = (
+                    await app.get_chat_member(message.chat.id, message.from_user.id)
+                ).privileges
             except:
                 return
             if not member.can_manage_voice_chats:
@@ -167,10 +175,12 @@ def ActualAdminCB(mystic):
         is_non_admin = await is_nonadmin_chat(CallbackQuery.message.chat.id)
         if not is_non_admin:
             try:
-                a = (await app.get_chat_member(
-                    CallbackQuery.message.chat.id,
-                    CallbackQuery.from_user.id,
-                )).privileges
+                a = (
+                    await app.get_chat_member(
+                        CallbackQuery.message.chat.id,
+                        CallbackQuery.from_user.id,
+                    )
+                ).privileges
             except:
                 return await CallbackQuery.answer(_["general_5"], show_alert=True)
             if not a.can_manage_video_chats:

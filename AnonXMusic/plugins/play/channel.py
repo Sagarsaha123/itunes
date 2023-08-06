@@ -1,22 +1,18 @@
 from pyrogram import filters
+from pyrogram.enums import ChatMembersFilter, ChatType
 from pyrogram.types import Message
-from pyrogram.enums import ChatType, ChatMembersFilter, ChatMemberStatus
 
-from config import BANNED_USERS
 from AnonXMusic import app
 from AnonXMusic.utils.database import set_cmode
 from AnonXMusic.utils.decorators.admins import AdminActual
+from config import BANNED_USERS
 
 
-@app.on_message(
-    filters.command(["channelplay"]) & filters.group & ~BANNED_USERS
-)
+@app.on_message(filters.command(["channelplay"]) & filters.group & ~BANNED_USERS)
 @AdminActual
 async def playmode_(client, message: Message, _):
     if len(message.command) < 2:
-        return await message.reply_text(
-            _["cplay_1"].format(message.chat.title)
-        )
+        return await message.reply_text(_["cplay_1"].format(message.chat.title))
     query = message.text.split(None, 2)[1].lower().strip()
     if (str(query)).lower() == "disable":
         await set_cmode(message.chat.id, None)
@@ -39,7 +35,9 @@ async def playmode_(client, message: Message, _):
         if chat.type != ChatType.CHANNEL:
             return await message.reply_text(_["cplay_5"])
         try:
-            async for user in app.get_chat_members(chat.id, filter=ChatMembersFilter.ADMINISTRATORS):
+            async for user in app.get_chat_members(
+                chat.id, filter=ChatMembersFilter.ADMINISTRATORS
+            ):
                 if user.status == ChatMembersStatus.OWNER:
                     cusn = user.user.username
                     crid = user.user.id

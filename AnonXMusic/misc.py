@@ -9,7 +9,6 @@ from AnonXMusic.core.mongo import mongodb
 
 from .logging import LOGGER
 
-
 SUDOERS = filters.user()
 
 HAPP = None

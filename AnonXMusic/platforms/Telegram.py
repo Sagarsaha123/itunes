@@ -1,16 +1,18 @@
+import asyncio
 import os
 import time
-import asyncio
 from typing import Union
-from datetime import datetime, timedelta
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Voice
 
 import config
 from AnonXMusic import app
-
-from AnonXMusic.utils.formatters import (check_duration, convert_bytes, get_readable_time,
-                                seconds_to_min)
+from AnonXMusic.utils.formatters import (
+    check_duration,
+    convert_bytes,
+    get_readable_time,
+    seconds_to_min,
+)
 
 
 class TeleAPI:
@@ -52,7 +54,9 @@ class TeleAPI:
             dur = seconds_to_min(filex.duration)
         except:
             try:
-                dur = await asyncio.get_event_loop().run_in_executor(None, check_duration, file_path)
+                dur = await asyncio.get_event_loop().run_in_executor(
+                    None, check_duration, file_path
+                )
                 dur = seconds_to_min(dur)
             except:
                 return "Unknown"
@@ -79,7 +83,9 @@ class TeleAPI:
             file_name = os.path.join(os.path.realpath("downloads"), file_name)
         if video:
             try:
-                file_name = video.file_unique_id + "." + (video.file_name.split(".")[-1])
+                file_name = (
+                    video.file_unique_id + "." + (video.file_name.split(".")[-1])
+                )
             except:
                 file_name = video.file_unique_id + "." + "mp4"
             file_name = os.path.join(os.path.realpath("downloads"), file_name)
@@ -135,9 +141,9 @@ class TeleAPI:
                                         completed_size,
                                         percentage[:5],
                                         speed,
-                                        eta
+                                        eta,
                                     ),
-                                    reply_markup=upl
+                                    reply_markup=upl,
                                 )
                                 checker[counter] = 100
                             except:
@@ -156,9 +162,7 @@ class TeleAPI:
                     )
                 except:
                     elapsed = "0 sᴇᴄᴏɴᴅs"
-                await mystic.edit_text(
-                    _["tg_2"].format(elapsed)
-                )
+                await mystic.edit_text(_["tg_2"].format(elapsed))
             except:
                 await mystic.edit_text(_["tg_3"])
 

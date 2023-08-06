@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import BANNED_USERS, MONGO_DB_URI, OWNER_ID
 from AnonXMusic import app
 from AnonXMusic.misc import SUDOERS
 from AnonXMusic.utils.database import add_sudo, remove_sudo
 from AnonXMusic.utils.decorators.language import language
+from config import BANNED_USERS, OWNER_ID
 
 
 @app.on_message(filters.command(["addsudo"]) & filters.user(OWNER_ID))

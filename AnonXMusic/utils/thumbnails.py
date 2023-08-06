@@ -1,12 +1,9 @@
 import os
 import re
-import textwrap
 
 import aiofiles
 import aiohttp
-from unidecode import unidecode
-from PIL import (Image, ImageDraw, ImageEnhance, ImageFilter,
-                 ImageFont, ImageOps)
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 from youtubesearchpython.__future__ import VideosSearch
 
 from config import YOUTUBE_IMG_URL
@@ -20,11 +17,12 @@ def changeImageSize(maxWidth, maxHeight, image):
     newImage = image.resize((newWidth, newHeight))
     return newImage
 
+
 def clear(text):
     list = text.split(" ")
     title = ""
     for i in list:
-        if len(title) + len(i) < 60:        
+        if len(title) + len(i) < 60:
             title += " " + i
     return title.strip()
 
@@ -60,9 +58,7 @@ async def get_thumb(videoid):
         async with aiohttp.ClientSession() as session:
             async with session.get(thumbnail) as resp:
                 if resp.status == 200:
-                    f = await aiofiles.open(
-                        f"cache/thumb{videoid}.png", mode="wb"
-                    )
+                    f = await aiofiles.open(f"cache/thumb{videoid}.png", mode="wb")
                     await f.write(await resp.read())
                     await f.close()
 
@@ -75,9 +71,7 @@ async def get_thumb(videoid):
         draw = ImageDraw.Draw(background)
         arial = ImageFont.truetype("AnonXMusic/assets/font2.ttf", 30)
         font = ImageFont.truetype("AnonXMusic/assets/font.ttf", 30)
-        draw.text(
-            (1110, 8), "Fallen Music", fill="white", font=arial
-        )
+        draw.text((1110, 8), "Fallen Music", fill="white", font=arial)
         draw.text(
             (55, 560),
             f"{channel} | {views[:23]}",
@@ -91,10 +85,10 @@ async def get_thumb(videoid):
             font=font,
         )
         draw.line(
-             [(55, 660), (1220, 660)],
-             fill="white",
-             width=5,
-             joint="curve",
+            [(55, 660), (1220, 660)],
+            fill="white",
+            width=5,
+            joint="curve",
         )
         draw.ellipse(
             [(918, 648), (942, 672)],

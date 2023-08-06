@@ -3,10 +3,12 @@ from pyrogram.types import Message
 
 from AnonXMusic import app
 from AnonXMusic.misc import SUDOERS
-from AnonXMusic.utils.database import (get_lang, is_maintenance, maintenance_off,
-                                       maintenance_on)
-from AnonXMusic.utils.decorators.language import language
-
+from AnonXMusic.utils.database import (
+    get_lang,
+    is_maintenance,
+    maintenance_off,
+    maintenance_on,
+)
 from strings import get_string
 
 

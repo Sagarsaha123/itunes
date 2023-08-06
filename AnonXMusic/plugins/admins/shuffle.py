@@ -3,10 +3,10 @@ import random
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import BANNED_USERS
 from AnonXMusic import app
 from AnonXMusic.misc import db
 from AnonXMusic.utils.decorators import AdminRightsCheck
+from config import BANNED_USERS
 
 
 @app.on_message(

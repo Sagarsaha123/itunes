@@ -1,4 +1,5 @@
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.enums import ChatType
 
 from AnonXMusic import app
 from AnonXMusic.misc import SUDOERS, db

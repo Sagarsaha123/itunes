@@ -5,7 +5,7 @@ from pyrogram.errors import (ChatAdminRequired, FloodWait,
                              UserAlreadyParticipant, UserNotParticipant)
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from config import LOGGER_ID, PLAYLIST_IMG_URL, adminlist, MUSIC_BOT_NAME, SUPPORT_GROUP
+from config import LOGGER_ID, PLAYLIST_IMG_URL, adminlist, SUPPORT_GROUP
 from strings import get_string
 from AnonXMusic import YouTube, app
 from AnonXMusic.misc import SUDOERS
@@ -39,7 +39,7 @@ def PlayWrapper(command):
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
                 return await message.reply_text(
-                    f"{MUSIC_BOT_NAME} ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ, ᴠɪsɪᴛ <a href={SUPPORT_GROUP}>sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ</a> ғᴏʀ ᴋɴᴏᴡɪɴɢ ᴛʜᴇ ʀᴇᴀsᴏɴ."
+                    f"{app.mention} ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ, ᴠɪsɪᴛ <a href={SUPPORT_GROUP}>sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ</a> ғᴏʀ ᴋɴᴏᴡɪɴɢ ᴛʜᴇ ʀᴇᴀsᴏɴ."
                 )
 
         try:
@@ -115,7 +115,7 @@ def PlayWrapper(command):
                     )
                 if get.status == ChatMemberStatus.BANNED or get.status == ChatMemberStatus.RESTRICTED:
                     return await message.reply_text(
-                        f"<u>{MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ɪs ʙᴀɴɴᴇᴅ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ.</u>\n\n<b>ɪᴅ :</b> <code>{userbot.id}</code>\n<b>ɴᴀᴍᴇ :</b> {userbot.name}\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{userbot.username}\n\nᴘʟᴇᴀsᴇ ᴜɴʙᴀɴ ᴛʜᴇ ᴀssɪsᴛᴀɴᴛ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ.",
+                        f"<u>{app.mention} ᴀssɪsᴛᴀɴᴛ ɪs ʙᴀɴɴᴇᴅ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ.</u>\n\n<b>ɪᴅ :</b> <code>{userbot.id}</code>\n<b>ɴᴀᴍᴇ :</b> {userbot.name}\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{userbot.username}\n\nᴘʟᴇᴀsᴇ ᴜɴʙᴀɴ ᴛʜᴇ ᴀssɪsᴛᴀɴᴛ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ.",
                     )
             except UserNotParticipant:
                 if chat_id in links:
@@ -136,7 +136,7 @@ def PlayWrapper(command):
                             )
                         except Exception as e:
                             return await message.reply_text(
-                                f"ғᴀɪʟᴇᴅ ᴛᴏ ɪɴᴠɪᴛᴇ {MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ.\n\nʀᴇᴀsᴏɴ : <code>{type(e).__name__}</code>"
+                                f"ғᴀɪʟᴇᴅ ᴛᴏ ɪɴᴠɪᴛᴇ {app.mention} ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ.\n\nʀᴇᴀsᴏɴ : <code>{type(e).__name__}</code>"
                             )
 
                 if invitelink.startswith("https://t.me/+"):
@@ -144,7 +144,7 @@ def PlayWrapper(command):
                         "https://t.me/+", "https://t.me/joinchat/"
                     )
                 myu = await message.reply_text(
-                    f"ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...\n\nɪɴᴠɪᴛɪɴɢ {MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ..."
+                    f"ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...\n\nɪɴᴠɪᴛɪɴɢ {app.mention} ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ..."
                 )
                 try:
                     await asyncio.sleep(1)
@@ -154,17 +154,17 @@ def PlayWrapper(command):
                             await app.approve_chat_join_request(chat_id, userbot.id)
                         except Exception as e:
                             return await message.reply_text(
-                                f"ғᴀɪʟᴇᴅ ᴛᴏ ɪɴᴠɪᴛᴇ {MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ.\n\nʀᴇᴀsᴏɴ : <code>{type(e).__name__}</code>"
+                                f"ғᴀɪʟᴇᴅ ᴛᴏ ɪɴᴠɪᴛᴇ {app.mention} ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ.\n\nʀᴇᴀsᴏɴ : <code>{type(e).__name__}</code>"
                             )
                     await asyncio.sleep(3)
                     await myu.edit(
-                        f"{MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴊᴏɪɴᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.\n\nᴛʀʏɪɴɢ ᴛᴏ sᴛᴀʀᴛ sᴛʀᴇᴀᴍ..."
+                        f"{app.mention} ᴀssɪsᴛᴀɴᴛ ᴊᴏɪɴᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.\n\nᴛʀʏɪɴɢ ᴛᴏ sᴛᴀʀᴛ sᴛʀᴇᴀᴍ..."
                     )
                 except UserAlreadyParticipant:
                     pass
                 except Exception as e:
                     return await message.reply_text(
-                        f"ғᴀɪʟᴇᴅ ᴛᴏ ɪɴᴠɪᴛᴇ {MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ.\n\nʀᴇᴀsᴏɴ : <code>{type(e).__name__}</code>"
+                        f"ғᴀɪʟᴇᴅ ᴛᴏ ɪɴᴠɪᴛᴇ {app.mention} ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ.\n\nʀᴇᴀsᴏɴ : <code>{type(e).__name__}</code>"
                     )
 
                 links[chat_id] = invitelink

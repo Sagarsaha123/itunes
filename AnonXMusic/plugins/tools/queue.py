@@ -84,7 +84,7 @@ async def get_queue(client, message: Message, _):
         if DUR == "Unknown"
         else _["queue_7"]
     )
-    cap = _["queue_8"].format(config.MUSIC_BOT_NAME, title, typo, user, send)
+    cap = _["queue_8"].format(app.mention, title, typo, user, send)
     upl = (
         queue_markup(_, DUR, "c" if cplay else "g", videoid)
         if DUR == "Unknown"
@@ -228,7 +228,7 @@ async def queue_back(client, CallbackQuery: CallbackQuery, _):
         if DUR == "Unknown"
         else _["queue_7"]
     )
-    cap = _["queue_8"].format(config.MUSIC_BOT_NAME, title, typo, user, send)
+    cap = _["queue_8"].format(app.mention, title, typo, user, send)
     upl = (
         queue_markup(_, DUR, cplay, videoid)
         if DUR == "Unknown"

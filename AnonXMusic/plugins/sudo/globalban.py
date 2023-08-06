@@ -5,7 +5,7 @@ from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 
-from config import BANNED_USERS, MUSIC_BOT_NAME
+from config import BANNED_USERS
 from AnonXMusic import app
 from AnonXMusic.misc import SUDOERS
 from AnonXMusic.utils import get_readable_time
@@ -49,7 +49,7 @@ async def global_ban(client, message: Message, _):
         except:
             continue
     await add_banned_user(user.id)
-    await message.reply_text(_["gban_6"].format(MUSIC_BOT_NAME, message.chat.title, message.chat.id, user.mention, user.id, message.from_user.mention, number_of_chats))
+    await message.reply_text(_["gban_6"].format(app.mention, message.chat.title, message.chat.id, user.mention, user.id, message.from_user.mention, number_of_chats))
     await mystic.delete()
 
 

@@ -1,7 +1,7 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import BANNED_USERS, MUSIC_BOT_NAME
+from config import BANNED_USERS
 from AnonXMusic import app
 from AnonXMusic.misc import SUDOERS
 from AnonXMusic.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
@@ -54,6 +54,6 @@ async def all_chats(client, message: Message, _):
         j = 1
         text += f"{count}. {title}[<code>{chat_id}</code>]\n"
     if j == 0:
-        await message.reply_text(_["black_8"].format(MUSIC_BOT_NAME))
+        await message.reply_text(_["black_8"].format(app.mention))
     else:
         await message.reply_text(text)

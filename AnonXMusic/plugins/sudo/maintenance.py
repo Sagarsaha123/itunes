@@ -8,7 +8,6 @@ from AnonXMusic.utils.database import (get_lang, is_maintenance, maintenance_off
 from AnonXMusic.utils.decorators.language import language
 
 from strings import get_string
-from config import MUSIC_BOT_NAME
 
 
 @app.on_message(filters.command(["maintenance"]) & SUDOERS)
@@ -27,11 +26,11 @@ async def maintenance(client, message: Message):
             await message.reply_text(_["maint_4"])
         else:
             await maintenance_on()
-            await message.reply_text(_["maint_2"].format(MUSIC_BOT_NAME))
+            await message.reply_text(_["maint_2"].format(app.mention))
     elif state == "disable":
         if await is_maintenance() is False:
             await maintenance_off()
-            await message.reply_text(_["maint_3"].format(MUSIC_BOT_NAME))
+            await message.reply_text(_["maint_3"].format(app.mention))
         else:
             await message.reply_text(_["maint_5"])
     else:

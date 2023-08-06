@@ -1,6 +1,6 @@
 from pyrogram.enums import ParseMode
 
-from config import LOG, LOGGER_ID, MUSIC_BOT_NAME
+from config import LOG, LOGGER_ID
 from AnonXMusic import app
 from AnonXMusic.utils.database import is_on_off
 
@@ -8,7 +8,7 @@ from AnonXMusic.utils.database import is_on_off
 async def play_logs(message, streamtype):
     if await is_on_off(LOG):
         logger_text = f"""
-<b>{MUSIC_BOT_NAME} ᴘʟᴀʏ ʟᴏɢ</b>
+<b>{app.mention} ᴘʟᴀʏ ʟᴏɢ</b>
 
 <b>ᴄʜᴀᴛ ɪᴅ :</b> <code>{message.chat.id}</code>
 <b>ᴄʜᴀᴛ ɴᴀᴍᴇ :</b> {message.chat.title}

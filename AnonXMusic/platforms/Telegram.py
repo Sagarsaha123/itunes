@@ -130,7 +130,7 @@ class TeleAPI:
                             try:
                                 await mystic.edit_text(
                                     text=_["tg_1"].format(
-                                        config.MUSIC_BOT_NAME,
+                                        app.mention,
                                         total_size,
                                         completed_size,
                                         percentage[:5],

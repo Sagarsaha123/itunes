@@ -50,7 +50,7 @@ async def start_pm(client, message: Message, _):
                 channel = result["channel"]["name"]
                 link = result["link"]
                 published = result["publishedTime"]
-            searched_text = _["start_8"].format(title, duration, views, published, channellink, channel, MUSIC_BOT_NAME)
+            searched_text = _["start_8"].format(title, duration, views, published, channellink, channel, app.mention)
             key = InlineKeyboardMarkup(
                 [
                     [
@@ -75,7 +75,7 @@ async def start_pm(client, message: Message, _):
         out = private_panel(_)
         await message.reply_photo(
             photo=config.START_IMG_URL,
-            caption=_["start_2"].format(message.from_user.mention, config.MUSIC_BOT_NAME),
+            caption=_["start_2"].format(message.from_user.mention, app.mention),
             reply_markup=InlineKeyboardMarkup(out),
         )
         if await is_on_off(config.LOG):
@@ -96,7 +96,7 @@ async def start_gp(client, message: Message, _):
     uptime = int(time.time() - _boot_)
     return await message.reply_photo(
         photo=config.START_IMG_URL,
-        caption=_["start_1"].format(config.MUSIC_BOT_NAME, get_readable_time(uptime)),
+        caption=_["start_1"].format(app.mention, get_readable_time(uptime)),
         reply_markup=InlineKeyboardMarkup(out),
     )
 
@@ -118,7 +118,7 @@ async def welcome(client, message: Message):
                     return await app.leave_chat(message.chat.id)
                 if message.chat.id in await blacklisted_chats():
                     await message.reply_text(
-                        _["start_5"].format(config.MUSIC_BOT_NAME, f"https://t.me/{app.username}?start=sudolist", config.SUPPORT_GROUP),
+                        _["start_5"].format(app.mention, f"https://t.me/{app.username}?start=sudolist", config.SUPPORT_GROUP),
                         disable_web_page_preview=True,
                     )
                     return await app.leave_chat(message.chat.id)
@@ -128,9 +128,9 @@ async def welcome(client, message: Message):
                     photo=config.START_IMG_URL,
                     caption=_["start_3"].format(
                         message.from_user.first_name,
-                        config.MUSIC_BOT_NAME,
+                        app.mention,
                         message.chat.title,
-                        config.MUSIC_BOT_NAME,
+                        app.mention,
                     ),
                     reply_markup=InlineKeyboardMarkup(out),
                 )

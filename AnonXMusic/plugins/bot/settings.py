@@ -3,7 +3,7 @@ from pyrogram.errors import MessageNotModified
 from pyrogram.types import (CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup,
                             Message)
 
-from config import BANNED_USERS, MUSIC_BOT_NAME, OWNER_ID
+from config import BANNED_USERS, OWNER_ID
 from strings import get_command
 from AnonXMusic import app
 from AnonXMusic.utils.database import (add_nonadmin_chat, get_authuser, get_authuser_names,
@@ -59,7 +59,7 @@ async def settings_back_markup(client, CallbackQuery: CallbackQuery, _):
         OWNER = OWNER_ID
         buttons = private_panel(_, app.username, OWNER)
         return await CallbackQuery.edit_message_text(
-            _["start_2"].format(CallbackQuery.from_user.mention, MUSIC_BOT_NAME),
+            _["start_2"].format(CallbackQuery.from_user.mention, app.mention),
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:

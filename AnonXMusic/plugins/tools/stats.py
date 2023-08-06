@@ -9,7 +9,7 @@ from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 from pytgcalls.__version__ import __version__ as pytgver
 
 import config
-from config import BANNED_USERS, MUSIC_BOT_NAME
+from config import BANNED_USERS
 from AnonXMusic import app
 from AnonXMusic.core.userbot import assistants
 from AnonXMusic.misc import SUDOERS, pymongodb
@@ -29,7 +29,7 @@ async def stats_global(client, message: Message, _):
     upl = stats_buttons(_, True if message.from_user.id in SUDOERS else False)
     await message.reply_photo(
         photo=config.STATS_IMG_URL,
-        caption=_["gstats_2"].format(config.MUSIC_BOT_NAME),
+        caption=_["gstats_2"].format(app.mention),
         reply_markup=upl,
     )
 
@@ -39,7 +39,7 @@ async def stats_global(client, message: Message, _):
 async def home_stats(_, CallbackQuery, _):
     upl = stats_buttons(_, True if CallbackQuery.from_user.id in SUDOERS else False)
     await CallbackQuery.edit_message_text(
-        text=_["gstats_2"].format(config.MUSIC_BOT_NAME),
+        text=_["gstats_2"].format(app.mention),
         reply_markup=upl,
     )
 
@@ -53,11 +53,11 @@ async def overall_stats(client, CallbackQuery, _):
         await CallbackQuery.answer()
     except:
         pass
-    await CallbackQuery.edit_message_text(_["gstats_1"].format(config.MUSIC_BOT_NAME))
+    await CallbackQuery.edit_message_text(_["gstats_1"].format(app.mention))
     served_chats = len(await get_served_chats())
     served_users = len(await get_served_users())
     text = _["gstats_3"].format(
-        config.MUSIC_BOT_NAME,
+        app.mention,
         len(assistants),
         len(BANNED_USERS),
         served_chats,
@@ -89,7 +89,7 @@ async def bot_stats(client, CallbackQuery, _):
         await CallbackQuery.answer()
     except:
         pass
-    await CallbackQuery.edit_message_text(_["gstats_1"].format(config.MUSIC_BOT_NAME))
+    await CallbackQuery.edit_message_text(_["gstats_1"].format(app.mention))
     p_core = psutil.cpu_count(logical=False)
     t_core = psutil.cpu_count(logical=True)
     ram = str(round(psutil.virtual_memory().total / (1024.0**3))) + " ɢʙ"
@@ -111,7 +111,7 @@ async def bot_stats(client, CallbackQuery, _):
     served_chats = len(await get_served_chats())
     served_users = len(await get_served_users())
     text = _["gstats_5"].format(
-        config.MUSIC_BOT_NAME,
+        app.mention,
         len(ALL_MODULES),
         platform.system(),
         ram,

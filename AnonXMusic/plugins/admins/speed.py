@@ -1,7 +1,7 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import BANNED_USERS, adminlist, MUSIC_BOT_NAME
+from config import BANNED_USERS, adminlist
 from AnonXMusic import app
 from AnonXMusic.core.call import Anony
 from AnonXMusic.misc import SUDOERS, db
@@ -32,7 +32,7 @@ async def playback(cli, message: Message, _, chat_id):
         return await message.reply_text(_["admin_35"])
     upl = speed_markup(_, chat_id)
     return await message.reply_text(
-        text=_["admin_37"].format(MUSIC_BOT_NAME),
+        text=_["admin_37"].format(app.mention),
         reply_markup=upl,
     )
 

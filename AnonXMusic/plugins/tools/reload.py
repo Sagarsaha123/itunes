@@ -5,7 +5,7 @@ from pyrogram import filters
 from pyrogram.types import CallbackQuery, Message
 from pyrogram.enums import ChatMembersFilter
 
-from config import BANNED_USERS, MUSIC_BOT_NAME, adminlist, lyrical
+from config import BANNED_USERS, adminlist, lyrical
 from AnonXMusic import app
 from AnonXMusic.core.call import Anony
 from AnonXMusic.misc import db
@@ -53,7 +53,7 @@ async def reload_admin_cache(client, message: Message, _):
 )
 @AdminActual
 async def restartbot(client, message: Message, _):
-    mystic = await message.reply_text(_["reload_4"].format(MUSIC_BOT_NAME))
+    mystic = await message.reply_text(_["reload_4"].format(app.mention))
     await asyncio.sleep(1)
     try:
         db[message.chat.id] = []
@@ -87,7 +87,7 @@ async def restartbot(client, message: Message, _):
             await Anony.stop_stream_force(chat_id)
         except:
             pass
-    return await mystic.edit_text(_["reload_5"].format(MUSIC_BOT_NAME))
+    return await mystic.edit_text(_["reload_5"].format(app.mention))
 
 
 @app.on_callback_query(filters.regex("close") & ~BANNED_USERS)

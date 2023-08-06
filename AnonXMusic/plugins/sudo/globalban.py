@@ -15,6 +15,7 @@ from AnonXMusic.utils.database import (
     is_banned_user,
     remove_banned_user,
 )
+from AnonXMusic.utils.extraction import extract_user
 from AnonXMusic.utils.decorators.language import language
 from config import BANNED_USERS
 

@@ -90,8 +90,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         )
     except:
         pass
-    mystic = await app.send_message(
-        chat_id=CallbackQuery.message.chat.id,
+    mystic = await CallbackQuery.edit_message_text(
         text=_["admin_41"].format(CallbackQuery.from_user.mention),
     )
     try:

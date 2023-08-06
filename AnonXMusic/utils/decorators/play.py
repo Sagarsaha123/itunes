@@ -149,12 +149,12 @@ def PlayWrapper(command):
                     await asyncio.sleep(1)
                     await userbot.join_chat(invitelink)
                 except InviteRequestSent:
-                        try:
-                            await app.approve_chat_join_request(chat_id, userbot.id)
-                        except Exception as e:
-                            return await message.reply_text(
-                                f"ғᴀɪʟᴇᴅ ᴛᴏ ɪɴᴠɪᴛᴇ {app.mention} ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ.\n\nʀᴇᴀsᴏɴ : <code>{type(e).__name__}</code>"
-                            )
+                    try:
+                        await app.approve_chat_join_request(chat_id, userbot.id)
+                    except Exception as e:
+                        return await message.reply_text(
+                            f"ғᴀɪʟᴇᴅ ᴛᴏ ɪɴᴠɪᴛᴇ {app.mention} ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ.\n\nʀᴇᴀsᴏɴ : <code>{type(e).__name__}</code>"
+                        )
                     await asyncio.sleep(3)
                     await myu.edit(
                         f"{app.mention} ᴀssɪsᴛᴀɴᴛ ᴊᴏɪɴᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.\n\nᴛʀʏɪɴɢ ᴛᴏ sᴛᴀʀᴛ sᴛʀᴇᴀᴍ..."

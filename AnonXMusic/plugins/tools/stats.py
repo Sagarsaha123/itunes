@@ -11,7 +11,7 @@ from pytgcalls.__version__ import __version__ as pytgver
 import config
 from AnonXMusic import app
 from AnonXMusic.core.userbot import assistants
-from AnonXMusic.misc import SUDOERS, pymongodb
+from AnonXMusic.misc import SUDOERS, mongodb
 from AnonXMusic.plugins import ALL_MODULES
 from AnonXMusic.utils.database import get_served_chats, get_served_users, get_sudoers
 from AnonXMusic.utils.decorators.language import language, languageCB
@@ -99,7 +99,8 @@ async def bot_stats(client, CallbackQuery, _):
     total = hdd.total / (1024.0**3)
     used = hdd.used / (1024.0**3)
     free = hdd.free / (1024.0**3)
-    call = pymongodb.command("dbstats")
+    call = await mongodb.command("dbstats")
+    print(call)
     datasize = call["dataSize"] / 1024
     storage = call["storageSize"] / 1024
     served_chats = len(await get_served_chats())

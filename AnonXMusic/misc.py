@@ -43,7 +43,7 @@ def dbb():
     LOGGER(__name__).info(f"Local Database Initialized.")
 
 
-def sudo():
+async def sudo():
     global SUDOERS
     SUDOERS.add(config.OWNER_ID)
     sudoersdb = mongodb.sudoers

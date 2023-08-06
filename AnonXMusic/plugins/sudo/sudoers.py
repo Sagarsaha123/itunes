@@ -4,6 +4,7 @@ from pyrogram.types import Message
 from AnonXMusic import app
 from AnonXMusic.misc import SUDOERS
 from AnonXMusic.utils.database import add_sudo, remove_sudo
+from AnonXMusic.utils.inline import close_markup
 from AnonXMusic.utils.decorators.language import language
 from AnonXMusic.utils.extraction import extract_user
 from config import BANNED_USERS, OWNER_ID
@@ -47,7 +48,7 @@ async def userdel(client, message: Message, _):
 @language
 async def sudoers_list(client, message: Message, _):
     text = _["sudo_5"]
-    user = await app.get_users(x)
+    user = await app.get_users(OWNER_ID)
     user = user.first_name if not user.mention else user.mention
     text += f"1➤ {user}\n"
     count = 0
@@ -67,4 +68,4 @@ async def sudoers_list(client, message: Message, _):
     if not text:
         await message.reply_text(_["sudo_7"])
     else:
-        await message.reply_text(text)
+        await message.reply_text(text, reply_markup=close_markup(_))

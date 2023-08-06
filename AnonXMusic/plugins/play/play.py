@@ -72,7 +72,6 @@ async def play_commnd(
         if message.reply_to_message
         else None
     )
-    print(1)
     if audio_telegram:
         if audio_telegram.file_size > 104857600:
             return await mystic.edit_text(_["play_5"])
@@ -318,7 +317,6 @@ async def play_commnd(
                 return await mystic.edit_text(err)
             return await play_logs(message, streamtype="M3u8 or Index Link")
     else:
-        print(2)
         if len(message.command) < 2:
             buttons = botplaylist_markup(_)
             return await mystic.edit_text(
@@ -356,7 +354,6 @@ async def play_commnd(
                     reply_markup=InlineKeyboardMarkup(buttons),
                 )
         try:
-            print(3)
             await stream(
                 _,
                 mystic,

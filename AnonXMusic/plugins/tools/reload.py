@@ -49,7 +49,7 @@ async def reload_admin_cache(client, message: Message, _):
 
 
 @app.on_message(
-    filters.command(["reboot"]) & filters.group & ~filters.edited & ~BANNED_USERS
+    filters.command(["reboot"]) & filters.group & ~BANNED_USERS
 )
 @AdminActual
 async def restartbot(client, message: Message, _):

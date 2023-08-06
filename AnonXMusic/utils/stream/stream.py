@@ -30,6 +30,7 @@ async def stream(
     spotify: Union[bool, str] = None,
     forceplay: Union[bool, str] = None,
 ):
+    print(4)
     if not result:
         return
     if forceplay:
@@ -132,6 +133,7 @@ async def stream(
                 reply_markup=upl,
             )
     elif streamtype == "youtube":
+        print(5)
         link = result["link"]
         vidid = result["vidid"]
         title = (result["title"]).title()
@@ -185,6 +187,7 @@ async def stream(
             )
             img = await get_thumb(vidid)
             button = stream_markup(_, vidid, chat_id)
+            print(6)
             run = await app.send_photo(
                 original_chat_id,
                 photo=img,

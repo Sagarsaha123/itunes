@@ -73,6 +73,7 @@ async def update_(client, message, _):
     else:
         nrs = await response.edit(_final_updates_, disable_web_page_preview=True)
     os.system("git stash &> /dev/null && git pull")
+
     try:
         served_chats = await get_active_chats()
         for x in served_chats:
@@ -88,6 +89,9 @@ async def update_(client, message, _):
         await response.edit(
             f"{nrs.text}\n\n{_['server_7']}"
         )
+    except:
+      pass
+
     if await is_heroku():
         try:
             os.system(

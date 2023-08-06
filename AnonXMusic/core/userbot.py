@@ -56,7 +56,7 @@ class Userbot(Client):
                 raise SystemExit(
                     "Assistant Account 1 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin!"
             self.one.id = self.one.me.id
-            self.one.name = self.one.me.first_name + " " + (self.one.me.last_name or "")
+            self.one.name = self.one.me.mention
             self.one.username = self.one.me.username
             assistantids.append(self.one.id)
             LOGGER(__name__).info(f"Assistant Started as {self.one.name}")
@@ -76,7 +76,7 @@ class Userbot(Client):
                     "Assistant Account 2 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin!"
                 )
             self.two.id = self.two.me.id
-            self.two.name = self.two.me.first_name + " " + (self.two.me.last_name or "")
+            self.two.name = self.two.me.mention
             self.two.username = self.two.me.username
             assistantids.append(self.two.id)
             LOGGER(__name__).info(f"Assistant Two Started as {self.two.name}")
@@ -96,7 +96,7 @@ class Userbot(Client):
                     "Assistant Account 3 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin! "
                 )
             self.three.id = self.three.me.id
-            self.three.name = self.three.me.first_name + " " + (self.three.me.last_name or "")
+            self.three.name = self.three.me.mention
             self.three.username = self.three.me.username
             assistantids.append(self.three.id)
             LOGGER(__name__).info(f"Assistant Three Started as {self.three.name}")
@@ -116,7 +116,7 @@ class Userbot(Client):
                     "Assistant Account 4 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin! "
                 )
             self.four.id = self.four.me.id
-            self.four.name = self.four.me.first_name + " " + (self.four.me.last_name or "")
+            self.four.name = self.four.me.mention
             self.four.username = self.four.me.username
             assistantids.append(self.four.id)
             LOGGER(__name__).info(f"Assistant Four Started as {self.four.name}")
@@ -136,7 +136,7 @@ class Userbot(Client):
                     "Assistant Account 5 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin! "
                 )
             self.five.id = self.five.me.id
-            self.five.name = self.five.me.first_name + " " + (self.five.me.last_name or "")
+            self.five.name = self.five.me.mention
             self.five.username = self.five.me.username
             assistantids.append(self.five.id)
             LOGGER(__name__).info(f"Assistant Five Started as {self.five.name}")

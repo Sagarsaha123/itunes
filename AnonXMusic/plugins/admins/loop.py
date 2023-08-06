@@ -2,9 +2,9 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from AnonXMusic import app
-from AnonXMusic.utils.inline import close_markup
 from AnonXMusic.utils.database import get_loop, set_loop
 from AnonXMusic.utils.decorators import AdminRightsCheck
+from AnonXMusic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
@@ -38,6 +38,9 @@ async def admins(cli, message: Message, _, chat_id):
         )
     elif state.lower() == "disable":
         await set_loop(chat_id, 0)
-        return await message.reply_text(_["admin_27"].format(message.from_user.mention), reply_markup=close_markup(_))
+        return await message.reply_text(
+            _["admin_27"].format(message.from_user.mention),
+            reply_markup=close_markup(_),
+        )
     else:
         return await message.reply_text(usage)

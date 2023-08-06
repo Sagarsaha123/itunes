@@ -28,8 +28,11 @@ async def playmode_(client, message: Message, _):
         else:
             return await message.reply_text(_["cplay_2"])
     else:
+        print(1)
         try:
+            print(query)
             chat = await app.get_chat(query)
+            print(chat)
         except Exception as ex:
             print(ex)
             return await message.reply_text(_["cplay_4"])

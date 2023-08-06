@@ -6,6 +6,7 @@ from pyrogram.errors import (
     UserNotParticipant,
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.enums import ChatMemberStatus
 
 from AnonXMusic import YouTube, app
 from AnonXMusic.misc import SUDOERS

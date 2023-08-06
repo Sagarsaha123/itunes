@@ -26,12 +26,14 @@ def close_markup(_):
     )
     return upl
 
+
 def supp_markup(_):
     upl = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    text=_["S_B_3"], url=SUPPORT_GROUP,
+                    text=_["S_B_3"],
+                    url=SUPPORT_GROUP,
                 ),
             ]
         ]

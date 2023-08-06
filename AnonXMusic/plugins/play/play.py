@@ -18,8 +18,8 @@ from AnonXMusic.utils.inline.play import (
     playlist_markup,
     slider_markup,
     track_markup,
+    botplaylist_markup,
 )
-from AnonXMusic.utils.inline.playlist import botplaylist_markup
 from AnonXMusic.utils.logger import play_logs
 from AnonXMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical

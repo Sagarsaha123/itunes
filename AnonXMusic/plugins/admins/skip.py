@@ -69,7 +69,9 @@ async def skip(cli, message: Message, _, chat_id):
                 await auto_clean(popped)
             if not check:
                 await message.reply_text(
-                    text=_["admin_10"].format(message.from_user.mention, message.chat.title),
+                    text=_["admin_10"].format(
+                        message.from_user.mention, message.chat.title
+                    ),
                     reply_markup=close_markup(_),
                 )
                 try:
@@ -79,7 +81,9 @@ async def skip(cli, message: Message, _, chat_id):
         except:
             try:
                 await message.reply_text(
-                    text=_["admin_10"].format(message.from_user.mention, message.chat.title),
+                    text=_["admin_10"].format(
+                        message.from_user.mention, message.chat.title
+                    ),
                     reply_markup=close_markup(_),
                 )
                 return await Anony.stop_stream(chat_id)

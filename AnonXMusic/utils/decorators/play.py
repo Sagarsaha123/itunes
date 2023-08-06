@@ -19,7 +19,7 @@ from AnonXMusic.utils.database import (
     is_active_chat,
     is_maintenance,
 )
-from AnonXMusic.utils.inline.playlist import botplaylist_markup
+from AnonXMusic.utils.inline import botplaylist_markup
 from config import PLAYLIST_IMG_URL, SUPPORT_GROUP, adminlist
 from strings import get_string
 

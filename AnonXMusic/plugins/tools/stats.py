@@ -32,7 +32,7 @@ async def stats_global(client, message: Message, _):
 
 @app.on_callback_query(filters.regex("stats_back") & ~BANNED_USERS)
 @languageCB
-async def home_stats(_, CallbackQuery, _):
+async def home_stats(client, CallbackQuery, _):
     upl = stats_buttons(_, True if CallbackQuery.from_user.id in SUDOERS else False)
     await CallbackQuery.edit_message_text(
         text=_["gstats_2"].format(app.mention),

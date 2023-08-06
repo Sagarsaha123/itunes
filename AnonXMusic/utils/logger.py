@@ -2,11 +2,11 @@ from pyrogram.enums import ParseMode
 
 from AnonXMusic import app
 from AnonXMusic.utils.database import is_on_off
-from config import LOG, LOGGER_ID
+from config import LOGGER_ID
 
 
 async def play_logs(message, streamtype):
-    if await is_on_off(LOG):
+    if await is_on_off(2):
         logger_text = f"""
 <b>{app.mention} ᴘʟᴀʏ ʟᴏɢ</b>
 

@@ -100,7 +100,6 @@ async def bot_stats(client, CallbackQuery, _):
     used = hdd.used / (1024.0**3)
     free = hdd.free / (1024.0**3)
     call = await mongodb.command("dbstats")
-    print(call)
     datasize = call["dataSize"] / 1024
     storage = call["storageSize"] / 1024
     served_chats = len(await get_served_chats())
@@ -116,14 +115,14 @@ async def bot_stats(client, CallbackQuery, _):
         pyver.split()[0],
         pyrover,
         pytgver,
-        str(total[:4]),
-        str(used[:4]),
-        str(free[:4]),
+        str(total)[:4],
+        str(used)[:4],
+        str(free)[:4],
         served_chats,
         served_users,
         len(BANNED_USERS),
         len(await get_sudoers()),
-        str(datasize[:6]),
+        str(datasize)[:6],
         storage,
         call["collections"],
         call["objects"],

@@ -3,6 +3,7 @@ import asyncio
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
+from strings import get_string
 from AnonXMusic import YouTube, app
 from AnonXMusic.core.call import Anony
 from AnonXMusic.misc import SUDOERS, db
@@ -388,11 +389,9 @@ async def markup_timer():
                     await mystic.edit_reply_markup(
                         reply_markup=InlineKeyboardMarkup(buttons)
                     )
-                except Exception as e:
-                    print(e)
+                except:
                     continue
-            except Exception as ex:
-                print(ex)
+            except:
                 continue
 
 

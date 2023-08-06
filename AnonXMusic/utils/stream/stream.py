@@ -30,7 +30,6 @@ async def stream(
     spotify: Union[bool, str] = None,
     forceplay: Union[bool, str] = None,
 ):
-    print(4)
     if not result:
         return
     if forceplay:
@@ -133,7 +132,6 @@ async def stream(
                 reply_markup=upl,
             )
     elif streamtype == "youtube":
-        print(5)
         link = result["link"]
         vidid = result["vidid"]
         title = (result["title"]).title()
@@ -146,9 +144,7 @@ async def stream(
             )
         except:
             raise AssistantErr(_["play_16"])
-        print(6)
         if await is_active_chat(chat_id):
-            print(7)
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -166,20 +162,15 @@ async def stream(
                 _["queue_4"].format(position, title[:27], duration_min, user_name),
             )
         else:
-            print(8)
             if not forceplay:
                 db[chat_id] = []
-            try:
-                await Anony.join_call(
-                    chat_id,
-                    original_chat_id,
-                    file_path,
-                    video=status,
-                    image=thumbnail,
-                )
-            except Exception as ex:
-                print(ex)
-                print(9)
+            await Anony.join_call(
+                chat_id,
+                original_chat_id,
+                file_path,
+                video=status,
+                image=thumbnail,
+            )
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -192,7 +183,6 @@ async def stream(
                 "video" if video else "audio",
                 forceplay=forceplay,
             )
-            print(10)
             img = await get_thumb(vidid)
             button = stream_markup(_, vidid, chat_id)
             run = await app.send_photo(

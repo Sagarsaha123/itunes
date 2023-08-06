@@ -146,7 +146,9 @@ async def stream(
             )
         except:
             raise AssistantErr(_["play_16"])
+        print(6)
         if await is_active_chat(chat_id):
+            print(7)
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -164,6 +166,7 @@ async def stream(
                 _["queue_4"].format(position, title[:27], duration_min, user_name),
             )
         else:
+            print(8)
             if not forceplay:
                 db[chat_id] = []
             await Anony.join_call(
@@ -173,6 +176,7 @@ async def stream(
                 video=status,
                 image=thumbnail,
             )
+            print(9)
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -185,10 +189,9 @@ async def stream(
                 "video" if video else "audio",
                 forceplay=forceplay,
             )
+            print(10)
             img = await get_thumb(vidid)
-            print(img)
             button = stream_markup(_, vidid, chat_id)
-            print(6)
             run = await app.send_photo(
                 original_chat_id,
                 photo=img,

@@ -1,4 +1,4 @@
-from pyrogram.types import Message
+from pyrogram.types import Message, User
 
 from AnonXMusic import app
 

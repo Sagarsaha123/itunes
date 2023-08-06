@@ -169,14 +169,17 @@ async def stream(
             print(8)
             if not forceplay:
                 db[chat_id] = []
-            await Anony.join_call(
-                chat_id,
-                original_chat_id,
-                file_path,
-                video=status,
-                image=thumbnail,
-            )
-            print(9)
+            try:
+                await Anony.join_call(
+                    chat_id,
+                    original_chat_id,
+                    file_path,
+                    video=status,
+                    image=thumbnail,
+                )
+            except Exception as ex:
+                print(ex)
+                print(9)
             await put_queue(
                 chat_id,
                 original_chat_id,

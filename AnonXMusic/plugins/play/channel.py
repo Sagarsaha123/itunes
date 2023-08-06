@@ -41,7 +41,8 @@ async def playmode_(client, message: Message, _):
                 if user.status == ChatMemberStatus.OWNER:
                     cusn = user.user.username
                     crid = user.user.id
-        except:
+        except Exception as ex:
+            print(ex)
             return await message.reply_text(_["cplay_4"])
         if crid != message.from_user.id:
             return await message.reply_text(_["cplay_6"].format(chat.title, cusn))

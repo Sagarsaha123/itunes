@@ -14,13 +14,9 @@ from AnonXMusic.utils.database import (
     is_on_off,
 )
 from AnonXMusic.utils.decorators.language import LanguageStart
-<<<<<<< HEAD
 from AnonXMusic.utils.inline import help_pannel, private_panel, start_panel
-=======
-from AnonXMusic.utils.inline import help_pannel, private_panel, start_pannel
 from config import BANNED_USERS
 from strings import get_string
->>>>>>> 0dc875154039761f990c69eca674947944313272
 
 
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)

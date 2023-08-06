@@ -3,8 +3,7 @@ from typing import Union
 
 from AnonXMusic.misc import db
 from AnonXMusic.utils.formatters import check_duration, seconds_to_min
-from config import autoclean
-from config.config import time_to_seconds
+from config import autoclean, time_to_seconds
 
 
 async def put_queue(

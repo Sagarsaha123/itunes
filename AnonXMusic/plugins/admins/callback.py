@@ -3,7 +3,6 @@ import asyncio
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from strings import get_string
 from AnonXMusic import YouTube, app
 from AnonXMusic.core.call import Anony
 from AnonXMusic.misc import SUDOERS, db
@@ -38,6 +37,7 @@ from config import (
     confirmer,
     votemode,
 )
+from strings import get_string
 
 checker = {}
 upvoters = {}

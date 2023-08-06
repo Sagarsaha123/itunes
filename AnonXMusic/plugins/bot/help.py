@@ -8,7 +8,7 @@ from strings import get_string, helpers
 from AnonXMusic import app
 from AnonXMusic.misc import SUDOERS
 from AnonXMusic.utils import help_pannel
-from AnonXMusic.utils.database import get_lang, is_commanddelete_on
+from AnonXMusic.utils.database import get_lang
 from AnonXMusic.utils.decorators.language import LanguageStart, languageCB
 from AnonXMusic.utils.inline.help import help_back_markup, private_help_panel
 
@@ -30,13 +30,11 @@ async def helper_private(client: app, update: Union[types.Message, types.Callbac
         keyboard = help_pannel(_, True)
         await update.edit_message_text(_["help_1"], reply_markup=keyboard)
     else:
-        chat_id = update.chat.id
-        if await is_commanddelete_on(update.chat.id):
-            try:
-                await update.delete()
-            except:
-                pass
-        language = await get_lang(chat_id)
+        try:
+            await update.delete()
+        except:
+            pass
+        language = await get_lang(update.chat.id)
         _ = get_string(language)
         keyboard = help_pannel(_)
         await update.reply_text(_["help_1"], reply_markup=keyboard)

@@ -12,7 +12,7 @@ from pytgcalls.exceptions import (
     TelegramServerError,
 )
 from pytgcalls.types import Update
-from pytgcalls.types.input_stream import AudioImagePiped, AudioPiped, AudioVideoPiped
+from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from pytgcalls.types.input_stream.quality import HighQualityAudio, MediumQualityVideo
 from pytgcalls.types.stream import StreamAudioEnded
 
@@ -246,15 +246,7 @@ class Call(PyTgCalls):
                 video_parameters=MediumQualityVideo(),
             )
         else:
-            if image and config.PRIVATE_BOT_MODE == str(True):
-                stream = AudioImagePiped(
-                    link,
-                    image,
-                    audio_parameters=HighQualityAudio(),
-                    video_parameters=MediumQualityVideo(),
-                )
-            else:
-                stream = AudioPiped(link, audio_parameters=HighQualityAudio())
+            stream = AudioPiped(link, audio_parameters=HighQualityAudio())
         await assistant.change_stream(
             chat_id,
             stream,
@@ -285,7 +277,7 @@ class Call(PyTgCalls):
             AudioVideoPiped(link),
             stream_type=StreamType().pulse_stream,
         )
-        await asyncio.sleep(1)
+        await asyncio.sleep(0.2)
         await assistant.leave_group_call(config.LOGGER_ID)
 
     async def join_call(
@@ -388,22 +380,10 @@ class Call(PyTgCalls):
                         video_parameters=MediumQualityVideo(),
                     )
                 else:
-                    try:
-                        image = await YouTube.thumbnail(videoid, True)
-                    except:
-                        image = None
-                    if image and config.PRIVATE_BOT_MODE == str(True):
-                        stream = AudioImagePiped(
-                            link,
-                            image,
-                            audio_parameters=HighQualityAudio(),
-                            video_parameters=MediumQualityVideo(),
-                        )
-                    else:
-                        stream = AudioPiped(
-                            link,
-                            audio_parameters=HighQualityAudio(),
-                        )
+                    stream = AudioPiped(
+                        link,
+                        audio_parameters=HighQualityAudio(),
+                    )
                 try:
                     await client.change_stream(chat_id, stream)
                 except Exception:
@@ -446,22 +426,10 @@ class Call(PyTgCalls):
                         video_parameters=MediumQualityVideo(),
                     )
                 else:
-                    try:
-                        image = await YouTube.thumbnail(videoid, True)
-                    except:
-                        image = None
-                    if image and config.PRIVATE_BOT_MODE == str(True):
-                        stream = AudioImagePiped(
-                            file_path,
-                            image,
-                            audio_parameters=HighQualityAudio(),
-                            video_parameters=MediumQualityVideo(),
-                        )
-                    else:
-                        stream = AudioPiped(
-                            file_path,
-                            audio_parameters=HighQualityAudio(),
-                        )
+                    stream = AudioPiped(
+                        file_path,
+                        audio_parameters=HighQualityAudio(),
+                    )
                 try:
                     await client.change_stream(chat_id, stream)
                 except:
@@ -512,15 +480,6 @@ class Call(PyTgCalls):
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "tg"
             else:
-                if videoid == "telegram":
-                    image = None
-                elif videoid == "soundcloud":
-                    image = None
-                else:
-                    try:
-                        image = await YouTube.thumbnail(videoid, True)
-                    except:
-                        image = None
                 if video:
                     stream = AudioVideoPiped(
                         queued,
@@ -528,18 +487,10 @@ class Call(PyTgCalls):
                         video_parameters=MediumQualityVideo(),
                     )
                 else:
-                    if image and config.PRIVATE_BOT_MODE == str(True):
-                        stream = AudioImagePiped(
-                            queued,
-                            image,
-                            audio_parameters=HighQualityAudio(),
-                            video_parameters=MediumQualityVideo(),
-                        )
-                    else:
-                        stream = AudioPiped(
-                            queued,
-                            audio_parameters=HighQualityAudio(),
-                        )
+                    stream = AudioPiped(
+                        queued,
+                        audio_parameters=HighQualityAudio(),
+                    )
                 try:
                     await client.change_stream(chat_id, stream)
                 except:

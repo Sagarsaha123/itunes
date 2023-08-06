@@ -314,23 +314,15 @@ class Call(PyTgCalls):
                 video_parameters=MediumQualityVideo(),
             )
         else:
-            if image and config.PRIVATE_BOT_MODE == str(True):
-                stream = AudioImagePiped(
+            stream = (
+                AudioVideoPiped(
                     link,
-                    image,
                     audio_parameters=HighQualityAudio(),
                     video_parameters=MediumQualityVideo(),
                 )
-            else:
-                stream = (
-                    AudioVideoPiped(
-                        link,
-                        audio_parameters=HighQualityAudio(),
-                        video_parameters=MediumQualityVideo(),
-                    )
-                    if video
-                    else AudioPiped(link, audio_parameters=HighQualityAudio())
-                )
+                if video
+                else AudioPiped(link, audio_parameters=HighQualityAudio())
+            )
         try:
             await assistant.join_group_call(
                 chat_id,

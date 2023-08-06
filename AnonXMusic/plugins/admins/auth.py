@@ -9,6 +9,7 @@ from AnonXMusic.utils.database import (
     get_authuser_names,
     save_authuser,
 )
+from AnonXMusic.utils.inline import close_markup
 from AnonXMusic.utils.decorators import AdminActual, language
 from config import BANNED_USERS, adminlist
 
@@ -85,4 +86,4 @@ async def authusers(client, message: Message, _):
                 continue
             text += f"{j}➤ {user}[<code>{user_id}</code>]\n"
             text += f"   {_['auth_8']} {admin_name}[<code>{admin_id}</code>]\n\n"
-        await mystic.edit_text(text)
+        await mystic.edit_text(text, reply_markup=close_markup())

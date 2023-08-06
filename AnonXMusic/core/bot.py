@@ -24,14 +24,14 @@ class Anony(Client):
         self.name = self.me.first_name + " " + (self.me.last_name or "")
         self.username = self.me.username
         self.mention = self.me.mention
+
         try:
             await self.send_message(config.LOGGER_ID, "Bot Started")
         except errors.PeerIdInvalid:
             raise SystemExit("Bot has failed to access the log group/channel. Make sure that you have added your bot to your log group/channel.")
         except Exception as ex:
-            raise SystemExit(
-                f"Bot has failed to access the log group/channel.\nReason : {type(ex).__name__}."
-            )
+            raise SystemExit(f"Bot has failed to access the log group/channel.\nReason : {type(ex).__name__}.")
+
         a = await self.get_chat_member(config.LOGGER_ID, self.id)
         if a.status != ChatMemberStatus.ADMINISTRATOR:
             raise SystemExit("Please promote your bot as an admin in your log group/channel.")

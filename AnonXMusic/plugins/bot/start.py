@@ -14,9 +14,13 @@ from AnonXMusic.utils.database import (
     is_on_off,
 )
 from AnonXMusic.utils.decorators.language import LanguageStart
+<<<<<<< HEAD
+from AnonXMusic.utils.inline import help_pannel, private_panel, start_panel
+=======
 from AnonXMusic.utils.inline import help_pannel, private_panel, start_pannel
 from config import BANNED_USERS
 from strings import get_string
+>>>>>>> 0dc875154039761f990c69eca674947944313272
 
 
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
@@ -92,7 +96,7 @@ async def start_pm(client, message: Message, _):
 @app.on_message(filters.command(["start"]) & filters.group & ~BANNED_USERS)
 @LanguageStart
 async def start_gp(client, message: Message, _):
-    out = start_pannel(_)
+    out = start_panel(_)
     uptime = int(time.time() - _boot_)
     return await message.reply_photo(
         photo=config.START_IMG_URL,
@@ -127,7 +131,7 @@ async def welcome(client, message: Message):
                     )
                     return await app.leave_chat(message.chat.id)
 
-                out = start_pannel(_)
+                out = start_panel(_)
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
                     caption=_["start_3"].format(

@@ -4,6 +4,7 @@ from pyrogram.types import Message
 from AnonXMusic import YouTube, app
 from AnonXMusic.core.call import Anony
 from AnonXMusic.misc import db
+from AnonXMusic.utils.inline import close_markup
 from AnonXMusic.utils import AdminRightsCheck, seconds_to_min
 from config import BANNED_USERS
 
@@ -33,13 +34,15 @@ async def seek_comm(cli, message: Message, _, chat_id):
     if message.command[0][-2] == "c":
         if (duration_played - duration_to_skip) <= 10:
             return await message.reply_text(
-                _["admin_31"].format(seconds_to_min(duration_played), duration)
+                text=_["admin_31"].format(seconds_to_min(duration_played), duration),
+                reply_markup=close_markup(_),
             )
         to_seek = duration_played - duration_to_skip + 1
     else:
         if (duration_seconds - (duration_played + duration_to_skip)) <= 10:
             return await message.reply_text(
-                _["admin_31"].format(seconds_to_min(duration_played), duration)
+                text=_["admin_31"].format(seconds_to_min(duration_played), duration),
+                reply_markup=close_markup(_),
             )
         to_seek = duration_played + duration_to_skip + 1
     mystic = await message.reply_text(_["admin_32"])
@@ -61,11 +64,12 @@ async def seek_comm(cli, message: Message, _, chat_id):
             playing[0]["streamtype"],
         )
     except:
-        return await mystic.edit_text(_["admin_34"])
+        return await mystic.edit_text(_["admin_34"], reply_markup=close_markup(_))
     if message.command[0][-2] == "c":
         db[chat_id][0]["played"] -= duration_to_skip
     else:
         db[chat_id][0]["played"] += duration_to_skip
     await mystic.edit_text(
-        _["admin_33"].format(seconds_to_min(to_seek), message.from_user.mention)
+        text=_["admin_33"].format(seconds_to_min(to_seek), message.from_user.mention),
+        reply_markup=close_markup(_),
     )

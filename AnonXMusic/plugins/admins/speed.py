@@ -68,10 +68,10 @@ async def del_back_playlist(client, CallbackQuery, _):
     if checkspeed:
         if str(checkspeed) == str(speed):
             if str(speed) == str("1.0"):
-            return await CallbackQuery.answer(
-                _["admin_38"],
-                show_alert=True,
-            )
+                return await CallbackQuery.answer(
+                    _["admin_38"],
+                    show_alert=True,
+                )
     else:
         if str(speed) == str("1.0"):
             return await CallbackQuery.answer(

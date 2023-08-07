@@ -41,7 +41,7 @@ def PlayWrapper(command):
                     ]
                 ]
             )
-            return await message.reply_text(_["general_4"], reply_markup=upl)
+            return await message.reply_text(_["general_3"], reply_markup=upl)
 
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
@@ -94,7 +94,7 @@ def PlayWrapper(command):
             if message.from_user.id not in SUDOERS:
                 admins = adminlist.get(message.chat.id)
                 if not admins:
-                    return await message.reply_text(_["admin_18"])
+                    return await message.reply_text(_["admin_13"])
                 else:
                     if message.from_user.id not in admins:
                         return await message.reply_text(_["play_4"])

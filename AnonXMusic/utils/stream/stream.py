@@ -10,7 +10,7 @@ from AnonXMusic.core.call import Anony
 from AnonXMusic.misc import db
 from AnonXMusic.utils.database import add_active_video_chat, is_active_chat
 from AnonXMusic.utils.exceptions import AssistantErr
-from AnonXMusic.utils.inline import close_markup, stream_markup
+from AnonXMusic.utils.inline import close_markup, stream_markup, aq_markup
 from AnonXMusic.utils.pastebin import AnonyBin
 from AnonXMusic.utils.stream.queue import put_queue, put_queue_index
 from AnonXMusic.utils.thumbnails import get_thumb
@@ -34,7 +34,7 @@ async def stream(
     if forceplay:
         await Anony.force_stop_stream(chat_id)
     if streamtype == "playlist":
-        msg = f"{_['playlist_16']}\n\n"
+        msg = f"{_['play_19']}\n\n"
         count = 0
         for search in result:
             if int(count) == config.PLAYLIST_FETCH_LIMIT:
@@ -68,7 +68,7 @@ async def stream(
                 position = len(db.get(chat_id)) - 1
                 count += 1
                 msg += f"{count}. {title[:70]}\n"
-                msg += f"{_['playlist_17']} {position}\n\n"
+                msg += f"{_['play_20']} {position}\n\n"
             else:
                 if not forceplay:
                     db[chat_id] = []
@@ -78,7 +78,7 @@ async def stream(
                         vidid, mystic, video=status, videoid=True
                     )
                 except:
-                    raise AssistantErr(_["play_16"])
+                    raise AssistantErr(_["play_14"])
                 await Anony.join_call(
                     chat_id,
                     original_chat_id,
@@ -127,7 +127,7 @@ async def stream(
             return await app.send_photo(
                 original_chat_id,
                 photo=carbon,
-                caption=_["playlist_18"].format(position, link),
+                caption=_["play_21"].format(position, link),
                 reply_markup=upl,
             )
     elif streamtype == "youtube":
@@ -142,7 +142,7 @@ async def stream(
                 vidid, mystic, videoid=True, video=status
             )
         except:
-            raise AssistantErr(_["play_16"])
+            raise AssistantErr(_["play_14"])
         if await is_active_chat(chat_id):
             await put_queue(
                 chat_id,
@@ -157,8 +157,9 @@ async def stream(
             )
             position = len(db.get(chat_id)) - 1
             await app.send_message(
-                original_chat_id,
-                _["queue_4"].format(position, title[:27], duration_min, user_name),
+                chat_id=original_chat_id,
+                text=_["queue_4"].format(position, title[:27], duration_min, user_name),
+                reply_markup=aq_markup(_, chat_id),
             )
         else:
             if not forceplay:
@@ -215,8 +216,9 @@ async def stream(
             )
             position = len(db.get(chat_id)) - 1
             await app.send_message(
-                original_chat_id,
-                _["queue_4"].format(position, title[:27], duration_min, user_name),
+                chat_id=original_chat_id,
+                text=_["queue_4"].format(position, title[:27], duration_min, user_name),
+                reply_markup=aq_markup(_, chat_id),
             )
         else:
             if not forceplay:
@@ -265,8 +267,9 @@ async def stream(
             )
             position = len(db.get(chat_id)) - 1
             await app.send_message(
-                original_chat_id,
-                _["queue_4"].format(position, title[:27], duration_min, user_name),
+                chat_id=original_chat_id,
+                text=_["queue_4"].format(position, title[:27], duration_min, user_name),
+                reply_markup=aq_markup(_, chat_id),
             )
         else:
             if not forceplay:
@@ -316,8 +319,9 @@ async def stream(
             )
             position = len(db.get(chat_id)) - 1
             await app.send_message(
-                original_chat_id,
-                _["queue_4"].format(position, title[:27], duration_min, user_name),
+                chat_id=original_chat_id,
+                text=_["queue_4"].format(position, title[:27], duration_min, user_name),
+                reply_markup=aq_markup(_, chat_id),
             )
         else:
             if not forceplay:
@@ -376,7 +380,8 @@ async def stream(
             )
             position = len(db.get(chat_id)) - 1
             await mystic.edit_text(
-                _["queue_4"].format(position, title[:27], duration_min, user_name)
+                text=_["queue_4"].format(position, title[:27], duration_min, user_name),
+                reply_markup=aq_markup(_, chat_id),
             )
         else:
             if not forceplay:

@@ -53,7 +53,7 @@ def AdminRightsCheck(mystic):
         if message.command[0][0] == "c":
             chat_id = await get_cmode(message.chat.id)
             if chat_id is None:
-                return await message.reply_text(_["setting_12"])
+                return await message.reply_text(_["setting_7"])
             try:
                 await app.get_chat(chat_id)
             except:

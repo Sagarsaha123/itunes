@@ -73,13 +73,13 @@ def PlayWrapper(command):
                 buttons = botplaylist_markup(_)
                 return await message.reply_photo(
                     photo=PLAYLIST_IMG_URL,
-                    caption=_["play_20"],
+                    caption=_["play_18"],
                     reply_markup=InlineKeyboardMarkup(buttons),
                 )
         if message.command[0][0] == "c":
             chat_id = await get_cmode(message.chat.id)
             if chat_id is None:
-                return await message.reply_text(_["setting_12"])
+                return await message.reply_text(_["setting_7"])
             try:
                 chat = await app.get_chat(chat_id)
             except:
@@ -107,7 +107,7 @@ def PlayWrapper(command):
                 video = True if message.command[0][1] == "v" else None
         if message.command[0][-1] == "e":
             if not await is_active_chat(chat_id):
-                return await message.reply_text(_["play_18"])
+                return await message.reply_text(_["play_16"])
             fplay = True
         else:
             fplay = None

@@ -1,11 +1,11 @@
 name : English
 
+
 general_1 : "» ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ's ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ ᴜsᴇʀɴᴀᴍᴇ/ᴜsᴇʀ ɪᴅ."
 general_2 : "» sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ ᴡʜɪʟᴇ ᴘʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ ǫᴜᴇʀʏ.\n\nᴇxᴄᴇᴘᴛɪᴏɴ : <code>{0}</code>"
 general_3 : "ʏᴏᴜ'ʀᴇ ᴀɴ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ᴄʜᴀᴛ, ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ғᴏʀ ᴜsɪɴɢ ᴍᴇ."
 general_4 : "» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴍᴀɴᴀɢᴇ ᴠɪᴅᴇᴏ ᴄʜᴀᴛs.\n\nʀᴇʟᴏᴀᴅ ᴀᴅᴍɪɴ ᴄᴀᴄʜᴇ ᴠɪᴀ /reload"
 general_5 : "» ʙᴏᴛ ɪsɴ'ᴛ sᴛʀᴇᴀᴍɪɴɢ ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ."
-
 
 tg_1 : "<u><b>{0} ᴅᴏᴡɴʟᴏᴀᴅᴇʀ</b></u>\n\n<b>ғɪʟᴇ sɪᴢᴇ :</b> {1}\n<b>ᴄᴏᴍᴘʟᴇᴛᴇᴅ :</b> {2}\n<b>ᴘᴇʀᴄᴇɴᴛᴀɢᴇ :</b> {3}%\n\n<b>sᴘᴇᴇᴅ :</b> {4}/s\n<b>ᴇᴛᴀ :</b> {5}"
 tg_2 : "sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ, ᴘʀᴏᴄᴇssɪɴɢ ғɪʟᴇ...\n\n<b>ᴛɪᴍᴇ ᴇʟᴀᴘsᴇᴅ :</b> {0}"
@@ -16,7 +16,6 @@ tg_6 : "» ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴀɴᴄᴇʟʟᴇᴅ."
 tg_7 : "» ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴀɴᴄᴇʟʟᴇᴅ ʙʏ : {0}"
 tg_8 : "ғᴀɪʟᴇᴅ ᴛᴏ sᴛᴏᴘ ᴛʜᴇ ᴅᴏᴡɴʟᴏᴀᴅ."
 tg_9 : "ғᴀɪʟᴇᴅ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ᴏɴɢᴏɪɴɢ ᴅᴏᴡɴʟᴏᴀᴅ ᴛᴀsᴋ..."
-
 
 call_1 : "» ʙᴏᴛ ʀᴇǫᴜɪʀᴇs <b>ɪɴᴠɪᴛᴇ ᴜsᴇʀs ᴠɪᴀ ʟɪɴᴋ</b> ᴘᴇʀᴍɪssɪᴏɴ ᴛᴏ ɪɴᴠɪᴛᴇ ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ."
 call_2 : "<u>{0} ᴀssɪsᴛᴀɴᴛ ɪs ʙᴀɴɴᴇᴅ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ.</u>\n\n<b>ɪᴅ :</b> <code>{1}</code>\n<b>ɴᴀᴍᴇ :</b> {2}\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{3}\n\nᴘʟᴇᴀsᴇ ᴜɴʙᴀɴ ᴛʜᴇ ᴀssɪsᴛᴀɴᴛ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ."
@@ -29,7 +28,6 @@ call_8 : "<b>Nᴏ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛ ғᴏᴜɴᴅ.</b>
 call_9 : "<b>Assɪsᴛᴀɴᴛ ᴀʟʀᴇᴀᴅʏ ɪɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ.</b>\n\nɪғ ᴀssɪsᴛᴀɴᴛ ɪs ɴᴏᴛ ɪɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ, ᴘʟᴇᴀsᴇ sᴇɴᴅ <code>/reboot</code> ᴀɴᴅ ᴘʟᴀʏ ᴀɢᴀɪɴ."
 call_10 : "<b>Tᴇʟᴇɢʀᴀᴍ sᴇʀᴠᴇʀ ᴇʀʀᴏʀ</b>\n\nᴛᴇʟᴇɢʀᴀᴍ ɪs ʜᴀᴠɪɴɢ sᴏᴍᴇ ɪɴᴛᴇʀɴᴀʟ ᴘʀᴏʙʟᴇᴍs, ᴘʟᴇᴀsᴇ ᴛʀʏ ᴘʟᴀʏɪɴɢ ᴀɢᴀɪɴ ᴏʀ ʀᴇsᴛᴀʀᴛ ᴛʜᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛ ᴏғ ʏᴏᴜʀ ɢʀᴏᴜᴘ."
 
-
 auth_1 : "» ʏᴏᴜ ᴄᴀɴ ᴏɴʟʏ ʜᴀᴠᴇ 25 ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴜsᴇʀs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ."
 auth_2 : "» ᴀᴅᴅᴇᴅ {0} ᴛᴏ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴜsᴇʀs ʟɪsᴛ."
 auth_3 : "{0} ɪs ᴀʟʀᴇᴀᴅʏ ɪɴ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴜsᴇʀs ʟɪsᴛ."
@@ -39,13 +37,11 @@ auth_6 : "» ғᴇᴛᴄʜɪɴɢ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴜsᴇʀs ʟɪsᴛ
 auth_7 : "» ʟɪsᴛ ᴏғ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴜsᴇʀs ɪɴ {0} :\n\n"
 auth_8 : "<b>↬ ᴀᴅᴅᴇᴅ ʙʏ :</b>"
 
-
 reload_1 : "» ʏᴏᴜ ᴄᴀɴ ᴏɴʟʏ ʀᴇғʀᴇsʜ ᴀᴅᴍɪɴ ᴄᴀᴄʜᴇ ᴏɴᴄᴇ ɪɴ 3 ᴍɪɴᴜᴛᴇs.\n\nᴘʟᴇᴀsᴇ ᴛʀʏ ᴀғᴛᴇʀ {0}."
 reload_2 : "» ᴀᴅᴍɪɴ ᴄᴀᴄʜᴇ ʀᴇғʀᴇsʜᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ."
 reload_3 : "» ғᴀɪʟᴇᴅ ᴛᴏ ʀᴇʟᴏᴀᴅ ᴀᴅᴍɪɴ ᴄᴀᴄʜᴇ, ᴍᴀᴋᴇ sᴜʀᴇ ᴛʜᴀᴛ ᴛʜᴇ ʙᴏᴛ ɪs ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ."
 reload_4 : "» ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...\n\nʀᴇʙᴏᴏᴛɪɴɢ {0} ғᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ."
 reload_5 : "sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇʙᴏᴏᴛᴇᴅ {0} ғᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ.\n\nsᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ ᴀɢᴀɪɴ..."
-
 
 admin_1 : "» ᴅɪᴅ ʏᴏᴜ ʀᴇᴍᴇᴍʙᴇʀ ᴛʜᴀᴛ ʏᴏᴜ'ᴠᴇ ʀᴇsᴜᴍᴇᴅ ᴛʜᴇ sᴛʀᴇᴀᴍ ?"
 admin_2 : "➻ sᴛʀᴇᴀᴍ ᴘᴀᴜsᴇᴅ 🎄\n│ \n└ʙʏ : {0} 🥀"
@@ -88,8 +84,6 @@ admin_38 : "» ᴀᴅᴅᴇᴅ 1 ᴜᴘᴠᴏᴛᴇ."
 admin_39 : "» ʀᴇᴍᴏᴠᴇᴅ 1 ᴜᴘᴠᴏᴛᴇ."
 admin_40 : "ᴜᴘᴠᴏᴛᴇᴅ."
 
-
-# Start
 start_1 : "{0} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ.\n\n<b>✫ ᴜᴘᴛɪᴍᴇ :</b> {1}"
 start_2 : "<b>нєу</b> {0}, 🥀\n\n๏ ᴛʜɪs ɪs {1} !\n\n➻ ᴀ ғᴀsᴛ & ᴘᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ғᴇᴀᴛᴜʀᴇs.\n\n<b><u>Sᴜᴘᴘᴏʀᴛᴇᴅ Pʟᴀᴛғᴏʀᴍs :</b></u> ʏᴏᴜᴛᴜʙᴇ, sᴘᴏᴛɪғʏ, ʀᴇssᴏ, ᴀᴘᴘʟᴇ ᴍᴜsɪᴄ ᴀɴᴅ sᴏᴜɴᴅᴄʟᴏᴜᴅ.\n──────────────────\n<b>๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.</b>"
 start_3 : "ʜᴇʏ {0},\nᴛʜɪs ɪs {1}\n\nᴛʜᴀɴᴋs ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ɪɴ {2}, {3} ᴄᴀɴ ɴᴏᴡ ᴩʟᴀʏ sᴏɴɢs ɪɴ ᴛʜɪs ᴄʜᴀᴛ."
@@ -97,58 +91,42 @@ start_4 : "🎄 <b>sᴜᴘᴇʀɢʀᴏᴜᴘ ɴᴇᴇᴅᴇᴅ</b> 🎄\n\nᴘʟ
 start_5 : "<b>↝ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴄʜᴀᴛ ↜</b>\n\nᴛʜɪs ᴄʜᴀᴛ ɪs ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴏɴ {0} ᴅᴀᴛᴀʙᴀsᴇ.\nʀᴇǫᴜᴇsᴛ ᴀ <a href={1}>sᴜᴅᴏ ᴜsᴇʀ</a> ᴛᴏ ᴜɴʙʟᴀᴄᴋʟɪsᴛ ʏᴏᴜʀ ᴄʜᴀᴛ ᴏʀ ᴠɪsɪᴛ <a href={2}>sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.</a>"
 start_6 : "😲 <b>ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</b> 😲\n\n📌 <b>ᴛɪᴛʟᴇ :</b> {0}\n\n⏳ <b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {1} ᴍɪɴᴜᴛᴇs\n👀 <b>ᴠɪᴇᴡs :</b> <code>{2}</code>\n⏰ <b>ᴩᴜʙʟɪsʜᴇᴅ ᴏɴ :</b> {3}\n📎 <b>ᴄʜᴀɴɴᴇʟ :</b> <a href={4}>{5}</a>\n\n<u><b>🥀 sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {6}</b></u>"
 
-
 help_1 : "ᴄʜᴏᴏsᴇ ᴛʜᴇ ᴄᴀᴛᴇɢᴏʀʏ ғᴏʀ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴɴᴀ ɢᴇᴛ ʜᴇʟᴩ.\nᴀsᴋ ʏᴏᴜʀ ᴅᴏᴜʙᴛs ᴀᴛ <a href={0}>sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ</a>\n\nᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ : <code>/</code>"
 help_2 : "ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴍʏ ʜᴇʟᴘ ᴍᴇɴᴜ ɪɴ ʏᴏᴜʀ ᴘᴍ."
-
 
 lang_1 : "» ᴘʟᴇᴀsᴇ ᴄʜᴏᴏsᴇ ᴛʜᴇ ʟᴀɴɢᴜᴀɢᴇ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴɴᴀ sᴇᴛ ᴀs ᴛʜɪs ɢʀᴏᴜᴘ's ᴅᴇғᴀᴜʟᴛ ʟᴀɴɢᴜᴀɢᴇ :"
 lang_2 : "ʟᴀɴɢᴜᴀɢᴇ ᴄʜᴀɴɢᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ."
 lang_3 : "ғᴀɪʟᴇᴅ ᴛᴏ ᴄʜᴀɴɢᴇ ʟᴀɴɢᴜᴀɢᴇ."
 lang_4 : "Yᴏᴜ'ʀᴇ ᴀʟʀᴇᴀᴅʏ ᴏɴ ᴛʜᴇ sᴀᴍᴇ ʟᴀɴɢᴜᴀɢᴇ."
 
-# Settings
-setting_1 : "⚙️ **Music Bot Settings**\n\n🖇**Group:** {0}\n🔖**Group ID:** `{1}`\n\n💡**Choose the function buttons from below which you want to edit or change.**"
-setting_3 : "» ᴅɪʀᴇᴄᴛ : ᴘʟᴀʏs sᴇᴀʀᴄʜ ǫᴜᴇʀɪᴇs ᴅɪʀᴇᴄᴛʟʏ.\n\n» ɪɴʟɪɴᴇ : ʀᴇᴛᴜʀɴs ɪɴʟɪɴᴇ ʙᴜᴛᴛᴏɴs ꜰᴏʀ ᴄʜᴏᴏsɪɴɢ ʙᴇᴛᴡᴇᴇɴ ᴠɪᴅᴇᴏ & ᴀᴜᴅɪᴏ."
-setting_4 : "» ᴇᴠᴇʀʏᴏɴᴇ : ᴀɴʏᴏɴᴇ ᴄᴀɴ ᴜsᴇ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs [sᴋɪᴘ, ᴘᴀᴜsᴇ, ʀᴇsᴜᴍᴇ ᴇᴛᴄ.] ᴘʀᴇsᴇɴᴛ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ.\n\n» ᴀᴅᴍɪɴ ᴏɴʟʏ : ᴏɴʟʏ ᴀᴅᴍɪɴs ᴀɴᴅ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴜsᴇʀs ᴄᴀɴ ᴜsᴇ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs."
-setting_5 : "» ɴᴏ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴜsᴇʀs ꜰᴏᴜɴᴅ."
-setting_9 : "⁉️ What is This?\n\nWhen activated, Bot will delete its message after {0} to make your chat clean and clear."
-setting_10 : "» ɢʀᴏᴜᴘ : ᴘʟᴀʏs ᴍᴜsɪᴄ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ᴡʜᴇʀᴇ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ɪs ɢɪᴠᴇɴ.\n\n» ᴄʜᴀɴɴᴇʟ : ᴘʟᴀʏs ᴍᴜsɪᴄ ɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ ʏᴏᴜ ᴡᴀɴᴛ. sᴇᴛ ᴄʜᴀɴɴᴇʟ ɪᴅ ᴠɪᴀ /channelplay"
-setting_11 : "» ᴇᴠᴇʀʏᴏɴᴇ : ᴀɴʏᴏɴᴇ ᴘʀᴇsᴇɴᴛ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ ᴄᴀɴ ᴘʟᴀʏ ᴍᴜsɪᴄ ʜᴇʀᴇ.\n\n» ᴀᴅᴍɪɴ ᴏɴʟʏ: ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴘʟᴀʏ ᴛʜᴇ ᴍᴜsɪᴄ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ."
-setting_12 : "» ᴘʟᴇᴀsᴇ ᴅᴇғɪɴᴇ ᴄʜᴀɴɴᴇʟ ɪᴅ ᴠɪᴀ /channelplay"
-setting_13 : "Can't change play mode in active group call. Please stop the voice chat first with /stop."
-setting_14 : "⁉️ What is This?\n\nWhen activated, Bot will delete its executed commands (/play, /pause, /shuffle, /stop etc) immediately.\n\nBot will be requiring delete messages admin right for this to work properly."
-setting_15 : "Failed to resolve peer, Make sure you have added bot in your channel and promoted it as admin.\n\nTry setting /channelplay again.."
-setting_16 : "⁉️ What is This?\n\nWhen activated, Bot will suggest your chat in every 1-2 hour about bot commands (How to use them, which are the commands and many other things) randomly."
-setting_17 : "ᴡʜᴇɴ ᴛʜɪs ᴍᴏᴅᴇ ɪs ᴇɴᴀʙʟᴇᴅ, ᴘᴇᴏᴘʟᴇ ᴡɪᴛʜᴏᴜᴛ ᴀᴅᴍɪɴ ʀɪɢʜᴛs ᴄᴀɴ ᴜsᴇ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs ᴀғᴛᴇʀ ᴀ ᴄᴇʀᴛᴀɪɴ ᴀᴍᴏᴜɴᴛ ᴏғ ᴠᴏᴛᴇs."
-setting_18 : "ᴄᴜʀʀᴇɴᴛ ᴜᴘᴠᴏᴛᴇs ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴜsɪɴɢ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs ᴀʀᴇ : {0}"
-setting_19 : "ᴠᴏᴛɪɴɢ ᴍᴏᴅᴇ ɪs ᴅɪsᴀʙʟᴇᴅ."
-setting_20 : "ʟᴏᴡᴇsᴛ ᴜᴘᴠᴏᴛᴇs ᴄᴏᴜɴᴛ ᴄᴀɴ ʙᴇ 2. ʏᴏᴜ ᴄᴀɴ'ᴛ sᴇᴛ ʙᴇʟᴏᴡ 2"
-setting_21 : "ʜɪɢʜᴇsᴛ ᴜᴘᴠᴏᴛᴇs ᴄᴏᴜɴᴛ ᴄᴀɴ ʙᴇ 15. ʏᴏᴜ ᴄᴀɴ'ᴛ sᴇᴛ ᴀʙᴏᴠᴇ 15"
+setting_1 : "<u><b>{0} sᴇᴛᴛɪɴɢs ᴘᴀɴᴇʟ</b></u>\n\n<b>ᴄʜᴀᴛ ɪᴅ :</b> <code>{1}</code>\n<b>ᴄʜᴀᴛ ᴛɪᴛʟᴇ :</b> {2}\n\nᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴄʜᴀɴɢɪɴɢ sᴇᴛᴛɪɴɢs."
+setting_2 : "» ᴅɪʀᴇᴄᴛ : ᴘʟᴀʏs sᴇᴀʀᴄʜ ǫᴜᴇʀɪᴇs ᴅɪʀᴇᴄᴛʟʏ.\n\n» ɪɴʟɪɴᴇ : ʀᴇᴛᴜʀɴs ɪɴʟɪɴᴇ ʙᴜᴛᴛᴏɴs ꜰᴏʀ ᴄʜᴏᴏsɪɴɢ ʙᴇᴛᴡᴇᴇɴ ᴠɪᴅᴇᴏ & ᴀᴜᴅɪᴏ."
+setting_3 : "» ᴇᴠᴇʀʏᴏɴᴇ : ᴀɴʏᴏɴᴇ ᴄᴀɴ ᴜsᴇ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs [sᴋɪᴘ, ᴘᴀᴜsᴇ, ʀᴇsᴜᴍᴇ ᴇᴛᴄ.] ᴘʀᴇsᴇɴᴛ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ.\n\n» ᴀᴅᴍɪɴ ᴏɴʟʏ : ᴏɴʟʏ ᴀᴅᴍɪɴs ᴀɴᴅ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴜsᴇʀs ᴄᴀɴ ᴜsᴇ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs."
+setting_4 : "» ɴᴏ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴜsᴇʀs ꜰᴏᴜɴᴅ."
+setting_5 : "» ɢʀᴏᴜᴘ : ᴘʟᴀʏs ᴍᴜsɪᴄ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ᴡʜᴇʀᴇ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ɪs ɢɪᴠᴇɴ.\n\n» ᴄʜᴀɴɴᴇʟ : ᴘʟᴀʏs ᴍᴜsɪᴄ ɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ ʏᴏᴜ ᴡᴀɴᴛ. sᴇᴛ ᴄʜᴀɴɴᴇʟ ɪᴅ ᴠɪᴀ /channelplay"
+setting_6 : "» ᴇᴠᴇʀʏᴏɴᴇ : ᴀɴʏᴏɴᴇ ᴘʀᴇsᴇɴᴛ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ ᴄᴀɴ ᴘʟᴀʏ ᴍᴜsɪᴄ ʜᴇʀᴇ.\n\n» ᴀᴅᴍɪɴ ᴏɴʟʏ: ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴘʟᴀʏ ᴛʜᴇ ᴍᴜsɪᴄ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ."
+setting_7 : "» ᴘʟᴇᴀsᴇ ᴅᴇғɪɴᴇ ᴄʜᴀɴɴᴇʟ ɪᴅ ᴠɪᴀ /channelplay"
+setting_8 : "ᴡʜᴇɴ ᴛʜɪs ᴍᴏᴅᴇ ɪs ᴇɴᴀʙʟᴇᴅ, ᴘᴇᴏᴘʟᴇ ᴡɪᴛʜᴏᴜᴛ ᴀᴅᴍɪɴ ʀɪɢʜᴛs ᴄᴀɴ ᴜsᴇ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs ᴀғᴛᴇʀ ᴀ ᴄᴇʀᴛᴀɪɴ ᴀᴍᴏᴜɴᴛ ᴏғ ᴠᴏᴛᴇs."
+setting_9 : "ᴄᴜʀʀᴇɴᴛ ᴜᴘᴠᴏᴛᴇs ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴜsɪɴɢ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs ᴀʀᴇ : {0}"
+setting_10 : "ᴠᴏᴛɪɴɢ ᴍᴏᴅᴇ ɪs ᴅɪsᴀʙʟᴇᴅ."
+setting_11 : "ʟᴏᴡᴇsᴛ ᴜᴘᴠᴏᴛᴇs ᴄᴏᴜɴᴛ ᴄᴀɴ ʙᴇ 2. ʏᴏᴜ ᴄᴀɴ'ᴛ sᴇᴛ ʙᴇʟᴏᴡ 2"
+setting_12 : "ʜɪɢʜᴇsᴛ ᴜᴘᴠᴏᴛᴇs ᴄᴏᴜɴᴛ ᴄᴀɴ ʙᴇ 15. ʏᴏᴜ ᴄᴀɴ'ᴛ sᴇᴛ ᴀʙᴏᴠᴇ 15"
 
-set_cb_1 : "Getting Audio Quality Panel..."
-set_cb_2 : "Getting Video Quality Panel..."
-set_cb_3 : "ɢᴇᴛᴛɪɴɢ ᴀᴜᴛʜ ᴜsᴇʀs ᴩᴀɴᴇʟ..."
-set_cb_4 : "ɢᴇᴛᴛɪɴɢ ᴩʟᴀʏ ᴍᴏᴅᴇ ᴩᴀɴᴇʟ..."
-set_cb_5 : "Getting Clean Mode Panel..."
-set_cb_6 : "sᴇᴛᴛɪɴɢ ᴜᴩ ᴄʜᴀɴɢᴇs..."
-set_cb_7 : "» ғᴇᴛᴄʜɪɴɢ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴜsᴇʀs ʟɪsᴛ..."
-set_cb_8 : "» ɢᴇᴛᴛɪɴɢ ʙᴀᴄᴋ..."
+set_cb_1 : "ɢᴇᴛᴛɪɴɢ ᴀᴜᴛʜ ᴜsᴇʀs ᴩᴀɴᴇʟ..."
+set_cb_2 : "ɢᴇᴛᴛɪɴɢ ᴩʟᴀʏ ᴍᴏᴅᴇ ᴩᴀɴᴇʟ..."
+set_cb_3 : "sᴇᴛᴛɪɴɢ ᴜᴩ ᴄʜᴀɴɢᴇs..."
+set_cb_4 : "» ғᴇᴛᴄʜɪɴɢ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴜsᴇʀs ʟɪsᴛ..."
+set_cb_5 : "» ɢᴇᴛᴛɪɴɢ ʙᴀᴄᴋ..."
 
-# Misc
 gstats_1 : "ɢᴇᴛᴛɪɴɢ {0} sᴛᴀᴛs ᴀɴᴅ ɪɴғᴏʀᴍᴀᴛɪᴏɴ...\n\nɪᴛ ᴍᴀʏ ᴛᴀᴋᴇ ᴀ ᴡʜɪʟᴇ, ᴘʟᴇᴀsᴇ ʜᴏʟᴅ ᴏɴ..."
 gstats_2 : "ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ᴛᴏ ᴄʜᴇᴄᴋ ᴛʜᴇ sᴛᴀᴛs ᴏғ {0}."
 gstats_3 : "<b><u>{0} sᴛᴀᴛs ᴀɴᴅ ɪɴғᴏʀᴍᴀᴛɪᴏɴ :</u></b>\n\n<b>ᴀssɪsᴛᴀɴᴛs :</b> <code>{1}</code>\n<b>ʙʟᴏᴄᴋᴇᴅ :</b> <code>{2}</code>\n<b>ᴄʜᴀᴛs:</b> <code>{3}</code>\n<b>ᴜsᴇʀs :</b> <code>{4}</code>\n<b>ᴍᴏᴅᴜʟᴇs :</b> <code>{5}</code>\n<b>sᴜᴅᴏᴇʀs :</b> <code>{6}</code>\n\n<b>ᴀᴜᴛᴏ ʟᴇᴀᴠɪɴɢ ᴀssɪsᴛᴀɴᴛ :</b> {7}\n<b>ᴘʟᴀʏ ᴅᴜʀᴀᴛɪᴏɴ ʟɪᴍɪᴛ :</b> {8} ᴍɪɴᴜᴛᴇs"
 gstats_4 : "ᴛʜɪs ʙᴜᴛᴛᴏɴ ɪs ᴏɴʟʏ ғᴏʀ sᴜᴅᴏᴇʀs."
 gstats_5 : "<b><u>{0} sᴛᴀᴛs ᴀɴᴅ ɪɴғᴏʀᴍᴀᴛɪᴏɴ :</u></b>\n\n<b>ᴍᴏᴅᴜʟᴇs :</b> <code>{1}</code>\n<b>ᴘʟᴀᴛғᴏʀᴍ :</b> <code>{2}</code>\n<b>ʀᴀᴍ :</b> <code>{3}</code>\n<b>ᴘʜʏsɪᴄᴀʟ ᴄᴏʀᴇs :</b> <code>{4}</code>\n<b>ᴛᴏᴛᴀʟ ᴄᴏʀᴇs :</b> <code>{5}</code>\n<b>ᴄᴘᴜ ғʀᴇǫᴜᴇɴᴄʏ :</b> <code>{6}</code>\n\n<b>ᴘʏᴛʜᴏɴ :</b> <code>{7}</code>\n<b>ᴘʏʀᴏɢʀᴀᴍ :</b> <code>{8}</code>\n<b>ᴘʏ-ᴛɢᴄᴀʟʟs :</b> <code>{9}</code>\n\n<b>sᴛᴏʀᴀɢᴇ ᴀᴠᴀɪʟᴀʙʟᴇ :</b> <code>{10} ɢɪʙ</code>\n<b>sᴛᴏʀᴀɢᴇ ᴜsᴇᴅ :</b> <code>{11} ɢɪʙ</code>\n<b>sᴛᴏʀᴀɢᴇ ʟᴇғᴛ :</b> <code>{12} ɢɪʙ</code>\n\n<b>sᴇʀᴠᴇᴅ ᴄʜᴀᴛs :</b> <code>{13}</code>\n<b>sᴇʀᴠᴇᴅ ᴜsᴇʀs :</b> <code>{14}</code>\n<b>ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs :</b> <code>{15}</code>\n<b>sᴜᴅᴏ ᴜsᴇʀs :</b> <code>{16}</code>\n\n<b>ᴛᴏᴛᴀʟ ᴅʙ sɪᴢᴇ :</b> <code>{17} ᴍʙ</code>\n<b>ᴛᴏᴛᴀʟ ᴅʙ sᴛᴏʀᴀɢᴇ :</b> <code>{18} ᴍʙ</code>\n<b>ᴛᴏᴛᴀʟ ᴅʙ ᴄᴏʟʟᴇᴄᴛɪᴏɴs :</b> <code>{19}</code>\n<b>ᴛᴏᴛᴀʟ ᴅʙ ᴋᴇʏs :</b> <code>{20}</code>"
 
-# Play 
-
-#Play Callback 
 playcb_1 : "» ᴀᴡᴡ, ᴛʜɪs ɪs ɴᴏᴛ ғᴏʀ ʏᴏᴜ ʙᴀʙʏ."
 playcb_2 : "» ɢᴇᴛᴛɪɴɢ ɴᴇxᴛ ʀᴇsᴜʟᴛ,\n\nᴘʟᴇᴀsᴇ ᴡᴀɪᴛ..."
 
-# Channel Play
 cplay_1 : "» ʏᴏᴜ ᴄᴀɴ ᴘʟᴀʏ ᴍᴜsɪᴄ ɪɴ ᴄʜᴀɴɴᴇʟs ғʀᴏᴍ {0} ᴛᴏ ᴀɴʏ ᴄʜᴀɴɴᴇʟ ᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ's ʟɪɴᴋᴇᴅ ᴄʜᴀɴɴᴇʟ.\n\n<b>ғᴏʀ ʟɪɴᴋᴇᴅ ᴄʜᴀɴɴᴇʟ :</b>\n<code>/channelplay linked</code>\n\n<b>ғᴏʀ ᴀɴʏ ᴏᴛʜᴇʀ ᴄʜᴀɴɴᴇʟ :</b>\n<code>/channelplay [ᴄʜᴀɴɴᴇʟ ɪᴅ]</code>"
 cplay_2 : "» ᴛʜɪs ᴄʜᴀᴛ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴʏ ʟɪɴᴋᴇᴅ ᴄʜᴀɴɴᴇʟ."
 cplay_3 : "» ᴄʜᴀɴɴᴇʟ ᴅᴇғɪɴᴇᴅ ᴛᴏ {0}.\nᴄʜᴀɴɴᴇʟ ɪᴅ : <code>{1}</code>"
@@ -157,88 +135,36 @@ cplay_5 : "ᴏɴʟʏ ᴄʜᴀɴɴᴇʟs ᴀʀᴇ sᴜᴘᴘᴏʀᴛᴇᴅ."
 cplay_6 : "» ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴛʜᴇ <b>ᴏᴡɴᴇʀ</b> ᴏғ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ {0} ᴛᴏ ᴄᴏɴɴᴇᴄᴛ ɪᴛ ᴡɪᴛʜ ᴛʜɪs ɢʀᴏᴜᴘ.\n<b>ᴄʜᴀɴɴᴇʟ's ᴏᴡɴᴇʀ :</b> @{1}\n\nᴀʟᴛᴇʀɴᴀᴛɪᴠᴇʟʏ ʏᴏᴜ ᴄᴀɴ ʟɪɴᴋ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴛᴏ ᴛʜᴀᴛ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴛʜᴇɴ ᴛʀʏ ᴄᴏɴɴɴᴇᴄᴛɪɴɢ ᴡɪᴛʜ <code>/channelplay linked</code>"
 cplay_7 : "» ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ ᴅɪsᴀʙʟᴇᴅ."
 
-#Play
 play_1 : "🔎"
 play_2 : "<b>➻ ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ ᴍᴏᴅᴇ</b>\n\nᴘʀᴏᴄᴇssɪɴɢ, ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...\n\n<b>ʟɪɴᴋᴇᴅ ᴄʜᴀɴɴᴇʟ :</b> {0}"
 play_3 : "» ғᴀɪʟᴇᴅ ᴛᴏ ᴘʀᴏᴄᴇss ǫᴜᴇʀʏ."
 play_4 : "<b>ᴀᴅᴍɪɴs ᴏɴʟʏ ᴘʟᴀʏ</b>\nᴏɴʟʏ ᴀᴅᴍɪɴs ᴏғ ᴛʜɪs ᴄʜᴀᴛ ᴀʀᴇ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴘʟᴀʏ\n\nᴄʜᴀɴɢᴇ ᴘʟᴀʏ ᴍᴏᴅᴇ ᴠɪᴀ /playmode"
 play_5 : "» ғᴀɪʟᴇᴅ ᴛᴏ ᴘʀᴏᴄᴇss ᴀᴜᴅɪᴏ ғɪʟᴇ.\n\nᴀᴜᴅɪᴏ ғɪʟᴇ sɪᴢᴇ ɪs ʟᴀʀɢᴇʀ ᴛʜᴀɴ ᴛʜᴇ ᴅᴇғɪɴᴇᴅ ʟɪᴍɪᴛ."
 play_6 : "» sᴛʀᴇᴀᴍ's ʟᴏɴɢᴇʀ ᴛʜᴀɴ {0} ᴀʀᴇɴ'ᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴘʟᴀʏ ᴏɴ {1}"
-play_7 : "Sorry! Bot only allows limited number of video calls due to CPU overload issues. Many other chats are using video call right now. Try switching to audio or try again later"
-play_8 : "» ɴᴏᴛ ᴀ ᴠᴀʟɪᴅ ᴠɪᴅᴇᴏ ғɪʟᴇ ᴇxᴛᴇɴsɪᴏɴ.\n\n<b>sᴜᴘᴘᴏʀᴛᴇᴅ ᴇxᴛᴇɴsɪᴏɴs :</b> {0}"
-play_9 : "» ᴠɪᴅᴇᴏ ғɪʟᴇ sɪᴢᴇ sʜᴏᴜʟᴅ ʙᴇ ʟᴇss ᴛʜᴀɴ 1ɢɪʙ."
-play_10 : "<b><u>ʏᴏᴜᴛᴜʙᴇ ᴘʟᴀʏʟɪsᴛ ғᴇᴀᴛᴜʀᴇ</b></u>\n\nsᴇʟᴇᴄᴛ ᴛʜᴇ ᴍᴏᴅᴇ ɪɴ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴘʟᴀʏ ᴡʜᴏʟᴇ ʏᴏᴜᴛᴜʙᴇ ᴘʟᴀʏʟɪsᴛ."
-play_11 : "<b>ᴛɪᴛʟᴇ :</b> {0}\n<b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {1} ᴍɪɴᴜᴛᴇs"
-play_12 : "<u><b>{0} sᴘᴏᴛɪғʏ ᴘʟᴀʏᴇʀ</b></u>\n\n<b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {1}"
-play_13 : "<u><b>{0} ᴀᴘᴘʟᴇ ᴘʟᴀʏᴇʀ</b></u>\n\n<b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {1}"
-play_14 : "**Unable to verify the URL.**\nBot wonders if this url belongs to any of the following platforms: Youtube, AppleMusic, Spotify, Resso and Soundcloud.\n\nYou can use /stream for M3u8 or Remote Links."
-play_15 : "» ʟɪᴠᴇ sᴛʀᴇᴀᴍ ᴅᴇᴛᴇᴄᴛᴇᴅ.\n\nᴀʀᴇ ʏᴏᴜ sᴜʀᴇ ᴛʜᴀᴛ ʏᴏᴜ ᴡᴀɴɴᴀ ᴘʟᴀʏ ᴛʜɪs ʟɪᴠᴇ sᴛʀᴇᴀᴍ ?"
-play_16 : "Failed to fetch track details. Try playing any other."
-play_17 : "» ғᴀɪʟᴇᴅ ᴛᴏ ᴘʀᴏᴄᴇss ǫᴜᴇʀʏ.\n\nɪ ᴄᴀɴ ᴏɴʟʏ ᴘʟᴀʏ sᴘᴏᴛɪғʏ ᴛʀᴀᴄᴋs, ᴀʟʙᴜᴍs, ᴀʀᴛɪsᴛs ᴀɴᴅ ᴘʟᴀʏʟɪsᴛs."
-play_18 : "ɴᴏ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ.\n\nᴛᴏ ᴜsᴇ ғᴏʀᴄᴇ ᴩʟᴀʏ, ᴛʜᴇʀᴇ ᴍᴜsᴛ ʙᴇ ᴀɴ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇᴄʜᴀᴛ."
-play_19 : "ᴘʟᴇᴀsᴇ ᴛᴜʀɴ ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ, ɪ'ᴍ ᴜɴᴀʙʟᴇ ᴛᴏ sᴛʀᴇᴀᴍ ᴜʀʟs."
-play_20 : "<b>ᴜsᴀɢᴇ :</b> /play [sᴏɴɢ ɴᴀᴍᴇ/ʏᴏᴜᴛᴜʙᴇ ᴜʀʟ/ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴀᴜᴅɪᴏ/ᴠɪᴅᴇᴏ ғɪʟᴇ]"
+play_7 : "» ɴᴏᴛ ᴀ ᴠᴀʟɪᴅ ᴠɪᴅᴇᴏ ғɪʟᴇ ᴇxᴛᴇɴsɪᴏɴ.\n\n<b>sᴜᴘᴘᴏʀᴛᴇᴅ ᴇxᴛᴇɴsɪᴏɴs :</b> {0}"
+play_8 : "» ᴠɪᴅᴇᴏ ғɪʟᴇ sɪᴢᴇ sʜᴏᴜʟᴅ ʙᴇ ʟᴇss ᴛʜᴀɴ 1ɢɪʙ."
+play_9 : "<b><u>ʏᴏᴜᴛᴜʙᴇ ᴘʟᴀʏʟɪsᴛ ғᴇᴀᴛᴜʀᴇ</b></u>\n\nsᴇʟᴇᴄᴛ ᴛʜᴇ ᴍᴏᴅᴇ ɪɴ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴘʟᴀʏ ᴡʜᴏʟᴇ ʏᴏᴜᴛᴜʙᴇ ᴘʟᴀʏʟɪsᴛ."
+play_10 : "<b>ᴛɪᴛʟᴇ :</b> {0}\n<b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {1} ᴍɪɴᴜᴛᴇs"
+play_11 : "<u><b>{0} sᴘᴏᴛɪғʏ ᴘʟᴀʏᴇʀ</b></u>\n\n<b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {1}"
+play_12 : "<u><b>{0} ᴀᴘᴘʟᴇ ᴘʟᴀʏᴇʀ</b></u>\n\n<b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {1}"
+play_13 : "» ʟɪᴠᴇ sᴛʀᴇᴀᴍ ᴅᴇᴛᴇᴄᴛᴇᴅ.\n\nᴀʀᴇ ʏᴏᴜ sᴜʀᴇ ᴛʜᴀᴛ ʏᴏᴜ ᴡᴀɴɴᴀ ᴘʟᴀʏ ᴛʜɪs ʟɪᴠᴇ sᴛʀᴇᴀᴍ ?"
+play_14 : "ꜰᴀɪʟᴇᴅ ᴛᴏ ꜰᴇᴛᴄʜ ᴛʀᴀᴄᴋ ᴅᴇᴛᴀɪʟs.\n\nᴛʀʏ ᴘʟᴀʏɪɴɢ ᴀɴʏ ᴏᴛʜᴇʀ."
+play_15 : "» ғᴀɪʟᴇᴅ ᴛᴏ ᴘʀᴏᴄᴇss ǫᴜᴇʀʏ.\n\nɪ ᴄᴀɴ ᴏɴʟʏ ᴘʟᴀʏ sᴘᴏᴛɪғʏ ᴛʀᴀᴄᴋs, ᴀʟʙᴜᴍs, ᴀʀᴛɪsᴛs ᴀɴᴅ ᴘʟᴀʏʟɪsᴛs."
+play_16 : "ɴᴏ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ.\n\nᴛᴏ ᴜsᴇ ғᴏʀᴄᴇ ᴩʟᴀʏ, ᴛʜᴇʀᴇ ᴍᴜsᴛ ʙᴇ ᴀɴ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇᴄʜᴀᴛ."
+play_17 : "ᴘʟᴇᴀsᴇ ᴛᴜʀɴ ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ, ɪ'ᴍ ᴜɴᴀʙʟᴇ ᴛᴏ sᴛʀᴇᴀᴍ ᴜʀʟs."
+play_18 : "<b>ᴜsᴀɢᴇ :</b> /play [sᴏɴɢ ɴᴀᴍᴇ/ʏᴏᴜᴛᴜʙᴇ ᴜʀʟ/ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴀᴜᴅɪᴏ/ᴠɪᴅᴇᴏ ғɪʟᴇ]"
+play_19 : "Queued Playlist :"
+play_20 : "Queued Position-"
+play_21 : "ᴀᴅᴅᴇᴅ {0} ᴛʀᴀᴄᴋs ᴛᴏ ǫᴜᴇᴜᴇ.\n\n<b>ᴄʜᴇᴄᴋ :</b> <a href={1}>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>"
+play_22 : "sᴇʟᴇᴄᴛ ᴛʜᴇ ᴍᴏᴅᴇ ɪɴ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴘʟᴀʏ ᴛʜᴇ ǫᴜᴇʀɪᴇs ɪɴsɪᴅᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ : {0}"
 
-#Playlist
-playlist_1 : "**Usage:** /play [Music Name or Youtube Link or Reply to Audio]\n\nIf you want to play Bot's Server Playlist! Press the button below."
-playlist_2 : "Getting your playlist. Please wait"
-playlist_3 : "You have no playlist on Bot's Server."
-playlist_4 : "Fetched Playlist:\n\n"
-playlist_5 :  "    Duration- {0} Mins"
-playlist_6 : "Contact me in PM for deletion of Playlists."
-playlist_7 : "Tracks Inside Playlist: {0}\n\nPress the Buttons to delete a particular track in your playlist.\n\nTo delete whole playlist: Press Del Whole Playlist button."
-playlist_8 : "Already Exists\n\nThis track exists in your playlist."
-playlist_9 : "Sorry! You can only have {0} music in a playlist."
-playlist_10 : "Playlist Addition\n\n{0}\nadded to your playlist."
-playlist_11 : "Successfully deleted your track."
-playlist_12 : "Failed to delete your track."
-playlist_13 : "Deleted your whole playlists from the server. "
-playlist_14 : "**Are you Sure you want to delete your whole playlist?**\n\nYou'll lost your playlist and this can't be recovered later."
-playlist_15 : "[Checkout Whole Playlist]({0})"
-playlist_16 : "Queued Playlist:"
-playlist_17 : "Queued Position-"
-playlist_18 : "ᴀᴅᴅᴇᴅ {0} ᴛʀᴀᴄᴋs ᴛᴏ ǫᴜᴇᴜᴇ.\n\n<b>ᴄʜᴇᴄᴋ :</b> <a href={1}>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>"
-
-#Playmode
-playmode_1 : "Select the mode in which you want to play the queries inside your group[{0}]."
-playmode_2 : "Settings changed and saved successfully by {0}"
-
-#Stream 
 str_1 : "ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴍ3ᴜ8 ᴏʀ ɪɴᴅᴇx ʟɪɴᴋs."
 str_2 : "➻ ᴠᴀʟɪᴅ sᴛʀᴇᴀᴍ ᴠᴇʀɪғɪᴇᴅ.\n\nᴘʀᴏᴄᴇssɪɴɢ..."
 str_3 : "ғᴀɪʟᴇᴅ ᴛᴏ sᴛʀᴇᴀᴍ ʏᴏᴜᴛᴜʙᴇ ʟɪᴠᴇ sᴛʀᴇᴀᴍ, ɴᴏ ʟɪᴠᴇ ꜰᴏʀᴍᴀᴛ ꜰᴏᴜɴᴅ."
 
-#TopPlay
-tracks_1 : "**Processing {0} Top 10 Playlist**\nThis could take some mins(around 3-4 mins).. Please Wait...\n\n**👤Requested By:** {1}\n\nCheck Top 10 tracks by /gstats"
-tracks_2 : "**Error**\n\nThere's no **{0} Top 10 Playlist** on bot's servers. Please try any other playlist"
-
-# TOOLS
-
-#Lyrics
-lyrics_1 : "**Usage:**\n\n/lyrics [ Music Name]"
-lyrics_2 : "Searching Lyrics"
-lyrics_3 : "❌ Failed to fetch lyrics😭.\n\n💡**Tried Searching For:** {0}"
-lyrics_4 : "Click on the button below and get searched lyrics to avoid long spam types lyrics search."
-
-#Ping
 ping_1 : "{0} ɪs ᴘɪɴɢɪɴɢ..."
 ping_2 : "🏓 ᴩᴏɴɢ : <code>{0}ᴍs</code>\n\n<b><u>{1} sʏsᴛᴇᴍ sᴛᴀᴛs :</u></b>\n\n↬ ᴜᴩᴛɪᴍᴇ : {2}\n↬ ʀᴀᴍ : {3}\n↬ ᴄᴩᴜ : {4}\n↬ ᴅɪsᴋ : {5}\n↬ ᴩʏ-ᴛɢᴄᴀʟʟs : <code>{6}ᴍs</code>"
 
-
-# Song
-song_1 : "You can download Music or Video from YouTube only in private chat. Please start me in private chat."
-song_2 : "**Usage:**\n\n/song [Music Name] or [Youtube Link]"
-song_3 : "Live Link Detected. I am not able to download live youtube videos. "
-song_4 : "**🔗Title:**- {0}\n\nSelect the type in which you want to download."
-song_5 : "Not a valid Youtube Link"
-song_6 : "Getting Formats.. \n\nPlease Wait.."
-song_7 : "Failed to get available formats for the video. Please try any other track."
-song_8 : "Download Started\n\nDownloading speed could be slow. Please hold on.."
-song_9 : "Failed to download song from Youtube-DL\n\n**Reason:** {0}"
-song_10 : "Failed to upload on telegram from servers."
-song_11 : "Uploading Started\n\nUploading speed could be slow. Please hold on.."
-
-# Tools - Queue
 queue_1 : "» ғᴇᴛᴄʜɪɴɢ ǫᴜᴇᴜᴇ...\n\nᴘʟᴇᴀsᴇ ᴡᴀɪᴛ..."
 queue_2 : "» ǫᴜᴇᴜᴇ ᴇᴍᴘᴛʏ."
 queue_3 : "<u>» ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴄʜᴇᴄᴋ ᴛʜᴇ ʟɪsᴛ ᴏғ ᴛʜᴇ ǫᴜᴇᴜᴇᴅ ᴛʀᴀᴄᴋs :</u> <a href={0}>ʜᴇʀᴇ</a>"
@@ -248,22 +174,13 @@ queue_6 : "<b>🕚 ᴅᴜʀᴀᴛɪᴏɴ :</b> ᴜɴᴋɴᴏᴡɴ ᴅᴜʀᴀᴛ
 queue_7 : "\nᴄʟɪᴄᴋ ᴏɴ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ ǫᴜᴇᴜᴇᴅ ʟɪsᴛ."
 queue_8 : "<b>{0} ᴘʟᴀʏᴇʀ</b>\n\n🎄 <b>sᴛʀᴇᴀᴍɪɴɢ :</b> {1}\n\n🔗 <b>sᴛʀᴇᴀᴍ ᴛʏᴘᴇ :</b> {2}\n🥀 <b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {3}\n{4}"
 
-# All Streaming Lines
 stream_1 : "➲ <b>Sᴛᴀʀᴛᴇᴅ Sᴛʀᴇᴀᴍɪɴɢ |</b>\n\n<b>‣ Tɪᴛʟᴇ :</b> <a href={0}>{1}</a>\n<b>‣ Dᴜʀᴀᴛɪᴏɴ :</b> {2} ᴍɪɴᴜᴛᴇs\n<b>‣ Rᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {3}"
 stream_2 : "➲ <b>Sᴛᴀʀᴛᴇᴅ Sᴛʀᴇᴀᴍɪɴɢ |</b>\n\n<b>‣ Sᴛʀᴇᴀᴍ ᴛʏᴘᴇ :</b> ʟɪᴠᴇ sᴛʀᴇᴀᴍ [ᴜʀʟ]\n<b>‣ Rᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {0}"
 
-# Inline Buttons
 
-#General Buttons
 CLOSE_BUTTON  : "🗑 Close"
-CLOSEMENU_BUTTON  : "🗑 Close Menu"
 BACK_BUTTON : "⬅ Back"
-UNBAN_BUTTON : "🗑 Unban Assistant"
 
-#Lyrics
-L_B_1 : "🚀 Checkout Lyrics Now"
-
-# Start
 S_B_1 : "Aᴅᴅ ᴍᴇ"
 S_B_2 : "Sᴜᴘᴘᴏʀᴛ"
 S_B_3 : "Aᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ"
@@ -274,7 +191,6 @@ S_B_7 : "Sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ"
 S_B_8 : "👀 ʏᴏᴜᴛᴜʙᴇ 👀"
 S_B_9 : "🥀 sᴜᴩᴩᴏʀᴛ 🥀"
 
-#Help 
 H_B_1 : "ᴀᴅᴍɪɴ"
 H_B_2 : "ᴀᴜᴛʜ"
 H_B_3 : "ʙʟᴀᴄᴋʟɪsᴛ"
@@ -285,32 +201,11 @@ H_B_7 : "ᴩʟᴀʏ"
 H_B_8 : "sᴛᴀʀᴛ"
 H_B_9 : "sᴜᴅᴏ"
 
-#PlayMode
-PM_B_1 : "DirectPlay"
-PM_B_2 : "InlineMarkup"
-PM_B_3 : "ChannelPlay"
-
-#Play
 P_B_1 : "ᴀᴜᴅɪᴏ"
 P_B_2 : "ᴠɪᴅᴇᴏ"
 P_B_3 : "ʟɪᴠᴇ sᴛʀᴇᴀᴍ"
-P_B_4 : "🎵 Play Playlist"
-P_B_5 : "ɴᴏʀᴍᴀʟ"
+P_B_4 : "ɴᴏʀᴍᴀʟ"
 
-#Playlist
-PL_B_1 : "🚀 Play Playlist"
-PL_B_2 : "✚ Playlists"
-PL_B_3 : "🔗 CPanel"
-PL_B_4 : "📡 Play Mode"
-PL_B_5 : "🔄 Del Whole Playlist"
-PL_B_6 : "↗️ Delete Playlist"
-PL_B_7 : "❗️ Yes, I'm sure. Delete it"
-PL_B_8 : "🔢 Play Top 10"
-PL_B_9 : "🤖 Play Global Top 10 Tracks"
-PL_B_10 : "🏘 Play Group's Top 10 Tracks"
-PL_B_11 : "👤 Play Personal Top 10 Tracks"
-
-#Settings
 ST_B_1 : "Aᴜᴛʜ ᴜsᴇʀs"
 ST_B_2 : "Pʟᴀʏ ᴍᴏᴅᴇ"
 ST_B_3 : "Lᴀɴɢᴜᴀɢᴇ"
@@ -326,22 +221,13 @@ ST_B_12 : "ɪɴʟɪɴᴇ"
 ST_B_13 : "Aᴅᴍɪɴ ᴄᴍᴅs ➜"
 ST_B_14 : "Pʟᴀʏ ᴛʏᴘᴇ ➜"
 
-#Song
-SG_B_1 : "↗️ Open Private Chat"
-SG_B_2 : "🔊 Audio"
-SG_B_3 : "🎥 Video"
-
-#Stats
 SA_B_1 : "ᴏᴠᴇʀᴀʟʟ sᴛᴀᴛs"
 SA_B_2 : "ɢᴇɴᴇʀᴀʟ"
 SA_B_3 : "ᴏᴠᴇʀᴀʟʟ"
 
-#Queue
 QU_B_1 : "ǫᴜᴇᴜᴇ"
 QU_B_2 : " {0} —————————— {1}"
 
-
-#Sudo
 sudo_1 : "» {0} ɪs ᴀʟʀᴇᴀᴅʏ ɪɴ sᴜᴅᴏ ᴜsᴇʀs ʟɪsᴛ."
 sudo_2 : "» ᴀᴅᴅᴇᴅ {0} ᴛᴏ sᴜᴅᴏ ᴜsᴇʀs ʟɪsᴛ." 
 sudo_3 : "» {0} ɪs ɴᴏᴛ ɪɴ sᴜᴅᴏ ᴜsᴇʀs ʟɪsᴛ."
@@ -351,7 +237,6 @@ sudo_6 : "\n<u><b>✨ sᴜᴅᴏ ᴜsᴇʀs :</b></u>\n"
 sudo_7 : "» ɴᴏ sᴜᴅᴏ ᴜsᴇʀs ғᴏᴜɴᴅ."
 sudo_8 : "ғᴀɪʟᴇᴅ."
 
-#Block
 block_1 : "» {0} ɪs ᴀʟʀᴇᴀᴅʏ ʙʟᴏᴄᴋᴇᴅ ғʀᴏᴍ ᴛʜᴇ ʙᴏᴛ."
 block_2 : "» ᴀᴅᴅᴇᴅ {0} ᴛᴏ ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs ʟɪsᴛ."
 block_3 : "» {0} ɪs ɴᴏᴛ ɪɴ ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs ʟɪsᴛ."
@@ -360,7 +245,6 @@ block_5 : "» ɴᴏ ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs ғᴏᴜɴᴅ."
 block_6 : "» ɢᴇᴛᴛɪɴɢ ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs ʟɪsᴛ..."
 block_7 : "<b>😫 ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs :</b>\n\n"
 
-#Blacklist Chats
 black_1 : "<b>ᴇxᴀᴍᴘʟᴇ :</b>\n\n/blacklistchat [ᴄʜᴀᴛ ɪᴅ]"
 black_2 : "» ᴛʜɪs ᴄʜᴀᴛ ɪs ᴀʟʀᴇᴀᴅʏ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ."
 black_3 : "» sᴜᴄᴄᴇssғᴜʟʟʏ ᴀᴅᴅᴇᴅ ᴛᴏ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴄʜᴀᴛs."
@@ -371,19 +255,16 @@ black_7 : "» ʟɪsᴛ ᴏғ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴄʜᴀᴛs :\n\n"
 black_8 : "» ɴᴏ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴄʜᴀᴛs ᴏɴ {0}."
 black_9 : "» sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ."
 
-#maintenance
 maint_1 : "<b>ᴇxᴀᴍᴘʟᴇ :</b>\n/maintenance [ᴇɴᴀʙʟᴇ | ᴅɪsᴀʙʟᴇ]"
 maint_2 : "» {0} ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ᴍᴏᴅᴇ ᴇɴᴀʙʟᴇᴅ."
 maint_3 : "» {0} ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ᴍᴏᴅᴇ ᴅɪsᴀʙʟᴇᴅ."
 maint_4 : "» ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ᴍᴏᴅᴇ ɪs ᴀʟʀᴇᴀᴅʏ ᴇɴᴀʙʟᴇᴅ."
 maint_5 : "» ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ᴍᴏᴅᴇ ɪs ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ."
 
-#log
 log_1 : "<b>ᴇxᴀᴍᴘʟᴇ :</b>\n/logger [ᴇɴᴀʙʟᴇ | ᴅɪsᴀʙʟᴇ]"
 log_2 : "ᴇɴᴀʙʟᴇᴅ ʟᴏɢɢɪɴɢ."
 log_3 : "ᴅɪsᴀʙʟᴇᴅ ʟᴏɢɢɪɴɢ."
 
-#broadcast
 broad_1 : "» sᴛᴀʀᴛᴇᴅ ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ..."
 broad_2 : "<b>ᴇxᴀᴍᴘʟᴇ :</b>\n\n/broadcast [ᴍᴇssᴀɢᴇ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ]"
 broad_3 : "» ʙʀᴏᴀᴅᴄᴀsᴛᴇᴅ ᴍᴇssᴀɢᴇ ᴛᴏ {0} ᴄʜᴀᴛs ᴡɪᴛʜ {1} ᴘɪɴs ғʀᴏᴍ ᴛʜᴇ ʙᴏᴛ."
@@ -393,7 +274,6 @@ broad_6 : "➻ ᴀssɪsᴛᴀɴᴛ ʙʀᴏᴀᴅᴄᴀsᴛ :\n\n"
 broad_7 : "↬ ᴀssɪsᴛᴀɴᴛ {0} ʙʀᴏᴀᴅᴄᴀsᴛᴇᴅ ɪɴ {1} ᴄʜᴀᴛs."
 broad_8 : "» ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ."
 
-#server
 server_1 : "» ғᴀɪʟᴇᴅ ᴛᴏ ɢᴇᴛ ʟᴏɢs."
 server_2 : "ᴘʟᴇᴀsᴇ ᴍᴀᴋᴇ sᴜʀᴇ ᴛʜᴀᴛ ʏᴏᴜʀ ʜᴇʀᴏᴋᴜ ᴀᴘɪ ᴋᴇʏ ᴀɴᴅ ᴀᴘᴘ ɴᴀᴍᴇ ᴀʀᴇ ᴄᴏɴғɪɢᴜʀᴇᴅ ᴄᴏʀʀᴇᴄᴛʟʏ."
 server_3 : "ᴄʜᴇᴄᴋɪɴɢ ꜰᴏʀ ᴀᴠᴀɪʟᴀʙʟᴇ ᴜᴘᴅᴀᴛᴇs..."
@@ -410,7 +290,6 @@ server_13 : "<b>⇆ ʀᴜɴɴɪɴɢ ᴜᴩʟᴏᴀᴅ sᴩᴇᴇᴅᴛᴇsᴛ...
 server_14 : "<b>↻ sʜᴀʀɪɴɢ sᴩᴇᴇᴅᴛᴇsᴛ ʀᴇsᴜʟᴛs...</b>"
 server_15 : "✯ <b>sᴩᴇᴇᴅᴛᴇsᴛ ʀᴇsᴜʟᴛs</b> ✯\n\n<u><b>ᴄʟɪᴇɴᴛ :</b></u>\n<b>» ɪsᴩ :</b> {0}\n<b>» ᴄᴏᴜɴᴛʀʏ :</b> {1}\n\n<u><b>sᴇʀᴠᴇʀ :</b></u>\n<b>» ɴᴀᴍᴇ :</b> {2}\n<b>» ᴄᴏᴜɴᴛʀʏ :</b> {3}, {4}\n<b>» sᴩᴏɴsᴏʀ :</b> {5}\n<b>» ʟᴀᴛᴇɴᴄʏ :</b> {6}\n<b>» ᴩɪɴɢ :</b> {7}"
 
-#gban
 gban_1 : "» ᴡʜʏ ᴅɪᴅ ʏᴏᴜ ᴡᴀɴɴᴀ ɢʙᴀɴ ʏᴏᴜʀsᴇʟғ ʙᴀʙʏ ?"
 gban_2 : "» ᴡʜʏ sʜᴏᴜʟᴅ ɪ ɢʙᴀɴ ᴍʏsᴇʟғ ?"
 gban_3 : "» ʏᴏᴜ ᴄᴀɴ'ᴛ ɢʙᴀɴ ᴍʏ sᴜᴅᴏᴇʀs."

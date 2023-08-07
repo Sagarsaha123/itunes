@@ -69,7 +69,7 @@ async def unauthusers(client, message: Message, _):
 async def authusers(client, message: Message, _):
     _wtf = await get_authuser_names(message.chat.id)
     if not _wtf:
-        return await message.reply_text(_["setting_5"])
+        return await message.reply_text(_["setting_4"])
     else:
         j = 0
         mystic = await message.reply_text(_["auth_6"])

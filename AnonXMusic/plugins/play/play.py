@@ -116,14 +116,14 @@ async def play_commnd(
                 ext = video_telegram.file_name.split(".")[-1]
                 if ext.lower() not in formats:
                     return await mystic.edit_text(
-                        _["play_8"].format(f"{' | '.join(formats)}")
+                        _["play_7"].format(f"{' | '.join(formats)}")
                     )
             except:
                 return await mystic.edit_text(
-                    _["play_8"].format(f"{' | '.join(formats)}")
+                    _["play_7"].format(f"{' | '.join(formats)}")
                 )
         if video_telegram.file_size > config.TG_VIDEO_FILESIZE_LIMIT:
-            return await mystic.edit_text(_["play_9"])
+            return await mystic.edit_text(_["play_8"])
         file_path = await Telegram.get_filepath(video=video_telegram)
         if await Telegram.download(_, message, mystic, file_path):
             message_link = await Telegram.get_link(message)
@@ -172,7 +172,7 @@ async def play_commnd(
                 else:
                     plist_id = url.split("=")[1]
                 img = config.PLAYLIST_IMG_URL
-                cap = _["play_10"]
+                cap = _["play_9"]
             else:
                 try:
                     details, track_id = await YouTube.track(url)
@@ -180,7 +180,7 @@ async def play_commnd(
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "youtube"
                 img = details["thumb"]
-                cap = _["play_11"].format(
+                cap = _["play_10"].format(
                     details["title"],
                     details["duration_min"],
                 )
@@ -197,7 +197,7 @@ async def play_commnd(
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "youtube"
                 img = details["thumb"]
-                cap = _["play_11"].format(details["title"], details["duration_min"])
+                cap = _["play_10"].format(details["title"], details["duration_min"])
             elif "playlist" in url:
                 try:
                     details, plist_id = await Spotify.playlist(url)
@@ -206,7 +206,7 @@ async def play_commnd(
                 streamtype = "playlist"
                 plist_type = "spplay"
                 img = config.SPOTIFY_PLAYLIST_IMG_URL
-                cap = _["play_12"].format(app.mention, message.from_user.mention)
+                cap = _["play_11"].format(app.mention, message.from_user.mention)
             elif "album" in url:
                 try:
                     details, plist_id = await Spotify.album(url)
@@ -215,7 +215,7 @@ async def play_commnd(
                 streamtype = "playlist"
                 plist_type = "spalbum"
                 img = config.SPOTIFY_ALBUM_IMG_URL
-                cap = _["play_12"].format(app.mention, message.from_user.mention)
+                cap = _["play_11"].format(app.mention, message.from_user.mention)
             elif "artist" in url:
                 try:
                     details, plist_id = await Spotify.artist(url)
@@ -224,9 +224,9 @@ async def play_commnd(
                 streamtype = "playlist"
                 plist_type = "spartist"
                 img = config.SPOTIFY_ARTIST_IMG_URL
-                cap = _["play_12"].format(message.from_user.first_name)
+                cap = _["play_11"].format(message.from_user.first_name)
             else:
-                return await mystic.edit_text(_["play_17"])
+                return await mystic.edit_text(_["play_15"])
         elif await Apple.valid(url):
             if "album" in url:
                 try:
@@ -235,7 +235,7 @@ async def play_commnd(
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "youtube"
                 img = details["thumb"]
-                cap = _["play_11"].format(details["title"], details["duration_min"])
+                cap = _["play_10"].format(details["title"], details["duration_min"])
             elif "playlist" in url:
                 spotify = True
                 try:
@@ -244,7 +244,7 @@ async def play_commnd(
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "playlist"
                 plist_type = "apple"
-                cap = _["play_13"].format(app.mention, message.from_user.mention)
+                cap = _["play_12"].format(app.mention, message.from_user.mention)
                 img = url
             else:
                 return await mystic.edit_text(_["play_3"])
@@ -255,7 +255,7 @@ async def play_commnd(
                 return await mystic.edit_text(_["play_3"])
             streamtype = "youtube"
             img = details["thumb"]
-            cap = _["play_11"].format(details["title"], details["duration_min"])
+            cap = _["play_10"].format(details["title"], details["duration_min"])
         elif await SoundCloud.valid(url):
             try:
                 details, track_path = await SoundCloud.download(url)
@@ -293,7 +293,7 @@ async def play_commnd(
                 await mystic.edit_text(_["black_9"])
                 return await app.send_message(
                     chat_id=config.LOGGER_ID,
-                    text=_["play_19"],
+                    text=_["play_17"],
                 )
             except Exception as e:
                 return await mystic.edit_text(_["general_2"].format(type(e).__name__))
@@ -320,7 +320,7 @@ async def play_commnd(
         if len(message.command) < 2:
             buttons = botplaylist_markup(_)
             return await mystic.edit_text(
-                _["play_20"],
+                _["play_18"],
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
         slider = True
@@ -350,7 +350,7 @@ async def play_commnd(
                     "f" if fplay else "d",
                 )
                 return await mystic.edit_text(
-                    _["play_15"],
+                    _["play_13"],
                     reply_markup=InlineKeyboardMarkup(buttons),
                 )
         try:
@@ -408,7 +408,7 @@ async def play_commnd(
                 await mystic.delete()
                 await message.reply_photo(
                     photo=details["thumb"],
-                    caption=_["play_11"].format(
+                    caption=_["play_10"].format(
                         details["title"].title(),
                         details["duration_min"],
                     ),
@@ -476,7 +476,7 @@ async def play_music(client, CallbackQuery, _):
             "f" if fplay else "d",
         )
         return await mystic.edit_text(
-            _["play_15"],
+            _["play_13"],
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     video = True if mode == "v" else None
@@ -632,7 +632,7 @@ async def slider_queries(client, CallbackQuery, _):
         buttons = slider_markup(_, vidid, user_id, query, query_type, cplay, fplay)
         med = InputMediaPhoto(
             media=thumbnail,
-            caption=_["play_11"].format(
+            caption=_["play_10"].format(
                 title.title(),
                 duration_min,
             ),
@@ -653,7 +653,7 @@ async def slider_queries(client, CallbackQuery, _):
         buttons = slider_markup(_, vidid, user_id, query, query_type, cplay, fplay)
         med = InputMediaPhoto(
             media=thumbnail,
-            caption=_["play_11"].format(
+            caption=_["play_10"].format(
                 title.title(),
                 duration_min,
             ),

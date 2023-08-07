@@ -44,7 +44,7 @@ from config import BANNED_USERS, OWNER_ID
 async def settings_mar(client, message: Message, _):
     buttons = setting_markup(_)
     await message.reply_text(
-        _["setting_1"].format(message.chat.id, message.chat.title),
+        _["setting_1"].format(app.mention, message.chat.id, message.chat.title),
         reply_markup=InlineKeyboardMarkup(buttons),
     )
 
@@ -53,12 +53,13 @@ async def settings_mar(client, message: Message, _):
 @languageCB
 async def settings_cb(client, CallbackQuery, _):
     try:
-        await CallbackQuery.answer(_["set_cb_8"])
+        await CallbackQuery.answer(_["set_cb_5"])
     except:
         pass
     buttons = setting_markup(_)
     return await CallbackQuery.edit_message_text(
         _["setting_1"].format(
+            app.mention,
             CallbackQuery.message.chat.id,
             CallbackQuery.message.chat.title,
         ),
@@ -99,28 +100,28 @@ async def without_Admin_rights(client, CallbackQuery, _):
     command = CallbackQuery.matches[0].group(1)
     if command == "SEARCHANSWER":
         try:
-            return await CallbackQuery.answer(_["setting_3"], show_alert=True)
+            return await CallbackQuery.answer(_["setting_2"], show_alert=True)
         except:
             return
     if command == "PLAYMODEANSWER":
         try:
-            return await CallbackQuery.answer(_["setting_10"], show_alert=True)
+            return await CallbackQuery.answer(_["setting_5"], show_alert=True)
         except:
             return
     if command == "PLAYTYPEANSWER":
         try:
-            return await CallbackQuery.answer(_["setting_11"], show_alert=True)
+            return await CallbackQuery.answer(_["setting_6"], show_alert=True)
         except:
             return
     if command == "AUTHANSWER":
         try:
-            return await CallbackQuery.answer(_["setting_4"], show_alert=True)
+            return await CallbackQuery.answer(_["setting_3"], show_alert=True)
         except:
             return
     if command == "VOTEANSWER":
         try:
             return await CallbackQuery.answer(
-                _["setting_17"],
+                _["setting_8"],
                 show_alert=True,
             )
         except:
@@ -129,14 +130,14 @@ async def without_Admin_rights(client, CallbackQuery, _):
         current = await get_upvote_count(CallbackQuery.message.chat.id)
         try:
             return await CallbackQuery.answer(
-                _["setting_18"].format(current),
+                _["setting_9"].format(current),
                 show_alert=True,
             )
         except:
             return
     if command == "PM":
         try:
-            await CallbackQuery.answer(_["set_cb_4"], show_alert=True)
+            await CallbackQuery.answer(_["set_cb_2"], show_alert=True)
         except:
             pass
         playmode = await get_playmode(CallbackQuery.message.chat.id)
@@ -157,7 +158,7 @@ async def without_Admin_rights(client, CallbackQuery, _):
         buttons = playmode_users_markup(_, Direct, Group, Playtype)
     if command == "AU":
         try:
-            await CallbackQuery.answer(_["set_cb_3"], show_alert=True)
+            await CallbackQuery.answer(_["set_cb_1"], show_alert=True)
         except:
             pass
         is_non_admin = await is_nonadmin_chat(CallbackQuery.message.chat.id)
@@ -183,14 +184,14 @@ async def addition(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
     mode = callback_data.split(None, 1)[1]
     if not await is_skipmode(CallbackQuery.message.chat.id):
-        return await CallbackQuery.answer(_["setting_19"], show_alert=True)
+        return await CallbackQuery.answer(_["setting_10"], show_alert=True)
     current = await get_upvote_count(CallbackQuery.message.chat.id)
     if mode == "M":
         final = current - 2
         print(final)
         if final == 0:
             return await CallbackQuery.answer(
-                _["setting_20"],
+                _["setting_11"],
                 show_alert=True,
             )
         if final <= 2:
@@ -201,7 +202,7 @@ async def addition(client, CallbackQuery, _):
         print(final)
         if final == 17:
             return await CallbackQuery.answer(
-                _["setting_21"],
+                _["setting_12"],
                 show_alert=True,
             )
         if final >= 15:
@@ -244,7 +245,7 @@ async def playmode_ans(client, CallbackQuery, _):
         buttons = playmode_users_markup(_, Direct, Group, Playtype)
     if command == "MODECHANGE":
         try:
-            await CallbackQuery.answer(_["set_cb_6"], show_alert=True)
+            await CallbackQuery.answer(_["set_cb_3"], show_alert=True)
         except:
             pass
         playmode = await get_playmode(CallbackQuery.message.chat.id)
@@ -267,7 +268,7 @@ async def playmode_ans(client, CallbackQuery, _):
         buttons = playmode_users_markup(_, Direct, Group, Playtype)
     if command == "PLAYTYPECHANGE":
         try:
-            await CallbackQuery.answer(_["set_cb_6"], show_alert=True)
+            await CallbackQuery.answer(_["set_cb_3"], show_alert=True)
         except:
             pass
         playty = await get_playtype(CallbackQuery.message.chat.id)
@@ -304,12 +305,12 @@ async def authusers_mar(client, CallbackQuery, _):
         _authusers = await get_authuser_names(CallbackQuery.message.chat.id)
         if not _authusers:
             try:
-                return await CallbackQuery.answer(_["setting_5"], show_alert=True)
+                return await CallbackQuery.answer(_["setting_4"], show_alert=True)
             except:
                 return
         else:
             try:
-                await CallbackQuery.answer(_["set_cb_7"], show_alert=True)
+                await CallbackQuery.answer(_["set_cb_4"], show_alert=True)
             except:
                 pass
             j = 0
@@ -346,7 +347,7 @@ async def authusers_mar(client, CallbackQuery, _):
             except MessageNotModified:
                 return
     try:
-        await CallbackQuery.answer(_["set_cb_6"], show_alert=True)
+        await CallbackQuery.answer(_["set_cb_3"], show_alert=True)
     except:
         pass
     if command == "AUTH":
@@ -370,7 +371,7 @@ async def authusers_mar(client, CallbackQuery, _):
 async def vote_change(client, CallbackQuery, _):
     command = CallbackQuery.matches[0].group(1)
     try:
-        await CallbackQuery.answer(_["set_cb_6"], show_alert=True)
+        await CallbackQuery.answer(_["set_cb_3"], show_alert=True)
     except:
         pass
     mod = None

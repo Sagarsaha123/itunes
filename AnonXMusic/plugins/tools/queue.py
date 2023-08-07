@@ -45,7 +45,7 @@ async def get_queue(client, message: Message, _):
     if message.command[0][0] == "c":
         chat_id = await get_cmode(message.chat.id)
         if chat_id is None:
-            return await message.reply_text(_["setting_12"])
+            return await message.reply_text(_["setting_7"])
         try:
             await app.get_chat(chat_id)
         except:
@@ -198,7 +198,7 @@ async def queue_back(client, CallbackQuery: CallbackQuery, _):
     got = db.get(chat_id)
     if not got:
         return await CallbackQuery.answer(_["queue_2"], show_alert=True)
-    await CallbackQuery.answer(_["set_cb_8"], show_alert=True)
+    await CallbackQuery.answer(_["set_cb_5"], show_alert=True)
     file = got[0]["file"]
     videoid = got[0]["vidid"]
     user = got[0]["by"]

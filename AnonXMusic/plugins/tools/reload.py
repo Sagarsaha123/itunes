@@ -33,7 +33,7 @@ async def reload_admin_cache(client, message: Message, _):
         async for user in app.get_chat_members(
             message.chat.id, filter=ChatMembersFilter.ADMINISTRATORS
         ):
-            if user.privileges.can_manage_voice_chats:
+            if user.privileges.can_manage_video_chats:
                 adminlist[message.chat.id].append(user.user.id)
         authusers = await get_authuser_names(message.chat.id)
         for user in authusers:
@@ -42,8 +42,7 @@ async def reload_admin_cache(client, message: Message, _):
         now = int(time.time()) + 180
         rel[message.chat.id] = now
         await message.reply_text(_["reload_2"])
-    except Exception as ex:
-        print(ex)
+    except:
         await message.reply_text(_["reload_3"])
 
 

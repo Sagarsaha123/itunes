@@ -28,7 +28,7 @@ async def start_pm(client, message: Message, _):
         if name[0:4] == "help":
             keyboard = help_pannel(_)
             return await message.reply_text(
-                _["help_1"].format(config.SUPPORT_GROUP), reply_markup=keyboard
+                _["help_1"].format(config.SUPPORT_CHAT), reply_markup=keyboard
             )
         #        if name[0:4] == "song":
         #            return await message.reply_text(_["song_2"])
@@ -61,7 +61,7 @@ async def start_pm(client, message: Message, _):
                 [
                     [
                         InlineKeyboardButton(text=_["S_B_8"], url=link),
-                        InlineKeyboardButton(text=_["S_B_9"], url=config.SUPPORT_GROUP),
+                        InlineKeyboardButton(text=_["S_B_9"], url=config.SUPPORT_CHAT),
                     ],
                 ]
             )
@@ -123,7 +123,7 @@ async def welcome(client, message: Message):
                         _["start_5"].format(
                             app.mention,
                             f"https://t.me/{app.username}?start=sudolist",
-                            config.SUPPORT_GROUP,
+                            config.SUPPORT_CHAT,
                         ),
                         disable_web_page_preview=True,
                     )

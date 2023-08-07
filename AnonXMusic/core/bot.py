@@ -28,6 +28,11 @@ class Anony(Client):
 
         try:
             await self.send_message(config.LOGGER_ID, "Bot Started")
+        except errors.ChannelInvalid:
+            LOGGER(__name__).error(
+                "Bot has failed to access the log group/channel. Make sure that you have added your bot to your log group/channel."
+            )
+            exit()
         except errors.PeerIdInvalid:
             LOGGER(__name__).error(
                 "Bot has failed to access the log group/channel. Make sure that you have added your bot to your log group/channel."
@@ -35,7 +40,7 @@ class Anony(Client):
             exit()
         except Exception as ex:
             LOGGER(__name__).error(
-                f"Bot has failed to access the log group/channel.\nReason : {type(ex).__name__}."
+                f"Bot has failed to access the log group/channel.\n  Reason : {type(ex).__name__}."
             )
             exit()
 

@@ -11,6 +11,6 @@ try:
     LOGGER(__name__).info("Connected to your Mongo Database.")
 except:
     LOGGER(__name__).error(
-        "Failed to connect to your Mongo Database. Please check your MONGO_DB_URI and try again."
+        "Failed to connect to your Mongo Database."
     )
     exit()

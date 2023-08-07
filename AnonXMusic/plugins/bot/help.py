@@ -9,7 +9,7 @@ from AnonXMusic.utils import help_pannel
 from AnonXMusic.utils.database import get_lang
 from AnonXMusic.utils.decorators.language import LanguageStart, languageCB
 from AnonXMusic.utils.inline.help import help_back_markup, private_help_panel
-from config import BANNED_USERS
+from config import BANNED_USERS, SUPPORT_GROUP
 from strings import get_string, helpers
 
 
@@ -28,7 +28,7 @@ async def helper_private(
         language = await get_lang(chat_id)
         _ = get_string(language)
         keyboard = help_pannel(_, True)
-        await update.edit_message_text(_["help_1"], reply_markup=keyboard)
+        await update.edit_message_text(_["help_1"].format(SUPPORT_GROUP), reply_markup=keyboard)
     else:
         try:
             await update.delete()
@@ -37,7 +37,7 @@ async def helper_private(
         language = await get_lang(update.chat.id)
         _ = get_string(language)
         keyboard = help_pannel(_)
-        await update.reply_text(_["help_1"], reply_markup=keyboard)
+        await update.reply_text(_["help_1"].format(SUPPORT_GROUP), reply_markup=keyboard)
 
 
 @app.on_message(filters.command(["help"]) & filters.group & ~BANNED_USERS)

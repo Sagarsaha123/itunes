@@ -105,7 +105,7 @@ async def stream(
                     photo=img,
                     caption=_["stream_1"].format(
                         f"https://t.me/{app.username}?start=info_{vidid}",
-                        title,
+                        title[:23],
                         duration_min,
                         user_name,
                     ),
@@ -189,7 +189,7 @@ async def stream(
                 photo=img,
                 caption=_["stream_1"].format(
                     f"https://t.me/{app.username}?start=info_{vidid}",
-                    title,
+                    title[:23],
                     duration_min,
                     user_name,
                 ),
@@ -239,7 +239,7 @@ async def stream(
                 original_chat_id,
                 photo=config.SOUNCLOUD_IMG_URL,
                 caption=_["stream_1"].format(
-                    config.SUPPORT_GROUP, title, duration_min, user_name
+                    config.SUPPORT_GROUP, title[:23], duration_min, user_name
                 ),
                 reply_markup=InlineKeyboardMarkup(button),
             )
@@ -290,7 +290,7 @@ async def stream(
             run = await app.send_photo(
                 original_chat_id,
                 photo=config.TELEGRAM_VIDEO_URL if video else config.TELEGRAM_AUDIO_URL,
-                caption=_["stream_4"].format(link, title, duration_min, user_name),
+                caption=_["stream_4"].format(link, title[:23], duration_min, user_name),
                 reply_markup=InlineKeyboardMarkup(button),
             )
             db[chat_id][0]["mystic"] = run
@@ -351,7 +351,7 @@ async def stream(
                 photo=img,
                 caption=_["stream_1"].format(
                     f"https://t.me/{app.username}?start=info_{vidid}",
-                    title,
+                    title[:23],
                     duration_min,
                     user_name,
                 ),

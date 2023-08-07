@@ -49,7 +49,7 @@ def AdminRightsCheck(mystic):
                     ]
                 ]
             )
-            return await message.reply_text(_["general_4"], reply_markup=upl)
+            return await message.reply_text(_["general_3"], reply_markup=upl)
         if message.command[0][0] == "c":
             chat_id = await get_cmode(message.chat.id)
             if chat_id is None:
@@ -61,13 +61,13 @@ def AdminRightsCheck(mystic):
         else:
             chat_id = message.chat.id
         if not await is_active_chat(chat_id):
-            return await message.reply_text(_["general_6"])
+            return await message.reply_text(_["general_5"])
         is_non_admin = await is_nonadmin_chat(message.chat.id)
         if not is_non_admin:
             if message.from_user.id not in SUDOERS:
                 admins = adminlist.get(message.chat.id)
                 if not admins:
-                    return await message.reply_text(_["admin_18"])
+                    return await message.reply_text(_["admin_13"])
                 else:
                     if message.from_user.id not in admins:
                         if await is_skipmode(message.chat.id):
@@ -82,7 +82,7 @@ def AdminRightsCheck(mystic):
                             if command[0] == "c":
                                 command = command[1:]
                             if command == "speed":
-                                return await message.reply_text(_["admin_19"])
+                                return await message.reply_text(_["admin_14"])
                             MODE = command.title()
                             upl = InlineKeyboardMarkup(
                                 [
@@ -100,7 +100,7 @@ def AdminRightsCheck(mystic):
                                 vidid = db[chat_id][0]["vidid"]
                                 file = db[chat_id][0]["file"]
                             except:
-                                return await message.reply_text(_["admin_19"])
+                                return await message.reply_text(_["admin_14"])
                             senn = await message.reply_text(text, reply_markup=upl)
                             confirmer[chat_id][senn.id] = {
                                 "vidid": vidid,
@@ -108,7 +108,7 @@ def AdminRightsCheck(mystic):
                             }
                             return
                         else:
-                            return await message.reply_text(_["admin_19"])
+                            return await message.reply_text(_["admin_14"])
 
         return await mystic(client, message, _, chat_id)
 
@@ -145,7 +145,7 @@ def AdminActual(mystic):
                     ]
                 ]
             )
-            return await message.reply_text(_["general_4"], reply_markup=upl)
+            return await message.reply_text(_["general_3"], reply_markup=upl)
         if message.from_user.id not in SUDOERS:
             try:
                 member = (
@@ -154,7 +154,7 @@ def AdminActual(mystic):
             except:
                 return
             if not member.can_manage_video_chats:
-                return await message.reply(_["general_5"])
+                return await message.reply(_["general_4"])
         return await mystic(client, message, _)
 
     return wrapper
@@ -185,7 +185,7 @@ def ActualAdminCB(mystic):
                     )
                 ).privileges
             except:
-                return await CallbackQuery.answer(_["general_5"], show_alert=True)
+                return await CallbackQuery.answer(_["general_4"], show_alert=True)
             if not a.can_manage_video_chats:
                 if CallbackQuery.from_user.id not in SUDOERS:
                     token = await int_to_alpha(CallbackQuery.from_user.id)
@@ -193,7 +193,7 @@ def ActualAdminCB(mystic):
                     if token not in _check:
                         try:
                             return await CallbackQuery.answer(
-                                _["general_5"],
+                                _["general_4"],
                                 show_alert=True,
                             )
                         except:

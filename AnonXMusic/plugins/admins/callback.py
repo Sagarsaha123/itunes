@@ -56,7 +56,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         counter = bet[1]
     chat_id = int(chat)
     if not await is_active_chat(chat_id):
-        return await CallbackQuery.answer(_["general_6"], show_alert=True)
+        return await CallbackQuery.answer(_["general_5"], show_alert=True)
     mention = CallbackQuery.from_user.mention
     if command == "UpVote":
         if chat_id not in votemode:
@@ -93,13 +93,13 @@ async def del_back_playlist(client, CallbackQuery, _):
                 return await CallbackQuery.edit_message_text(f"ғᴀɪʟᴇᴅ.")
             try:
                 if current["vidid"] != exists["vidid"]:
-                    return await CallbackQuery.edit_message.text(_["admin_44"])
+                    return await CallbackQuery.edit_message.text(_["admin_35"])
                 if current["file"] != exists["file"]:
-                    return await CallbackQuery.edit_message.text(_["admin_44"])
+                    return await CallbackQuery.edit_message.text(_["admin_35"])
             except:
-                return await CallbackQuery.edit_message_text(_["admin_45"])
+                return await CallbackQuery.edit_message_text(_["admin_36"])
             try:
-                await CallbackQuery.edit_message_text(_["admin_46"].format(upvote))
+                await CallbackQuery.edit_message_text(_["admin_37"].format(upvote))
             except:
                 pass
             command = counter
@@ -109,9 +109,9 @@ async def del_back_playlist(client, CallbackQuery, _):
                 CallbackQuery.from_user.id
                 in upvoters[chat_id][CallbackQuery.message.id]
             ):
-                await CallbackQuery.answer(_["admin_47"], show_alert=True)
+                await CallbackQuery.answer(_["admin_38"], show_alert=True)
             else:
-                await CallbackQuery.answer(_["admin_48"], show_alert=True)
+                await CallbackQuery.answer(_["admin_39"], show_alert=True)
             upl = InlineKeyboardMarkup(
                 [
                     [
@@ -122,7 +122,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     ]
                 ]
             )
-            await CallbackQuery.answer(_["admin_49"], show_alert=True)
+            await CallbackQuery.answer(_["admin_40"], show_alert=True)
             return await CallbackQuery.edit_message_reply_markup(reply_markup=upl)
     else:
         is_non_admin = await is_nonadmin_chat(CallbackQuery.message.chat.id)
@@ -130,11 +130,11 @@ async def del_back_playlist(client, CallbackQuery, _):
             if CallbackQuery.from_user.id not in SUDOERS:
                 admins = adminlist.get(CallbackQuery.message.chat.id)
                 if not admins:
-                    return await CallbackQuery.answer(_["admin_18"], show_alert=True)
+                    return await CallbackQuery.answer(_["admin_13"], show_alert=True)
                 else:
                     if CallbackQuery.from_user.id not in admins:
                         return await CallbackQuery.answer(
-                            _["admin_19"], show_alert=True
+                            _["admin_14"], show_alert=True
                         )
     if command == "Pause":
         if not await is_music_playing(chat_id):
@@ -159,7 +159,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         await Anony.stop_stream(chat_id)
         await set_loop(chat_id, 0)
         await CallbackQuery.message.reply_text(
-            _["admin_9"].format(mention), reply_markup=close_markup(_)
+            _["admin_5"].format(mention), reply_markup=close_markup(_)
         )
         await CallbackQuery.message.delete()
     elif command == "Skip" or command == "Replay":
@@ -176,7 +176,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                         f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
                     )
                     await CallbackQuery.message.reply_text(
-                        text=_["admin_10"].format(
+                        text=_["admin_6"].format(
                             mention, CallbackQuery.message.chat.title
                         ),
                         reply_markup=close_markup(_),
@@ -191,7 +191,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                         f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
                     )
                     await CallbackQuery.message.reply_text(
-                        text=_["admin_10"].format(
+                        text=_["admin_6"].format(
                             mention, CallbackQuery.message.chat.title
                         ),
                         reply_markup=close_markup(_),
@@ -220,7 +220,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             n, link = await YouTube.video(videoid, True)
             if n == 0:
                 return await CallbackQuery.message.reply_text(
-                    text=_["admin_11"].format(title),
+                    text=_["admin_7"].format(title),
                     reply_markup=close_markup(_),
                 )
             try:
@@ -230,14 +230,14 @@ async def del_back_playlist(client, CallbackQuery, _):
             try:
                 await Anony.skip_stream(chat_id, link, video=status, image=image)
             except:
-                return await CallbackQuery.message.reply_text(_["call_9"])
+                return await CallbackQuery.message.reply_text(_["call_6"])
             button = telegram_markup(_, chat_id)
             img = await get_thumb(videoid)
             run = await CallbackQuery.message.reply_photo(
                 photo=img,
                 caption=_["stream_1"].format(
                     f"https://t.me/{app.username}?start=info_{videoid}",
-                    title,
+                    title[:23],
                     duration,
                     user,
                 ),
@@ -248,7 +248,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             await CallbackQuery.edit_message_text(txt, reply_markup=close_markup(_))
         elif "vid_" in queued:
             mystic = await CallbackQuery.message.reply_text(
-                _["call_10"], disable_web_page_preview=True
+                _["call_7"], disable_web_page_preview=True
             )
             try:
                 file_path, direct = await YouTube.download(
@@ -258,7 +258,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     video=status,
                 )
             except:
-                return await mystic.edit_text(_["call_9"])
+                return await mystic.edit_text(_["call_6"])
             try:
                 image = await YouTube.thumbnail(videoid, True)
             except:
@@ -266,14 +266,14 @@ async def del_back_playlist(client, CallbackQuery, _):
             try:
                 await Anony.skip_stream(chat_id, file_path, video=status, image=image)
             except:
-                return await mystic.edit_text(_["call_9"])
+                return await mystic.edit_text(_["call_6"])
             button = stream_markup(_, videoid, chat_id)
             img = await get_thumb(videoid)
             run = await CallbackQuery.message.reply_photo(
                 photo=img,
                 caption=_["stream_1"].format(
                     f"https://t.me/{app.username}?start=info_{videoid}",
-                    title,
+                    title[:23],
                     duration,
                     user,
                 ),
@@ -287,7 +287,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             try:
                 await Anony.skip_stream(chat_id, videoid, video=status)
             except:
-                return await CallbackQuery.message.reply_text(_["call_9"])
+                return await CallbackQuery.message.reply_text(_["call_6"])
             button = telegram_markup(_, chat_id)
             run = await CallbackQuery.message.reply_photo(
                 photo=STREAM_IMG_URL,
@@ -310,7 +310,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             try:
                 await Anony.skip_stream(chat_id, queued, video=status, image=image)
             except:
-                return await CallbackQuery.message.reply_text(_["call_9"])
+                return await CallbackQuery.message.reply_text(_["call_6"])
             if videoid == "telegram":
                 button = telegram_markup(_, chat_id)
                 run = await CallbackQuery.message.reply_photo(
@@ -318,7 +318,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     if str(streamtype) == "audio"
                     else TELEGRAM_VIDEO_URL,
                     caption=_["stream_1"].format(
-                        config.SUPPORT_GROUP, title, duration, user
+                        config.SUPPORT_GROUP, title[:23], duration, user
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
                 )
@@ -331,7 +331,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     if str(streamtype) == "audio"
                     else TELEGRAM_VIDEO_URL,
                     caption=_["stream_1"].format(
-                        config.SUPPORT_GROUP, title, duration, user
+                        config.SUPPORT_GROUP, title[:23], duration, user
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
                 )
@@ -344,7 +344,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     photo=img,
                     caption=_["stream_1"].format(
                         f"https://t.me/{app.username}?start=info_{videoid}",
-                        title,
+                        title[:23],
                         duration,
                         user,
                     ),

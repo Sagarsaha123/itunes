@@ -24,7 +24,7 @@ async def auth(client, message: Message, _):
     token = await int_to_alpha(user.id)
     _check = await get_authuser_names(message.chat.id)
     count = len(_check)
-    if int(count) == 20:
+    if int(count) == 25:
         return await message.reply_text(_["auth_1"])
     if token not in _check:
         assis = {

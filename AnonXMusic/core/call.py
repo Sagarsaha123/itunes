@@ -314,11 +314,11 @@ class Call(PyTgCalls):
                 stream_type=StreamType().pulse_stream,
             )
         except NoActiveGroupCall:
-            raise AssistantErr(_["call_12"])
+            raise AssistantErr(_["call_8"])
         except AlreadyJoinedError:
-            raise AssistantErr(_["call_13"])
+            raise AssistantErr(_["call_9"])
         except TelegramServerError:
-            raise AssistantErr(_["call_14"])
+            raise AssistantErr(_["call_10"])
         await add_active_chat(chat_id)
         await music_on(chat_id)
         if video:
@@ -371,7 +371,7 @@ class Call(PyTgCalls):
                 if n == 0:
                     return await app.send_message(
                         original_chat_id,
-                        text=_["call_9"],
+                        text=_["call_6"],
                     )
                 if video:
                     stream = AudioVideoPiped(
@@ -389,7 +389,7 @@ class Call(PyTgCalls):
                 except Exception:
                     return await app.send_message(
                         original_chat_id,
-                        text=_["call_9"],
+                        text=_["call_6"],
                     )
                 img = await get_thumb(videoid)
                 button = telegram_markup(_, chat_id)
@@ -398,7 +398,7 @@ class Call(PyTgCalls):
                     photo=img,
                     caption=_["stream_1"].format(
                         f"https://t.me/{app.username}?start=info_{videoid}",
-                        title,
+                        title[:23],
                         check[0]["dur"],
                         user,
                     ),
@@ -407,7 +407,7 @@ class Call(PyTgCalls):
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "tg"
             elif "vid_" in queued:
-                mystic = await app.send_message(original_chat_id, _["call_10"])
+                mystic = await app.send_message(original_chat_id, _["call_7"])
                 try:
                     file_path, direct = await YouTube.download(
                         videoid,
@@ -417,7 +417,7 @@ class Call(PyTgCalls):
                     )
                 except:
                     return await mystic.edit_text(
-                        _["call_9"], disable_web_page_preview=True
+                        _["call_6"], disable_web_page_preview=True
                     )
                 if video:
                     stream = AudioVideoPiped(
@@ -435,7 +435,7 @@ class Call(PyTgCalls):
                 except:
                     return await app.send_message(
                         original_chat_id,
-                        text=_["call_9"],
+                        text=_["call_6"],
                     )
                 img = await get_thumb(videoid)
                 button = stream_markup(_, videoid, chat_id)
@@ -445,7 +445,7 @@ class Call(PyTgCalls):
                     photo=img,
                     caption=_["stream_1"].format(
                         f"https://t.me/{app.username}?start=info_{videoid}",
-                        title,
+                        title[:23],
                         check[0]["dur"],
                         user,
                     ),
@@ -468,7 +468,7 @@ class Call(PyTgCalls):
                 except:
                     return await app.send_message(
                         original_chat_id,
-                        text=_["call_9"],
+                        text=_["call_6"],
                     )
                 button = telegram_markup(_, chat_id)
                 run = await app.send_photo(
@@ -496,7 +496,7 @@ class Call(PyTgCalls):
                 except:
                     return await app.send_message(
                         original_chat_id,
-                        text=_["call_9"],
+                        text=_["call_6"],
                     )
                 if videoid == "telegram":
                     button = telegram_markup(_, chat_id)
@@ -506,7 +506,7 @@ class Call(PyTgCalls):
                         if str(streamtype) == "audio"
                         else config.TELEGRAM_VIDEO_URL,
                         caption=_["stream_1"].format(
-                            config.SUPPORT_GROUP, title, check[0]["dur"], user
+                            config.SUPPORT_GROUP, title[:23], check[0]["dur"], user
                         ),
                         reply_markup=InlineKeyboardMarkup(button),
                     )
@@ -518,7 +518,7 @@ class Call(PyTgCalls):
                         chat_id=original_chat_id,
                         photo=config.SOUNCLOUD_IMG_URL,
                         caption=_["stream_1"].format(
-                            config.SUPPORT_GROUP, title, check[0]["dur"], user
+                            config.SUPPORT_GROUP, title[:23], check[0]["dur"], user
                         ),
                         reply_markup=InlineKeyboardMarkup(button),
                     )
@@ -532,7 +532,7 @@ class Call(PyTgCalls):
                         photo=img,
                         caption=_["stream_1"].format(
                             f"https://t.me/{app.username}?start=info_{videoid}",
-                            title,
+                            title[:23],
                             check[0]["dur"],
                             user,
                         ),

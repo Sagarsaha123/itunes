@@ -30,7 +30,7 @@ async def reload_admin_cache(client, message: Message, _):
                 left = get_readable_time((int(saved) - int(time.time())))
                 return await message.reply_text(_["reload_1"].format(left))
         adminlist[message.chat.id] = []
-        async for user in app.get_chat_membere(
+        async for user in app.get_chat_members(
             message.chat.id, filter=ChatMembersFilter.ADMINISTRATORS
         ):
             if user.privileges.can_manage_voice_chats:

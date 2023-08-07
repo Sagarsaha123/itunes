@@ -118,15 +118,13 @@ def PlayWrapper(command):
                 try:
                     get = await app.get_chat_member(chat_id, userbot.id)
                 except ChatAdminRequired:
-                    return await message.reply_text(
-                        "» ʙᴏᴛ ʀᴇǫᴜɪʀᴇs <b>ɪɴᴠɪᴛᴇ ᴜsᴇʀs ᴠɪᴀ ʟɪɴᴋ</b> ᴘᴇʀᴍɪssɪᴏɴ ᴛᴏ ɪɴᴠɪᴛᴇ ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ."
-                    )
+                    return await message.reply_text(_["call_1"])
                 if (
                     get.status == ChatMemberStatus.BANNED
                     or get.status == ChatMemberStatus.RESTRICTED
                 ):
                     return await message.reply_text(
-                        f"<u>{app.mention} ᴀssɪsᴛᴀɴᴛ ɪs ʙᴀɴɴᴇᴅ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ.</u>\n\n<b>ɪᴅ :</b> <code>{userbot.id}</code>\n<b>ɴᴀᴍᴇ :</b> {userbot.name}\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{userbot.username}\n\nᴘʟᴇᴀsᴇ ᴜɴʙᴀɴ ᴛʜᴇ ᴀssɪsᴛᴀɴᴛ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ.",
+                        _["call_2"].format(app.mention, userbot.id, userbot.name, userbot.username)
                     )
             except UserNotParticipant:
                 if chat_id in links:
@@ -142,12 +140,10 @@ def PlayWrapper(command):
                         try:
                             invitelink = await app.export_chat_invite_link(chat_id)
                         except ChatAdminRequired:
-                            return await message.reply_text(
-                                "» ʙᴏᴛ ʀᴇǫᴜɪʀᴇs <b>ɪɴᴠɪᴛᴇ ᴜsᴇʀs ᴠɪᴀ ʟɪɴᴋ</b> ᴘᴇʀᴍɪssɪᴏɴ ᴛᴏ ɪɴᴠɪᴛᴇ ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ."
-                            )
+                            return await message.reply_text(_["call_1"])
                         except Exception as e:
                             return await message.reply_text(
-                                f"ғᴀɪʟᴇᴅ ᴛᴏ ɪɴᴠɪᴛᴇ {app.mention} ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ.\n\nʀᴇᴀsᴏɴ : <code>{type(e).__name__}</code>"
+                                _["call_3"].format(app.mention, type(e).__name__)
                             )
 
                 if invitelink.startswith("https://t.me/+"):
@@ -155,7 +151,7 @@ def PlayWrapper(command):
                         "https://t.me/+", "https://t.me/joinchat/"
                     )
                 myu = await message.reply_text(
-                    f"ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...\n\nɪɴᴠɪᴛɪɴɢ {app.mention} ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ..."
+                    _["call_4"].format(app.mention)
                 )
                 try:
                     await asyncio.sleep(1)
@@ -165,17 +161,17 @@ def PlayWrapper(command):
                         await app.approve_chat_join_request(chat_id, userbot.id)
                     except Exception as e:
                         return await message.reply_text(
-                            f"ғᴀɪʟᴇᴅ ᴛᴏ ɪɴᴠɪᴛᴇ {app.mention} ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ.\n\nʀᴇᴀsᴏɴ : <code>{type(e).__name__}</code>"
+                            _["call_3"].format(app.mention, type(e).__name__)
                         )
                     await asyncio.sleep(3)
                     await myu.edit(
-                        f"{app.mention} ᴀssɪsᴛᴀɴᴛ ᴊᴏɪɴᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.\n\nᴛʀʏɪɴɢ ᴛᴏ sᴛᴀʀᴛ sᴛʀᴇᴀᴍ..."
+                        _["call_5"].format(app.mention)
                     )
                 except UserAlreadyParticipant:
                     pass
                 except Exception as e:
                     return await message.reply_text(
-                        f"ғᴀɪʟᴇᴅ ᴛᴏ ɪɴᴠɪᴛᴇ {app.mention} ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ.\n\nʀᴇᴀsᴏɴ : <code>{type(e).__name__}</code>"
+                        _["call_3"].format(app.mention, type(e).__name__)
                     )
 
                 links[chat_id] = invitelink

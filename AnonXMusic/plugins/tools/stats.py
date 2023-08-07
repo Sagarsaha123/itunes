@@ -62,7 +62,6 @@ async def overall_stats(client, CallbackQuery, _):
         len(SUDOERS),
         config.AUTO_LEAVING_ASSISTANT,
         config.DURATION_LIMIT_MIN,
-        config.SONG_DOWNLOAD_DURATION,
     )
     med = InputMediaPhoto(media=config.STATS_IMG_URL, caption=text)
     try:

@@ -42,7 +42,8 @@ async def reload_admin_cache(client, message: Message, _):
         now = int(time.time()) + 180
         rel[message.chat.id] = now
         await message.reply_text(_["reload_2"])
-    except:
+    except Exception as ex:
+        print(ex)
         await message.reply_text(_["reload_3"])
 
 

@@ -17,6 +17,7 @@ from AnonXMusic.utils.database import (
     is_banned_user,
     is_on_off,
 )
+from AnonXMusic.utils.formatters import get_readable_time
 from AnonXMusic.utils.decorators.language import LanguageStart
 from AnonXMusic.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
@@ -34,8 +35,6 @@ async def start_pm(client, message: Message, _):
             return await message.reply_text(
                 _["help_1"].format(config.SUPPORT_CHAT), reply_markup=keyboard
             )
-        #        if name[0:4] == "song":
-        #            return await message.reply_text(_["song_2"])
         if name[0:3] == "sud":
             await sudoers_list(client=client, message=message, _=_)
             if await is_on_off(2):

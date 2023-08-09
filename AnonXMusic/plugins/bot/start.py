@@ -96,14 +96,15 @@ async def start_pm(client, message: Message, _):
 async def start_gp(client, message: Message, _):
     out = start_panel(_)
     uptime = int(time.time() - _boot_)
-    return await message.reply_photo(
+    await message.reply_photo(
         photo=config.START_IMG_URL,
         caption=_["start_1"].format(app.mention, get_readable_time(uptime)),
         reply_markup=InlineKeyboardMarkup(out),
     )
+    return await add_served_chat(message.chat.id)
 
 
-@app.on_message(filters.new_chat_members, group=2)
+@app.on_message(filters.new_chat_members, group=-1)
 async def welcome(client, message: Message):
     for member in message.new_chat_members:
         try:
@@ -142,6 +143,5 @@ async def welcome(client, message: Message):
                 )
                 await add_served_chat(message.chat.id)
                 await message.stop_propagation()
-            return
-        except:
-            return
+        except Exception as ex:
+            print(ex)

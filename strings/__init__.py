@@ -16,6 +16,7 @@ for filename in os.listdir(r"./strings/langs/"):
         languages["en"] = yaml.safe_load(
             open(r"./strings/langs/en.yml", encoding="utf8")
         )
+        languages_present["en"] = languages["en"]["name"]
     if filename.endswith(".yml"):
         language_name = filename[:-4]
         if language_name == "en":
@@ -29,5 +30,5 @@ for filename in os.listdir(r"./strings/langs/"):
     try:
         languages_present[language_name] = languages[language_name]["name"]
     except:
-        LOGGER(__name__).error("There is some issue with the language file inside bot.")
+        print("There is some issue with the language file inside bot.")
         exit()

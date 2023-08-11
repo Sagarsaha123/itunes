@@ -33,7 +33,7 @@ def lanuages_keyboard(_):
 
 
 @app.on_message(
-    filters.command(["lang", "setlang", "language"]) & filters.group & ~BANNED_USERS
+    filters.command(["lang", "setlang", "language"]) & ~BANNED_USERS
 )
 @language
 async def langs_command(client, message: Message, _):

@@ -4,7 +4,6 @@ from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 from AnonXMusic import app
-from AnonXMusic.misc import SUDOERS
 from AnonXMusic.utils import help_pannel
 from AnonXMusic.utils.database import get_lang
 from AnonXMusic.utils.decorators.language import LanguageStart, languageCB
@@ -59,18 +58,6 @@ async def helper_cb(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
     cb = callback_data.split(None, 1)[1]
     keyboard = help_back_markup(_)
-    if cb == "hb9":
-        if CallbackQuery.from_user.id not in SUDOERS:
-            return await CallbackQuery.answer(
-                "ᴛʜɪs ʙᴜᴛᴛᴏɴ ɪs ᴏɴʟʏ ғᴏʀ sᴜᴅᴏ ᴜsᴇʀs.", show_alert=True
-            )
-        else:
-            await CallbackQuery.edit_message_text(helpers.HELP_9, reply_markup=keyboard)
-            return await CallbackQuery.answer()
-    try:
-        await CallbackQuery.answer()
-    except:
-        pass
     if cb == "hb1":
         await CallbackQuery.edit_message_text(helpers.HELP_1, reply_markup=keyboard)
     elif cb == "hb2":
@@ -87,3 +74,17 @@ async def helper_cb(client, CallbackQuery, _):
         await CallbackQuery.edit_message_text(helpers.HELP_7, reply_markup=keyboard)
     elif cb == "hb8":
         await CallbackQuery.edit_message_text(helpers.HELP_8, reply_markup=keyboard)
+    elif cb == "hb9":
+        await CallbackQuery.edit_message_text(helpers.HELP_9, reply_markup=keyboard)
+    elif cb == "hb10":
+        await CallbackQuery.edit_message_text(helpers.HELP_10, reply_markup=keyboard)
+    elif cb == "hb11":
+        await CallbackQuery.edit_message_text(helpers.HELP_11, reply_markup=keyboard)
+    elif cb == "hb12":
+        await CallbackQuery.edit_message_text(helpers.HELP_12, reply_markup=keyboard)
+    elif cb == "hb13":
+        await CallbackQuery.edit_message_text(helpers.HELP_13, reply_markup=keyboard)
+    elif cb == "hb14":
+        await CallbackQuery.edit_message_text(helpers.HELP_14, reply_markup=keyboard)
+    elif cb == "hb15":
+        await CallbackQuery.edit_message_text(helpers.HELP_15, reply_markup=keyboard)

@@ -40,7 +40,7 @@ GIT_TOKEN = getenv(
 )  # Fill this variable if your upstream repository is private
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/FallenAssociation")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/DevilsHeavenMF")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/FallenSupport")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -62,9 +62,9 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 
 
 # Get your pyrogram v2 session from @StringFatherBot on Telegram
-STRING1 = getenv("STRING_SESSION", "")
-STRING2 = getenv("STRING_SESSION2", "")
-STRING3 = getenv("STRING_SESSION3", "")
+STRING1 = getenv("STRING_SESSION", "BQHBzKIAKvPnInD2uHYpQuE9X_bJs5bXdFGFe6mZ8w97Ds2A3A86-8U_wDd07nlBq9Sh1tzsscAgz0QSNZE4gi87xfMWmn_T9gGWsWyrzM-Vp78EF4q7QedeCX5_iz-2J-BW6KE5P06bucpxS5t_dSaO2jMPHTnx5dM_jEap3xDynkRMzT1LQl5UDZ_bdxZgbxLTRWfpyah6OxRpbuXhMAjDm0-6d8fPJdpZRELYtMfooT_hhjlWVNiBVzAnLg8ED3Xd8usP7_OfQYIrp3lXJdrvtsc9tbwUoZi005iwAHBJSZYWKZNikZUld4O8pD3JID2Sv0U3SUipZ5RHlspqg2o2Zqj6HgAAAAFo3ALWAA")
+STRING2 = getenv("STRING_SESSION2", "AQHBzKIAlsRe0MoteGZV8nFZIZUMX28Rn9wr-opj15xYGj22RNVxStwFRSa-jnuTOmCg0jBNPs58mShN6folbd30M2Py96Rx3SfEVutykLTkreiMZmmlKn5A_Jap-MjhENzfMXyOY2upCnO49cOdMwl9LukAFtgcRQICoIKD_gM3Y1mf2jhspgLl6Eqr7Y9_KjcfOXs-9SJ5M9GdJI49ip_cE5mpxb7ODk6LQPnMYiTc0px3JHCjHau1FGNjkmZL61eYymVn8j3NrBVKorK8r8RGoYnHRblDaGB9TlinSgmYlUuCvfqayz1e9-zCP-JCaqkIxfQqk4WJmx4tG775vU-MiRjGBQAAAAF80Y4zAA")
+STRING3 = getenv("STRING_SESSION3", "BQHBzKIAmHtD2xPmFjXGdw91Fjt9tAQFYG2a1ti-dOngEccpEzvPmnaHKeo1RCD_vjH6rRSyjU2Jaf995tD4i-sNlcN_9Unq6m2nsKPlLUqX3pb9kVoRzDfhmKPHaPXze8EgOq_favV-x3pi7kPLZyq98PUWGTsN1omYjFELT5xxAMie7dMcJQgqoJasXnNWjmRDD3lkEpIT_A3NkaieIyeMryeAzS_gYYVKCjYNnoJ-QI-RnCcrMHHVgcizOWneOmjMemgh_HYst6GTiNW-I66SJfRkR7DNgesifLbj_dijAAHe8mlh6D3l57fwamM2mJyLiyOweLqsC5OTouiotSPCxT93_QAAAAFsYwxbAA")
 STRING4 = getenv("STRING_SESSION4", None)
 STRING5 = getenv("STRING_SESSION5", None)
 

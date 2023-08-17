@@ -3,6 +3,7 @@ import asyncio
 from pyrogram.enums import ChatMemberStatus
 from pyrogram.errors import (
     ChatAdminRequired,
+    InviteRequestSent,
     UserAlreadyParticipant,
     UserNotParticipant,
 )

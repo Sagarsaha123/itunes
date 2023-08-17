@@ -3,7 +3,7 @@ import re
 
 import aiofiles
 import aiohttp
-from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageOps, ImageFont
 from unidecode import unidecode
 from youtubesearchpython.__future__ import VideosSearch
 

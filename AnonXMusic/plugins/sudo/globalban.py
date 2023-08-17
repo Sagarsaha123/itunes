@@ -17,10 +17,10 @@ from AnonXMusic.utils.database import (
 )
 from AnonXMusic.utils.decorators.language import language
 from AnonXMusic.utils.extraction import extract_user
-from config import BANNED_USERS
+from config import BANNED_USERS, OWNER_ID
 
 
-@app.on_message(filters.command(["gban", "globalban"]) & SUDOERS)
+@app.on_message(filters.command(["gban", "globalban"]) & filters.user(OWNER_ID))
 @language
 async def global_ban(client, message: Message, _):
     if not message.reply_to_message:
@@ -68,7 +68,7 @@ async def global_ban(client, message: Message, _):
     await mystic.delete()
 
 
-@app.on_message(filters.command(["ungban"]) & SUDOERS)
+@app.on_message(filters.command(["ungban"]) & filters.user(OWNER_ID))
 @language
 async def global_un(client, message: Message, _):
     if not message.reply_to_message:
@@ -100,7 +100,7 @@ async def global_un(client, message: Message, _):
     await mystic.delete()
 
 
-@app.on_message(filters.command(["gbannedusers", "gbanlist"]) & SUDOERS)
+@app.on_message(filters.command(["gbannedusers", "gbanlist"]) & filters.user(OWNER_ID))
 @language
 async def gbanned_list(client, message: Message, _):
     counts = await get_banned_count()

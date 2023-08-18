@@ -25,14 +25,8 @@ ub3 = userbot.three
 ub4 = userbot.four
 ub5 = userbot.five
 
-FC_COMMAND = get_command("FC_COMMAND")
-LINK_COMMAND = get_command("LINK_COMMAND")
-CHECK_COMMAND = get_command("CHECK_COMMAND")
-TRACK_COMMAND = get_command("TRACK_COMMAND")
-
-
 # Check Every Userbots & Bot
-@app.on_message(filters.command(CHECK_COMMAND) & filters.user(OWNER_ID))
+@app.on_message(filters.command(check) & filters.user(OWNER_ID))
 @language
 async def systest(client, message: Message, _):
     mys = await message.reply_text(_["extra_1"])
@@ -82,7 +76,7 @@ async def systest(client, message: Message, _):
 
 
 # Logs, Temps Etc Cleaner Without Restarting Bot
-@app.on_message(avoice(["FC_COMMAND"]) & SUDOERS)
+@app.on_message(avoice(["fc"]) & SUDOERS)
 async def cleaning(client: Client, message: Message):
     A = 'rm -rf downloads'
     try:
@@ -98,7 +92,7 @@ DISK_SPACE = psutil.disk_usage("/").percent
 
 #Link Creater
 @app.on_message(
-    filters.command(LINK_COMMAND)
+    filters.command(link)
     & filters.user(OWNER_ID)
     & ~filters.forwarded
     & ~filters.via_bot
@@ -122,7 +116,7 @@ async def new_link_getter(client, message: Message):
 
 
 @app.on_message(
-    filters.command(TRACK_COMMAND)
+    filters.command(track)
     & filters.user(OWNER_ID)
     & ~filters.forwarded
     & ~filters.via_bot

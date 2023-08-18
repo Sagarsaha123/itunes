@@ -16,7 +16,7 @@ from AnonXMusic.misc import SUDOERS
 from AnonXMusic.utils.database import get_served_chats
 from AnonXMusic.utils.decorators.language import language
 
-MAINGROUP_ID = LOG_GROUP_ID
+MAINGROUP_ID = LOGGER_ID
 
 ub1 = userbot.one
 ub2 = userbot.two

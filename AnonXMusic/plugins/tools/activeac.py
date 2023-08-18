@@ -1,8 +1,8 @@
-from RiruruMusic import app
-from RiruruMusic.utils.database.memorydatabase import active, activevideo
+from AnonXMusic import app
+from AnonXMusic.utils.database.memorydatabase import active, activevideo
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from RiruruMusic.utils.inline.play import close_keyboard
+from AnonXMusic.utils.inline.play import close_keyboard
 from config import OWNER_ID
 
 

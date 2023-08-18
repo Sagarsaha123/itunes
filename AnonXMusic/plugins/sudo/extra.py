@@ -91,7 +91,7 @@ DISK_SPACE = psutil.disk_usage("/").percent
 
 #Link Creater
 @app.on_message(
-    filters.command(link)
+    filters.command(/link)
     & filters.user(OWNER_ID)
     & ~filters.forwarded
     & ~filters.via_bot

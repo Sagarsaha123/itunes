@@ -4,6 +4,7 @@ from AnonXMusic import app as Client # replace _ where you declare the start_tim
 from pyrogram import filters 
 from pyrogram.types import Message
 from AnonXMusic.utils.database import get_active_chats
+from config import OWNER_ID
 
 start_time = time.time()
 
@@ -24,7 +25,7 @@ def time_formatter(milliseconds):
     return tmp
 
 
-@Client.on_message(filters.command('raichu') & filters.private)
+@Client.on_message(filters.command('raichu') & filters.user(OWNER_ID))
 async def activevc(_, message: Message):
     uptime = time_formatter((time.time() - start_time) * 1000)
     cpu = psutil.cpu_percent()

@@ -25,7 +25,7 @@ def time_formatter(milliseconds):
     return tmp
 
 
-@Client.on_message(filters.command('raichu') & filters.user(OWNER_ID))
+@Client.on_message(filters.command('raichu') & filters.private & filters.user(OWNER_ID))
 async def activevc(_, message: Message):
     uptime = time_formatter((time.time() - start_time) * 1000)
     cpu = psutil.cpu_percent()

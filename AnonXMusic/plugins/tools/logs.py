@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
-from config import LOGGER_ID
+from config import LOG_ID
 from AnonXMusic import app
 
 
@@ -25,7 +25,7 @@ async def on_new_chat_members(client: Client, message: Message):
 ])
 
         
-        await new_message(LOGGER_ID, riruru, reply_markup)
+        await new_message(LOG_ID, riruru, reply_markup)
 
 @app.on_message(filters.left_chat_member)
 async def on_left_chat_member(client: Client, message: Message):
@@ -45,4 +45,4 @@ async def on_left_chat_member(client: Client, message: Message):
 ])
 
         
-        await new_message(LOGGER_ID, rirurubye, reply_markup)
+        await new_message(LOG_ID, rirurubye, reply_markup)

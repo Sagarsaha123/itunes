@@ -162,8 +162,8 @@ str_1 : "please provide m3u8 or index links."
 str_2 : "➻ valid stream verified.\n\nprocessing..."
 str_3 : "failed to stream youtube live stream, no live ꜰormat ꜰound."
 
-ping_1 : "{0} is pinging..."
-ping_2 : "🏓 ᴩong : <code>{0}ms</code>\n\n<b><u>{1} system stats :</u></b>\n\n↬ uᴩtime : {2}\n↬ ram : {3}\n↬ cᴩu : {4}\n↬ disk : {5}\n↬ ᴩy-tgcalls : <code>{6}ms</code>"
+ping_1 : "{0} ɪs ᴘɪɴɢɪɴɢ..."
+ping_2 : "🏓 Pᴏɴɢ ➻ <code>{0}ᴍs</code>\n\n<b><u>{1} Sʏsᴛᴇᴍ Sᴛᴀᴛs ➻</u></b>\n\n🕰 Uᴘᴛɪᴍᴇ ➻ {2}\n★────────────────★\n🧭 Rᴀᴍ ➻ {3}\n★────────────────★\n🖥 Cᴘᴜ ➻ {4}\n★────────────────★\n💽 Dɪsᴄ ➻ {5}\n★────────────────★\n🛰 Pʏ-TGC ➻ <code>{6}ᴍs</code>\n♪♪━━━━━━━━━━━━━━━━♪♪\n"
 
 queue_1 : "» fetching ǫueue...\n\nplease wait..."
 queue_2 : "» ǫueue empty."

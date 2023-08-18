@@ -30,5 +30,5 @@ async def activevc(_, message: Message):
     uptime = time_formatter((time.time() - start_time) * 1000)
     cpu = psutil.cpu_percent()
     vc = await get_active_chats()
-    TEXT = f"**ᴜᴘᴛɪᴍᴇ :** {uptime} | **ᴄᴘᴜ :** {cpu}% | **ᴜsᴀɢᴇ :** "+str(len(vc))
+    TEXT = f"ᴜᴘᴛɪᴍᴇ : {uptime} | ᴄᴘᴜ : {cpu}% | ᴜsᴀɢᴇ : "+str(len(vc))
     await message.reply(TEXT)

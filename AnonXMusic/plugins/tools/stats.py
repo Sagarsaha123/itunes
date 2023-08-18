@@ -20,7 +20,7 @@ from AnonXMusic.utils.inline.stats import back_stats_buttons, stats_buttons
 from config import BANNED_USERS, OWNER_ID
 
 
-@app.on_message(filters.command(["stats", "gstats"]) & filters.group & SUDOERS))
+@app.on_message(filters.command(["stats", "gstats"]) & filters.group & SUDOERS)
 @language
 async def stats_global(client, message: Message, _):
     upl = stats_buttons(_, True if message.from_user.id in SUDOERS else False)

@@ -5,8 +5,7 @@ import os
 from asyncio import sleep
 from traceback import format_exc
 
-from strings import get_command
-from config import LOG_GROUP_ID, OWNER_ID, STRING1, STRING2, STRING3, STRING4, STRING5
+from config import LOGGER_ID, OWNER_ID, STRING1, STRING2, STRING3, STRING4, STRING5
 
 from pyrogram import filters
 from pyrogram.types import Message
@@ -30,13 +29,13 @@ ub5 = userbot.five
 @language
 async def systest(client, message: Message, _):
     mys = await message.reply_text(_["extra_1"])
-    await app.send_message(LOG_GROUP_ID, _["extra_2"])
+    await app.send_message(LOGGER_ID, _["extra_2"])
     suspendedacc = []
     count = 0
 
     if STRING1:
         try:
-            await userbot.one.send_message(LOG_GROUP_ID, _["extra_3"].format("1"))
+            await userbot.one.send_message(LOGGER_ID, _["extra_3"].format("1"))
             count += 1
         except UserDeactivated:
             suspendedacc.append("Assistant 1")
@@ -50,21 +49,21 @@ async def systest(client, message: Message, _):
 
     if STRING3:
         try:
-            await userbot.three.send_message(LOG_GROUP_ID, _["extra_3"].format("3"))
+            await userbot.three.send_message(LOGGER_ID, _["extra_3"].format("3"))
             count += 1
         except UserDeactivated:
             suspendedacc.append("Assistant 3")
 
     if STRING4:
         try:
-            await userbot.four.send_message(LOG_GROUP_ID, _["extra_3"].format("4"))
+            await userbot.four.send_message(LOGGER_ID, _["extra_3"].format("4"))
             count += 1
         except UserDeactivated:
             suspendedacc.append("Assistant 4")
 
     if STRING5:
         try:
-            await userbot.five.send_message(LOG_GROUP_ID, _["extra_3"].format("5"))
+            await userbot.five.send_message(LOGGER_ID, _["extra_3"].format("5"))
             count += 1
         except UserDeactivated:
             suspendedacc.append("Assistant 5")

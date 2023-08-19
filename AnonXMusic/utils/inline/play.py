@@ -51,7 +51,7 @@ def stream_markup_timer(_, chat_id, played, dur):
     elif 80 <= umm < 95:
         bar = "————————◉—"
     else:
-        bar = "๏ 𝖥ɪɴɪsʜᴇᴅ ๏"
+        bar = "—————————◉"
     buttons = [
         [
             InlineKeyboardButton(
@@ -67,9 +67,8 @@ def stream_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
         [
-            InlineKeyboardButton(text="» sᴘᴇᴇᴅ »", callback_data=f"PanelMarkup {videoid}|{chat_id}"),
             InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")
-    ],
+        ],
         [
             InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")
         ]

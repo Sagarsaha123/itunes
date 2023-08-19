@@ -158,31 +158,3 @@ def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
     ]
     return buttons
 
-## Extra Shit
-
-close_keyboard = InlineKeyboardMarkup( 
-            [
-                [
-                    InlineKeyboardButton(text="✯ ᴄʟᴏsᴇ ✯", callback_data="close")
-                ]    
-            ]
-        )
-
-
-def panel_markup_3(_, videoid, chat_id):
-    buttons = [
-        [
-                InlineKeyboardButton(text="🕒 0.5x", callback_data=f"SpeedUP {chat_id}|0.5"),
-                InlineKeyboardButton(text="ɴᴏʀᴍᴀʟ", callback_data=f"SpeedUP {chat_id}|1.0"),
-                InlineKeyboardButton(text="🕓 0.75x", callback_data=f"SpeedUP {chat_id}|0.75")
-            ],
-            [
-                InlineKeyboardButton(text="⟳ ᴇɴᴀʙʟᴇ ʟᴏᴏᴘ ⟲", callback_data=f"ADMIN Loop|{chat_id}")
-            ], 
-            [
-                InlineKeyboardButton(text="🕤 1.5x", callback_data=f"SpeedUP {chat_id}|1.5"),
-                InlineKeyboardButton(text="• ʙᴀᴄᴋ •", callback_data=f"MainMarkup {videoid}|{chat_id}"),
-                InlineKeyboardButton(text="🕛 2.0x", callback_data=f"SpeedUP {chat_id}|2.0")
-            ]
-    ]
-    return buttons

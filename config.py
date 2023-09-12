@@ -45,6 +45,8 @@ SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/melodybomb")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", True))
+SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION", 1500))
+SONG_DOWNLOAD_DURATION_LIMIT = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", 1500))
 
 
 # Get this credentials from https://developer.spotify.com/dashboard

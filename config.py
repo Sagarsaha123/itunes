@@ -11,19 +11,19 @@ API_ID = int(getenv("API_ID", "10577960"))
 API_HASH = getenv("API_HASH", "80fd047285f4e94ca80311928b6bb5da")
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", "6139173699:AAGNYFgSSZA7MLMm8UoI77DdX7sFAEvHOo8")
+BOT_TOKEN = getenv("BOT_TOKEN", "6637104790:AAGk2DXAYKN5rvPZ3wxIcqYjcoao6bKN14A")
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://lecej39035:lecej39035@cluster0.mvqxqlm.mongodb.net/?retryWrites=true&w=majority")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://chimmymusic7:chimmy02@cluster0.ilsuq6a.mongodb.net/?retryWrites=true&w=majority")
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 900))
 
 # Chat id of a group for logging bot's activities
-LOG_ID = int(getenv("LOG_ID", "-1001831007764"))
-LOGGER_ID = int(getenv("LOGGER_ID", "-1001969560344"))
+LOG_ID = int(getenv("LOG_ID", "-1001644674701"))
+LOGGER_ID = int(getenv("LOGGER_ID", "-1001644674701"))
 
 # Get this value from @FallenxBot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", "5665115127"))
+OWNER_ID = int(getenv("OWNER_ID", "6189545021"))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -64,8 +64,8 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 
 
 # Get your pyrogram v2 session from @StringFatherBot on Telegram
-STRING1 = getenv("STRING_SESSION", "BQFqNk0AMzLBKFJJAns8215lBX8P7mk0UhYx3MRYlScEOz69yatcUMKlpGYhLXtpaAVYYOeZoYOf696t_WRuZfQhJoDK6n9zScCjINvYZC2JIdxMKd3cKXQOgootvOLoVaVETrcWtfj05uKfxBPH6hDT3K-i-pKDjOQyAsiXhuabxN-0ISOtbwduvYRwcwhsBnlsp0paurJlu8wnS-Gm5OSGX3ytc7iEjVcD7A1dtdh42uyozMdKq4usgLelKxouait9SzN6SbJbXfY3vXmjbqyysq4I_IPSo8OYLp2KLbZjNeNPg1WF4nEw2zf_4-HoIFuY33xZpUVBQe4ZfLQmqrdgPiKX2gAAAAFyJzM7AA")
-STRING2 = getenv("STRING_SESSION2", "BQFqNk0ApnrqEex2iImaZTwDqzetsq8kU8e-vh_3Sphk-chvygjUarMXV3cBvtZk2tFWwEn23xO6GGm1lMr_5SzHuxTPMTZY9STquXw47evwbQGA3Zp-9OEF08mgQKALM6mHlGlP0o8qKVg1FroX0QuE62QymnUV8vjEiMX25N4pq_om8YM-20vf9lbkZJAcBdKqa9PiQnndM8KielMXx4cJLCsymYDs4dxr-5VsR-D4Z-LWviIYpZc-1ELSmCLYvdoYuXzQZ3E94Ewdz-DXCrDBKZbncEygHspHoudUgjEosf9EkOJTMvECj23iJ1azFeRUcKxIJ_0fprgKRemWP5qZZsIafAAAAAF71Q5pAA")
+STRING1 = getenv("STRING_SESSION", "BQFrnREAiU2DJia9UcpX4Y4NPi0J8D3sBPFjwyV3sKj4HHGd5s4WtPDTAceDHk0lwu5wgjDlgnoanV6nSbTcXMPC1CnvtZjybSKwbm9dwnOv--t2cGwXfshn2s9IZwviK6yuyF_AVzw8-XdZj5oaNaII7T5fZDuoda-8_vmPIu0U1zPoDzSGw5fUTJWQI-dU1bPaESSbJjtQ89_mLBY7B1kUk8j4fHOwJep5Z3mfrU3Df3WyloCXZu3a7-1CTo2hz-TXVWmcU2NlFLSofxRI_satFdvcfzM1_ad_S5drbyV2J2H2DK7OVFfShh-NfmWPt5RqSD_Smdurxhp9w4TzkmSKZtbFUgAAAAGLswEWAA")
+STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
 STRING5 = getenv("STRING_SESSION5", None)
@@ -80,10 +80,10 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://telegra.ph/file/daa9b259ed274c0d5b2e7.jpg"
+    "START_IMG_URL", "https://telegra.ph/file/039ae07ee99bf70dc9eeb.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://telegra.ph/file/e78fb35228a5a76aa6a07.jpg"
+    "PING_IMG_URL", "https://telegra.ph/file/41d34fc9f7fb72e7dde08.jpg"
 )
 PLAYLIST_IMG_URL = "https://te.legra.ph/file/4ec5ae4381dffb039b4ef.jpg"
 STATS_IMG_URL = "https://te.legra.ph/file/e906c2def5afe8a9b9120.jpg"

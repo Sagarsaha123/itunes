@@ -91,232 +91,231 @@ start_4 : "🎄 <b>المطلوب سوبر جروب</b> 🎄\n\nيرجى تحو�
 start_5 : "<b>↝ الدردشة في القائمة السوداء ↜</b>\n\nتم إدراج هذه الدردشة في قاعدة بيانات {0} كدردشة في القائمة السوداء.\nقدم طلبًا لمستخدم <a href={1}>سودو</a> لإزالة الدردشة من القائمة السوداء أو قم بزيارة <a href={2}>دردشة الدعم.</a>"
 start_6 : "😲 <b>معلومات المقطع</b> 😲\n\n📌 <b>العنوان :</b> {0}\n\n⏳ <b>المدة :</b> {1} دقيقة\n👀 <b>المشاهدات :</b> <code>{2}</code>\n⏰ <b>نشر في :</b> {3}\n📎 <b>القناة :</b> <a href={4}>{5}</a>\n\n<u><b>🥀 البحث مدعوم من قبل {6}</b></u>"
 
-help_1 : "choose the category for which you wanna get helᴩ.\nask your doubts at <a href={0}>support chat</a>\n\nall commands can be used with : <code>/</code>"
-help_2 : "click on the button below to get my help menu in your pm."
+queue_1 : "» جاري جلب قائمة الانتظار...\n\nيرجى الانتظار..."
+queue_2 : "» قائمة الانتظار فارغة."
+queue_3 : "<u>» انقر هنا للتحقق من قائمة المقاطع في الانتظار :</u> <a href={0}>هنا</a>"
+queue_4 : "➲ <b>تمت إضافته إلى قائمة الانتظار في الموقع رقم #{0}\n\n‣ العنوان :</b> {1}\n<b>‣ المدة :</b> {2} دقيقة\n<b>‣ طلب بواسطة :</b> {3}"
+queue_5 : "هناك مقطع واحد فقط في قائمة الانتظار.\n\nأضف المزيد من المقاطع للتحقق من القائمة."
+queue_6 : "<b>🕚 المدة :</b> مدة البث غير معروفة\n\nانقر على الزر أدناه للحصول على قائمة الانتظار بالكامل."
+queue_7 : "\nانقر على الزر أدناه للحصول على قائمة الانتظار بالكامل."
+queue_8 : "<b>مشغل {0}</b>\n\n🎄 <b>يتم البث حاليًا لـ :</b> {1}\n\n🔗 <b>نوع البث :</b> {2}\n🥀 <b>طلب بواسطة :</b> {3}\n{4}"
 
-lang_1 : "» please choose the language which you wanna set as this group's default language :"
-lang_2 : "language changed successfully."
-lang_3 : "failed to change language."
-lang_4 : "You're already on the same language."
+stream_1 : "➲ <b>بدء البث |</b>\n\n<b>‣ العنوان :</b> <a href={0}>{1}</a>\n<b>‣ المدة :</b> {2} دقيقة\n<b>‣ طلب بواسطة :</b> {3}"
+stream_2 : "➲ <b>بدء البث |</b>\n\n<b>‣ نوع البث :</b> بث مباشر [الرابط]\n<b>‣ طلب بواسطة :</b> {0}"
 
-setting_1 : "<u><b>{0} settings panel</b></u>\n\n<b>chat id :</b> <code>{1}</code>\n<b>chat title :</b> {2}\n\nclick on the buttons below for changing settings."
-setting_2 : "» direct : plays search ǫueries directly.\n\n» inline : returns inline buttons ꜰor choosing between video & audio."
-setting_3 : "» everyone : anyone can use admin commands [skip, pause, resume etc.] present in this group.\n\n» admin only : only admins and authorized users can use admin commands."
-setting_4 : "» no authorized users ꜰound."
-setting_5 : "» group : plays music in the group where the command is given.\n\n» channel : plays music in the channel you want. set channel id via /channelplay"
-setting_6 : "» everyone : anyone present in this group can play music here.\n\n» admin only: only admins can play the music in this group."
-setting_7 : "» please define channel id via /channelplay"
-setting_8 : "when this mode is enabled, people without admin rights can use admin commands after a certain amount of votes."
-setting_9 : "current upvotes reǫuired for using admin commands are : {0}"
-setting_10 : "voting mode is disabled."
-setting_11 : "lowest upvotes count can be 2. you can't set below 2"
-setting_12 : "highest upvotes count can be 15. you can't set above 15"
+help_1 : "اختر الفئة التي ترغب في الحصول على المساعدة لها.\nاستفسر عن شكواك في <a href={0}>دردشة الدعم</a>\n\nيمكن استخدام جميع الأوامر مع : <code>/</code>"
+help_2 : "انقر على الزر أدناه للحصول على قائمة المساعدة في رسائلك الخاصة."
 
-set_cb_1 : "getting auth users ᴩanel..."
-set_cb_2 : "getting ᴩlay mode ᴩanel..."
-set_cb_3 : "setting uᴩ changes..."
-set_cb_4 : "» fetching authorized users list..."
-set_cb_5 : "» getting back..."
+lang_1 : "» يُرجى اختيار اللغة التي ترغب في تعيينها كلغة افتراضية لهذه المجموعة:"
+lang_2 : "تم تغيير اللغة بنجاح."
+lang_3 : "فشل في تغيير اللغة."
+lang_4 : "أنت بالفعل على نفس اللغة."
 
-gstats_1 : "getting {0} stats and information...\n\nit may take a while, please hold on..."
-gstats_2 : "click on the buttons below to check the stats of {0}."
-gstats_3 : "<b><u>{0} stats and information :</u></b>\n\n<b>assistants :</b> <code>{1}</code>\n<b>blocked :</b> <code>{2}</code>\n<b>chats:</b> <code>{3}</code>\n<b>users :</b> <code>{4}</code>\n<b>modules :</b> <code>{5}</code>\n<b>sudoers :</b> <code>{6}</code>\n\n<b>auto leaving assistant :</b> {7}\n<b>play duration limit :</b> {8} minutes"
-gstats_4 : "this button is only for sudoers."
-gstats_5 : "<b><u>{0} stats and information :</u></b>\n\n<b>modules :</b> <code>{1}</code>\n<b>platform :</b> <code>{2}</code>\n<b>ram :</b> <code>{3}</code>\n<b>physical cores :</b> <code>{4}</code>\n<b>total cores :</b> <code>{5}</code>\n<b>cpu freǫuency :</b> <code>{6}</code>\n\n<b>python :</b> <code>{7}</code>\n<b>pyrogram :</b> <code>{8}</code>\n<b>py-tgcalls :</b> <code>{9}</code>\n\n<b>storage available :</b> <code>{10} gib</code>\n<b>storage used :</b> <code>{11} gib</code>\n<b>storage left :</b> <code>{12} gib</code>\n\n<b>served chats :</b> <code>{13}</code>\n<b>served users :</b> <code>{14}</code>\n<b>blocked users :</b> <code>{15}</code>\n<b>sudo users :</b> <code>{16}</code>\n\n<b>total db size :</b> <code>{17} mb</code>\n<b>total db storage :</b> <code>{18} mb</code>\n<b>total db collections :</b> <code>{19}</code>\n<b>total db keys :</b> <code>{20}</code>"
+setting_1 : "<u><b>لوحة إعدادات {0}</b></u>\n\n<b>معرّف الدردشة :</b> <code>{1}</code>\n<b>عنوان الدردشة :</b> {2}\n\nانقر على الأزرار أدناه لتغيير الإعدادات."
+setting_2 : "» مباشر : يشغل عمليات البحث مباشرةً.\n\n» مضمن : يعيد زرًا مضمنًا للاختيار بين الفيديو والصوت."
+setting_3 : "» الجميع : يمكن لأي شخص استخدام أوامر المشرف [تخطي، إيقاف مؤقت، استئناف وما إلى ذلك] في هذه المجموعة.\n\n» المشرفون فقط : يمكن فقط للمشرفين والمستخدمين المصرح لهم استخدام أوامر المشرف."
+setting_4 : "» لم يتم العثور على مستخدمين مصرح لهم."
+setting_5 : "» مجموعة : يشغل الموسيقى في المجموعة التي تم إعطاء الأمر فيها.\n\n» قناة : يشغل الموسيقى في القناة التي تريدها. قم بتعيين معرّف القناة عبر /channelplay"
+setting_6 : "» الجميع : يمكن لأي شخص حاضر في هذه المجموعة تشغيل الموسيقى هنا.\n\n» المشرفون فقط : يمكن فقط للمشرفين تشغيل الموسيقى في هذه المجموعة."
+setting_7 : "» يرجى تعريف معرف القناة عبر /channelplay"
+setting_8 : "عند تمكين هذا الوضع، يمكن للأشخاص الذين ليس لديهم صلاحيات المشرف استخدام أوامر المشرف بعد عدد معين من التصويتات."
+setting_9 : "التصويتات الحالية المطلوبة لاستخدام أوامر المشرف هي : {0}"
+setting_10 : "تم تعطيل وضع التصويت."
+setting_11 : "أدنى عدد للتصويتات يمكن أن يكون 2. لا يمكنك تعيينه أقل من 2"
+setting_12 : "أعلى عدد للتصويتات يمكن أن يكون 15. لا يمكنك تعيينه أعلى من 15"
 
-playcb_1 : "» aww, this is not for you baby."
-playcb_2 : "» getting next result,\n\nplease wait..."
+set_cb_1 : "جارٍ الحصول على لوحة مستخدمي المصرح لهم..."
+set_cb_2 : "جارٍ الحصول على لوحة وضع التشغيل..."
+set_cb_3 : "جاري تغيير الإعدادات..."
+set_cb_4 : "» جاري الحصول على قائمة المستخدمين المصرح لهم..."
+set_cb_5 : "» الرجاء الانتظار..."
 
-cplay_1 : "» you can play music in channels from {0} to any channel or your chat's linked channel.\n\n<b>for linked channel :</b>\n<code>/channelplay linked</code>\n\n<b>for any other channel :</b>\n<code>/channelplay [channel id]</code>"
-cplay_2 : "» this chat don't have any linked channel."
-cplay_3 : "» channel defined to {0}.\nchannel id : <code>{1}</code>"
-cplay_4 : "» failed to get channel.\n\nmake sure you've added the bot in your channel and promoted as admin."
-cplay_5 : "only channels are supported."
-cplay_6 : "» you need to be the <b>owner</b> of the channel {0} to connect it with this group.\n<b>channel's owner :</b> @{1}\n\nalternatively you can link your group to that channel and then try connnecting with <code>/channelplay linked</code>"
-cplay_7 : "» channel play disabled."
+gstats_1 : "جارٍ الحصول على إحصائيات ومعلومات {0}...\n\nقد يستغرق الأمر بعض الوقت، يرجى الانتظار..."
+gstats_2 : "انقر على الأزرار أدناه للتحقق من إحصائيات {0}."
+gstats_3 : "<b><u>إحصائيات ومعلومات {0} :</u></b>\n\n<b>المساعدين :</b> <code>{1}</code>\n<b>المحظورون :</b> <code>{2}</code>\n<b>الدردشات :</b> <code>{3}</code>\n<b>المستخدمون :</b> <code>{4}</code>\n<b>الوحدات :</b> <code>{5}</code>\n<b>المشرفون :</b> <code>{6}</code>\n\n<b>مغادرة تلقائية للمساعدين :</b> {7}\n<b>حدود مدة التشغيل :</b> {8} دقائق"
+gstats_4 : "هذا الزر مخصص للمشرفين فقط."
+gstats_5 : "<b><u>إحصائيات ومعلومات {0} :</u></b>\n\n<b>الوحدات :</b> <code>{1}</code>\n<b>المنصة :</b> <code>{2}</code>\n<b>الذاكرة (RAM) :</b> <code>{3}</code>\n<b>النوى الفعلية :</b> <code>{4}</code>\n<b>إجمالي النوى :</b> <code>{5}</code>\n<b>تردد وحدة المعالجة المركزية :</b> <code>{6}</code>\n\n<b>بيثون :</b> <code>{7}</code>\n<b>Pyrogram :</b> <code>{8}</code>\n<b>Py-TgCalls :</b> <code>{9}</code>\n\n<b>التخزين المتاح :</b> <code>{10} جيبايت</code>\n<b>التخزين المستخدم :</b> <code>{11} جيبايت</code>\n<b>التخزين المتبقي :</b> <code>{12} جيبايت</code>\n\n<b>الدردشات المخدومة :</b> <code>{13}</code>\n<b>المستخدمون المخدومون :</b> <code>{14}</code>\n<b>المستخدمون المحظورون :</b> <code>{15}</code>\n<b>مستخدمو sudo :</b> <code>{16}</code>\n\n<b>حجم قاعدة البيانات الإجمالي :</b> <code>{17} ميجابايت</code>\n<b>سعة تخزين قاعدة البيانات الإجمالية :</b> <code>{18} ميجابايت</code>\n<b>إجمالي مجموعات بيانات قاعدة البيانات :</b> <code>{19}</code>\n<b>إجمالي مفاتيح قاعدة البيانات :</b> <code>{20}</code>"
+
+playcb_1 : "» آه، هذا ليس لك يا حبيبي."
+playcb_2 : "» جاري الحصول على النتيجة التالية،\n\nالرجاء الانتظار..."
+
+cplay_1 : "» يمكنك تشغيل الموسيقى في القنوات من {0} إلى أي قناة أخرى أو القناة المرتبطة بالدردشة.\n\n<b>للقناة المرتبطة :</b>\n<code>/channelplay linked</code>\n\n<b>لأي قناة أخرى :</b>\n<code>/channelplay [معرف القناة]</code>"
+cplay_2 : "» هذه الدردشة ليس لديها أي قناة مرتبطة."
+cplay_3 : "» تم تعيين القناة إلى {0}.\nمعرف القناة : <code>{1}</code>"
+cplay_4 : "» فشل في الحصول على القناة.\n\nتأكد من أنك قمت بإضافة البوت إلى القناة وترقيته كمشرف."
+cplay_5 : "القنوات فقط مدعومة."
+cplay_6 : "» يجب أن تكون <b>المالك</b> للقناة {0} لتربطها بالمجموعة هذه.\n<b>مالك القناة :</b> @{1}\n\nبديلاً يمكنك ربط مجموعتك بتلك القناة ومن ثم محاولة الاتصال باستخدام <code>/channelplay linked</code>"
+cplay_7 : "» تم تعطيل تشغيل القناة."
 
 play_1 : "🔎"
-play_2 : "<b>➻ channel play mode</b>\n\nprocessing, please wait...\n\n<b>linked channel :</b> {0}"
-play_3 : "» failed to process ǫuery."
-play_4 : "<b>admins only play</b>\nonly admins of this chat are allowed to play\n\nchange play mode via /playmode"
-play_5 : "» failed to process audio file.\n\naudio file size is larger than the defined limit."
-play_6 : "» stream's longer than {0} aren't allowed to play on {1}"
-play_7 : "» not a valid video file extension.\n\n<b>supported extensions :</b> {0}"
-play_8 : "» video file size should be less than 1gib."
-play_9 : "<b><u>youtube playlist feature</b></u>\n\nselect the mode in which you want to play whole youtube playlist."
-play_10 : "<b>title :</b> {0}\n<b>duration :</b> {1} minutes"
-play_11 : "<u><b>{0} spotify player</b></u>\n\n<b>reǫuested by :</b> {1}"
-play_12 : "<u><b>{0} apple player</b></u>\n\n<b>reǫuested by :</b> {1}"
-play_13 : "» live stream detected.\n\nare you sure that you wanna play this live stream ?"
-play_14 : "ꜰailed to ꜰetch track details.\n\ntry playing any other."
-play_15 : "» failed to process ǫuery.\n\ni can only play spotify tracks, albums, artists and playlists."
-play_16 : "no active voice chat.\n\nto use force ᴩlay, there must be an active voicechat."
-play_17 : "please turn on videochat, i'm unable to stream urls."
-play_18 : "<b>usage :</b> /play [song name/youtube url/reply to a audio/video file]"
-play_19 : "Queued Playlist :"
-play_20 : "Queued Position-"
-play_21 : "added {0} tracks to ǫueue.\n\n<b>check :</b> <a href={1}>click here</a>"
-play_22 : "select the mode in which you want to play the ǫueries inside your group : {0}"
+play_2 : "<b>➻ وضع تشغيل القناة</b>\n\nجاري المعالجة، يرجى الانتظار...\n\n<b>القناة المرتبطة :</b> {0}"
+play_3 : "» فشل في معالجة الاستعلام."
+play_4 : "<b>تشغيل للمسؤولين فقط</b>\nيُسمح فقط لمسؤولي هذه الدردشة بالتشغيل\n\nقم بتغيير وضع التشغيل عبر /playmode"
+play_5 : "» فشل في معالجة ملف الصوت.\n\nحجم ملف الصوت أكبر من الحد المحدد."
+play_6 : "» البث أطول من {0} غير مسموح بتشغيله على {1}"
+play_7 : "» ليس ملحق ملف فيديو صالح.\n\n<b>الملحقات المدعومة :</b> {0}"
+play_8 : "» يجب أن يكون حجم ملف الفيديو أقل من 1 جيجابايت."
+play_9 : "<b><u>ميزة قائمة تشغيل يوتيوب</b></u>\n\nحدد الوضع الذي تريد تشغيل قائمة تشغيل يوتيوب كاملة فيه."
+play_10 : "<b>العنوان :</b> {0}\n<b>المدة :</b> {1} دقيقة"
+play_11 : "<u><b>مشغل سبوتيفاي {0}</b></u>\n\n<b>الطلب من قِبل :</b> {1}"
+play_12 : "<u><b>مشغل أبل ميوزك {0}</b></u>\n\n<b>الطلب من قِبل :</b> {1}"
+play_13 : "» تم الكشف عن بث مباشر.\n\nهل أنت متأكد أنك تريد تشغيل هذا البث المباشر؟"
+play_14 : "فشل في جلب تفاصيل المسار.\n\nجرب تشغيل أي مسار آخر."
+play_15 : "» فشل في معالجة الاستعلام.\n\nأستطيع فقط تشغيل مسارات سبوتيفاي والبومات وفنانين وقوائم تشغيل."
+play_16 : "لا يوجد دردشة صوتية نشطة.\n\nلاستخدام التشغيل القسري، يجب أن يكون هناك دردشة صوتية نشطة."
+play_17 : "يرجى تشغيل دردشة الفيديو، لا يمكنني تشغيل عناوين URL."
+play_18 : "<b>الاستخدام:</b> /play [اسم الأغنية/عنوان يوتيوب/الرد على ملف صوتي/فيديو]"
+play_19 : "قائمة التشغيل في الانتظار:"
+play_20 : "الموقف في قائمة الانتظار -"
+play_21 : "تمت إضافة {0} مسارات إلى القائمة في الانتظار.\n\n<b>التحقق:</b> <a href={1}>انقر هنا</a>"
+play_22 : "حدد الوضع الذي تريد تشغيل الاستعلامات به داخل مجموعتك: {0}"
 
-str_1 : "please provide m3u8 or index links."
-str_2 : "➻ valid stream verified.\n\nprocessing..."
-str_3 : "failed to stream youtube live stream, no live ꜰormat ꜰound."
+str_1 : "يرجى تقديم روابط m3u8 أو index."
+str_2 : "➻ تم التحقق من البث الصالح.\n\nجاري المعالجة..."
+str_3 : "فشل في بث بث مباشر من يوتيوب، لم يتم العثور على تنسيق بث مباشر."
 
-ping_1 : "{0} ɪs ᴘɪɴɢɪɴɢ..."
-ping_2 : "🏓 Pᴏɴɢ ➻ <code>{0}ᴍs</code>\n\n<b><u>{1} Sʏsᴛᴇᴍ Sᴛᴀᴛs ➻</u></b>\n\n🕰 Uᴘᴛɪᴍᴇ ➻ {2}\n★────────────────★\n🧭 Rᴀᴍ ➻ {3}\n★────────────────★\n🖥 Cᴘᴜ ➻ {4}\n★────────────────★\n💽 Dɪsᴄ ➻ {5}\n★────────────────★\n🛰 Pʏ-TGC ➻ <code>{6}ᴍs</code>\n♪♪━━━━━━━━━━━━━━━━♪♪\n"
+ping_1 : "يتم عمل بينغ لـ {0}..."
+ping_2 : "🏓 البونج : <code>{0}ms</code>\n\n<b><u>{1} إحصائيات النظام :</u></b>\n\n↬ وقت التشغيل : {2}\n↬ الذاكرة العشوائية (RAM) : {3}\n↬ المعالج (CPU) : {4}\n↬ القرص الصلب (Disk) : {5}\n↬ Py-TgCalls : <code>{6}ms</code>"
 
-queue_1 : "» fetching ǫueue...\n\nplease wait..."
-queue_2 : "» ǫueue empty."
-queue_3 : "<u>» click here to check the list of the ǫueued tracks :</u> <a href={0}>here</a>"
-queue_4 : "➲ <b>Added To Queue At #{0}\n\n‣ Title :</b> {1}\n<b>‣ Duration :</b> {2} minutes\n<b>‣ Reǫuested by :</b> {3}"
-queue_5 : "there's only one ǫueued track in playlist.\n\nadd more tracks to check list."
-queue_6 : "<b>🕚 duration :</b> unknown duration stream\n\nclick on button below to get whole ǫueued list."
-queue_7 : "\nclick on button below to get whole ǫueued list."
-queue_8 : "<b>{0} player</b>\n\n🎄 <b>streaming :</b> {1}\n\n🔗 <b>stream type :</b> {2}\n🥀 <b>reǫuested by :</b> {3}\n{4}"
+queue_1 : "» جاري جلب قائمة الانتظار...\n\nيرجى الانتظار..."
+queue_2 : "» قائمة الانتظار فارغة."
+queue_3 : "<u>» انقر هنا للتحقق من قائمة المقاطع في الانتظار :</u> <a href={0}>هنا</a>"
+queue_4 : "➲ <b>تمت إضافته إلى قائمة الانتظار في الموقع رقم #{0}\n\n‣ العنوان :</b> {1}\n<b>‣ المدة :</b> {2} دقيقة\n<b>‣ طلب بواسطة :</b> {3}"
+queue_5 : "هناك مقطع واحد فقط في قائمة الانتظار.\n\nأضف المزيد من المقاطع للتحقق من القائمة."
+queue_6 : "<b>🕚 المدة :</b> مدة البث غير معروفة\n\nانقر على الزر أدناه للحصول على قائمة الانتظار بالكامل."
+queue_7 : "\nانقر على الزر أدناه للحصول على قائمة الانتظار بالكامل."
+queue_8 : "<b>مشغل {0}</b>\n\n🎄 <b>يتم البث حاليًا لـ :</b> {1}\n\n🔗 <b>نوع البث :</b> {2}\n🥀 <b>طلب بواسطة :</b> {3}\n{4}"
 
-stream_1 : "➲ <b>Started Streaming |</b>\n\n<b>‣ Title :</b> <a href={0}>{1}</a>\n<b>‣ Duration :</b> {2} minutes\n<b>‣ Reǫuested by :</b> {3}"
-stream_2 : "➲ <b>Started Streaming |</b>\n\n<b>‣ Stream type :</b> live stream [url]\n<b>‣ Reǫuested by :</b> {0}"
+stream_1 : "➲ <b>بدء البث |</b>\n\n<b>‣ العنوان :</b> <a href={0}>{1}</a>\n<b>‣ المدة :</b> {2} دقيقة\n<b>‣ طلب بواسطة :</b> {3}"
+stream_2 : "➲ <b>بدء البث |</b>\n\n<b>‣ نوع البث :</b> بث مباشر [الرابط]\n<b>‣ طلب بواسطة :</b> {0}"
 
+CLOSE_BUTTON : "إغلاق"
+BACK_BUTTON : "رجوع"
 
-CLOSE_BUTTON  : "close"
-BACK_BUTTON : "back"
+S_B_1 : "أضفني"
+S_B_2 : "الدعم"
+S_B_3 : "أضفني في مجموعتك"
+S_B_4 : "المساعدة والأوامر"
+S_B_5 : "المطور"
+S_B_6 : "القناة"
+S_B_7 : "الشيفرة المصدرية"
+S_B_8 : "👀 يوتيوب 👀"
+S_B_9 : "🥀 الدعم 🥀"
+S_B_0 : "لغة"
 
-S_B_1 : "Add me"
-S_B_2 : "Support"
-S_B_3 : "Add me in your group"
-S_B_4 : "Help & Commands"
-S_B_5 : "Developer"
-S_B_6 : "Channel"
-S_B_7 : "Source code"
-S_B_8 : "👀 youtube 👀"
-S_B_9 : "🥀 suᴩᴩort 🥀"
+H_B_1 : "مشرف"
+H_B_2 : "مصادقة"
+H_B_3 : "بث"
+H_B_4 : "دردشة محظورة"
+H_B_5 : "مستخدم محظور"
+H_B_6 : "تشغيل متتابع"
+H_B_7 : "حظر مجموعة"
+H_B_8 : "تكرار"
+H_B_9 : "صيانة"
+H_B_10 : "معرفة الاستجابة"
+H_B_11 : "تشغيل"
+H_B_12 : "خلط"
+H_B_13 : "بحث"
+H_B_14 : "أغنية"
+H_B_15 : "سرعة"
 
-H_B_1 : "admin"
-H_B_2 : "auth"
-H_B_3 : "blacklist"
-H_B_4 : "broadcast"
-H_B_5 : "gban"
-H_B_6 : "ᴩing"
-H_B_7 : "ᴩlay"
-H_B_8 : "start"
-H_B_9 : "sudo"
+P_B_1 : "صوتي"
+P_B_2 : "فيديو"
+P_B_3 : "بث مباشر"
+P_B_4 : "عادي"
 
-P_B_1 : "audio"
-P_B_2 : "video"
-P_B_3 : "live stream"
-P_B_4 : "normal"
+ST_B_1 : "مستخدمين مصرح لهم"
+ST_B_2 : "وضع التشغيل"
+ST_B_3 : "اللغة"
+ST_B_4 : "وضع التصويت"
+ST_B_5 : "مشغل"
+ST_B_6 : "معطل"
+ST_B_7 : "مستخدمين مصرح لهم ➜"
+ST_B_8 : "مسؤولون"
+ST_B_9 : "الجميع"
+ST_B_10 : "وضع البحث ➜"
+ST_B_11 : "مباشر"
+ST_B_12 : "داخلي"
+ST_B_13 : "أوامر المسؤول ➜"
+ST_B_14 : "نوع التشغيل ➜"
 
-ST_B_1 : "Auth users"
-ST_B_2 : "Play mode"
-ST_B_3 : "Language"
-ST_B_4 : "Voting mode"
-ST_B_5 : "on"
-ST_B_6 : "off"
-ST_B_7 : "Auth users ➜"
-ST_B_8 : "admins"
-ST_B_9 : "everyone"
-ST_B_10 : "Search mode ➜"
-ST_B_11 : "direct"
-ST_B_12 : "inline"
-ST_B_13 : "Admin cmds ➜"
-ST_B_14 : "Play type ➜"
+SA_B_1 : "إحصائيات عامة"
+SA_B_2 : "عام"
+SA_B_3 : "عامة"
 
-SA_B_1 : "overall stats"
-SA_B_2 : "general"
-SA_B_3 : "overall"
-
-QU_B_1 : "ǫueue"
+QU_B_1 : "قائمة الانتظار"
 QU_B_2 : " {0} —————————— {1}"
 
-sudo_1 : "» {0} is already in sudo users list."
-sudo_2 : "» added {0} to sudo users list." 
-sudo_3 : "» {0} is not in sudo users list."
-sudo_4 : "» removed {0} from sudo users list."
-sudo_5 : "<u><b>🥀 owner :</b></u>\n"
-sudo_6 : "\n<u><b>✨ sudo users :</b></u>\n"
-sudo_7 : "» no sudo users found."
-sudo_8 : "failed."
+sudo_1 : "» {0} موجود بالفعل في قائمة مستخدمي sudo."
+sudo_2 : "» تمت إضافة {0} إلى قائمة مستخدمي sudo."
+sudo_3 : "» {0} غير موجود في قائمة مستخدمي sudo."
+sudo_4 : "» تمت إزالة {0} من قائمة مستخدمي sudo."
+sudo_5 : "<u><b>🥀 المالك :</b></u>\n"
+sudo_6 : "\n<u><b>✨ مستخدمو sudo :</b></u>\n"
+sudo_7 : "» لا توجد مستخدمين sudo."
+sudo_8 : "فشل."
 
-block_1 : "» {0} is already blocked from the bot."
-block_2 : "» added {0} to blocked users list."
-block_3 : "» {0} is not in blocked users list."
-block_4 : "» removed {0} from blocked users list."
-block_5 : "» no blocked users found."
-block_6 : "» getting blocked users list..."
-block_7 : "<b>😫 blocked users :</b>\n\n"
+block_1 : "» {0} محظور بالفعل من البوت."
+block_2 : "» تمت إضافة {0} إلى قائمة المستخدمين المحظورين."
+block_3 : "» {0} غير موجود في قائمة المستخدمين المحظورين."
+block_4 : "» تمت إزالة {0} من قائمة المستخدمين المحظورين."
+block_5 : "» لا توجد مستخدمين محظورين."
+block_6 : "» جاري الحصول على قائمة المستخدمين المحظورين..."
+block_7 : "<b>😫 المستخدمون المحظورون :</b>\n\n"
 
-black_1 : "<b>example :</b>\n\n/blacklistchat [chat id]"
-black_2 : "» this chat is already blacklisted."
-black_3 : "» successfully added to blacklisted chats."
-black_4 : "<b>example :</b>\n\n/whitelistchat [chat id]"
-black_5 : "» this chat is not blacklisted."
-black_6 : "» successfully removed from blacklisted chats."
-black_7 : "» list of blacklisted chats :\n\n"
-black_8 : "» no blacklisted chats on {0}."
-black_9 : "» something went wrong."
+black_1 : "<b>مثال :</b>\n\n/blacklistchat [معرّف الدردشة]"
+black_2 : "» هذه الدردشة محظورة بالفعل."
+black_3 : "» تمت إضافتها بنجاح إلى قائمة الدردشات المحظورة."
+black_4 : "<b>مثال :</b>\n\n/whitelistchat [معرّف الدردشة]"
+black_5 : "» هذه الدردشة غير محظورة."
+black_6 : "» تمت إزالتها بنجاح من قائمة الدردشات المحظورة."
+black_7 : "» قائمة الدردشات المحظورة :\n\n"
+black_8 : "» لا توجد دردشات محظورة على {0}."
+black_9 : "» حدث خطأ ما."
 
-maint_1 : "<b>example :</b>\n/maintenance [enable | disable]"
-maint_2 : "» {0} maintenance mode enabled."
-maint_3 : "» {0} maintenance mode disabled."
-maint_4 : "» maintenance mode is already enabled."
-maint_5 : "» maintenance mode is already disabled."
+maint_1 : "<b>مثال :</b>\n/maintenance [تمكين | تعطيل]"
+maint_2 : "» تم تمكين وضع الصيانة {0}."
+maint_3 : "» تم تعطيل وضع الصيانة {0}."
+maint_4 : "» وضع الصيانة مُمكّن بالفعل."
+maint_5 : "» وضع الصيانة مُعطّل بالفعل."
 
-log_1 : "<b>example :</b>\n/logger [enable | disable]"
-log_2 : "enabled logging."
-log_3 : "disabled logging."
+log_1 : "<b>مثال :</b>\n/logger [تمكين | تعطيل]"
+log_2 : "تم تمكين تسجيل البيانات."
+log_3 : "تم تعطيل تسجيل البيانات."
 
-broad_1 : "» started broadcasting..."
-broad_2 : "<b>example :</b>\n\n/broadcast [message or reply to a message]"
-broad_3 : "» broadcasted message to {0} chats with {1} pins from the bot."
-broad_4 : "» broadcasted message to {0} users."
-broad_5 : "» starting assistant broadcast..."
-broad_6 : "➻ assistant broadcast :\n\n"
-broad_7 : "↬ assistant {0} broadcasted in {1} chats."
-broad_8 : "» please provide some text to broadcast."
+broad_1 : "» بدء البث..."
+broad_2 : "<b>مثال :</b>\n\n/broadcast [الرسالة أو الرد على رسالة]"
+broad_3 : "» تم بث الرسالة إلى {0} دردشة مع {1} تثبيتًا من البوت."
+broad_4 : "» تم بث الرسالة إلى {0} مستخدمين."
+broad_5 : "» بدء بث المساعد..."
+broad_6 : "➻ بث المساعد :\n\n"
+broad_7 : "↬ تم بث المساعد {0} في {1} دردشة."
+broad_8 : "» يُرجى تقديم نص للبث."
 
-server_1 : "» failed to get logs."
-server_2 : "please make sure that your heroku api key and app name are configured correctly."
-server_3 : "checking ꜰor available updates..."
-server_4 : "git command error."
-server_5 : "invalid git repsitory."
-server_6 : "» bot is up-to-date."
-server_7 : "» bot uᴩdated successfully ! now wait for few minutes until the bot restarts and ᴩush changes !"
-server_8 : "{0} is restarting...\n\nyou can start ᴩlaying again after 15-20 seconds."
-server_9 : "something went wrong, ᴩlease check logs."
-server_10 : "an exceᴩtion occured at #uᴩdater due to : <code>{0}</code>"
-server_11 : "» running a speedtest..."
-server_12 : "<b>⇆ running download sᴩeedtest...</b>"
-server_13 : "<b>⇆ running uᴩload sᴩeedtest...</b>"
-server_14 : "<b>↻ sharing sᴩeedtest results...</b>"
-server_15 : "✯ <b>sᴩeedtest results</b> ✯\n\n<u><b>client :</b></u>\n<b>» isᴩ :</b> {0}\n<b>» country :</b> {1}\n\n<u><b>server :</b></u>\n<b>» name :</b> {2}\n<b>» country :</b> {3}, {4}\n<b>» sᴩonsor :</b> {5}\n<b>» latency :</b> {6}\n<b>» ᴩing :</b> {7}"
-
-gban_1 : "» why did you wanna gban yourself baby ?"
-gban_2 : "» why should i gban myself ?"
-gban_3 : "» you can't gban my sudoers."
-gban_4 : "» {0} is already globally banned from the bot."
-gban_5 : "» initializing global ban on {0}.\n\n<b>time expected :</b> {1}"
-gban_6 : "<b><u>new global ban on {0} :</u></b>\n\n<b>originated from :</b> {1} [<code>{2}</code>]\n<b>user :</b> {3}\n<b>user id :</b> {4}\n\n<b>banned by :</b> {5}\n<b>chats :</b> </code>{6}</code>"
-gban_7 : "» {0} is not gbanned from the bot."
-gban_8 : "» lifting global ban from {0}.\n\n<b>expected time :</b> {1}"
-gban_9 : "» lifted global ban from {0}.\n\nunbanned in {1} chats."
-gban_10 : "» no one is globally banned from the bot."
-gban_11 : "» fetching gbanned users list..."
-gban_12 : "🙂 <b>globally banned users :</b>\n\n"
-
-# Song
-song_1 : "ʏᴏᴜ ᴄᴀɴ ᴅᴏᴡɴʟᴏᴀᴅ ᴍᴜsɪᴄ ᴏʀ ᴠɪᴅᴇᴏ ꜰʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ ᴏɴʟʏ ɪɴ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ. ᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ᴍᴇ ɪɴ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ."
-song_2 : "ᴜsᴀɢᴇ:\n\n/song [ᴍᴜsɪᴄ ɴᴀᴍᴇ] ᴏʀ [ʏᴏᴜᴛᴜʙᴇ ʟɪɴᴋ]"
-song_3 : "ʟɪᴠᴇ ʟɪɴᴋ ᴅᴇᴛᴇᴄᴛᴇᴅ. ɪ ᴀᴍ ɴᴏᴛ ᴀʙʟᴇ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪᴠᴇ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏs. "
-song_4 : "📌ᴛɪᴛʟᴇ:- {0}\n\nsᴇʟᴇᴄᴛ ᴛʜᴇ ᴛʏᴘᴇ ɪɴ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ."
-song_5 : "ɴᴏᴛ ᴀ ᴠᴀʟɪᴅ ʏᴏᴜᴛᴜʙᴇ ʟɪɴᴋ."
-song_6 : "ɢᴇᴛᴛɪɴɢ ꜰᴏʀᴍᴀᴛs...\n\nᴘʟᴇᴀsᴇ ᴡᴀɪᴛ..."
-song_7 : "ꜰᴀɪʟᴇᴅ ᴛᴏ ɢᴇᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ꜰᴏʀᴍᴀᴛs ꜰᴏʀ ᴛʜᴇ ᴠɪᴅᴇᴏ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɴʏ ᴏᴛʜᴇʀ ᴛʀᴀᴄᴋ."
-song_8 : "ᴅᴏᴡɴʟᴏᴀᴅ sᴛᴀʀᴛᴇᴅ\n\nᴘʟᴇᴀsᴇ ʜᴏʟᴅ ᴏɴ ғᴏʀ ғᴇᴡ sᴇᴄᴏɴᴅs..."
-song_9 : "ꜰᴀɪʟᴇᴅ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ sᴏɴɢ ꜰʀᴏᴍ ʏᴛ-ᴅʟ\n\nʀᴇᴀsᴏɴ: {0}"
-song_10 : "ꜰᴀɪʟᴇᴅ ᴛᴏ ᴜᴘʟᴏᴀᴅ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ sᴇʀᴠᴇʀs."
-song_11 : "ᴜᴘʟᴏᴀᴅɪɴɢ sᴛᴀʀᴛᴇᴅ ʙᴀʙʏ\n\nᴘʟᴇᴀsᴇ ʜᴏʟᴅ ᴏɴ..."
-
-#Song
-SG_B_1 : "• انقر هنا •"
-SG_B_2 : "🎧 صوتي 🎧"
-SG_B_3 : "🎥 فيديو 🎥"
+server_1 : "» فشل في الحصول على السجلات."
+server_2 : "يرجى التأكد من تكوين مفتاح API هيروكو الخاص بك واسم التطبيق بشكل صحيح."
+server_3 : "التحقق من وجود تحديثات متاحة..."
+server_4 : "خطأ في أمر git."
+server_5 : "مستودع Git غير صالح."
+server_6 : "» البوت محدث."
+server_7 : "» تم تحديث البوت بنجاح! انتظر بضع دقائق حتى يتم إعادة تشغيل البوت ودمج التغييرات!"
+server_8 : "جاري إعادة تشغيل {0}...\n\nيمكنك البدء في التشغيل مرة أخرى بعد 15-20 ثانية."
+server_9 : "حدث خطأ ما، يُرجى التحقق من السجلات."
+server_10 : "حدث استثناء في #مُحدّث بسبب : <code>{0}</code>"
+server_11 : "» جاري إجراء اختبار سرعة..."
+server_12 : "<b>⇆ جاري اختبار سرعة التنزيل...</b>"
+server_13 : "<b>⇆ جاري اختبار سرعة الرفع...</b>"
+server_14 : "<b>↻ مشاركة نتائج اختبار السرعة...</b>"
+server_15 : "✯ <b>نتائج اختبار السرعة</b> ✯\n\n<u><b>العميل :</b></u>\n<b>» عنوان IP :</b> {0}\n<b>» البلد :</b> {1}\n\n<u><b>الخادم :</b></u>\n<b>» الاسم :</b> {2}\n<b>» البلد :</b> {3}, {4}\n<b>» الراعي :</b> {5}\n<b>» التأخير :</b> {6}\n<b>» التأخير في الشبكة :</b> {7}"
+gban_1 : "» لماذا تريد حظر نفسك يا صغيري؟"
+gban_2 : "» لماذا يجب أن أحظر نفسي؟"
+gban_3 : "» لا يمكنك حظر المستخدمين المصرح لهم."
+gban_4 : "» تم حظر {0} بالفعل على مستوى البوت."
+gban_5 : "» جاري تنفيذ حظر عالمي على {0}.\n\n<b>الزمن المتوقع:</b> {1}"
+gban_6 : "<b><u>حظر عالمي جديد على {0}:</u></b>\n\n<b>منبعه من :</b> {1} [<code>{2}</code>]\n<b>المستخدم :</b> {3}\n<b>معرّف المستخدم :</b> {4}\n\n<b>تم الحظر بواسطة :</b> {5}\n<b>الدردشات :</b> </code>{6}</code>"
+gban_7 : "» {0} ليس محظورًا على مستوى البوت."
+gban_8 : "» رفع الحظر العالمي عن {0}.\n\n<b>الزمن المتوقع :</b> {1}"
+gban_9 : "» تم رفع الحظر العالمي عن {0}.\n\nتم إلغاء الحظر في {1} دردشة."
+gban_10 : "» لا يوجد أي مستخدم محظور على مستوى البوت."
+gban_11 : "» جاري جلب قائمة المستخدمين المحظورين على مستوى البوت..."
+gban_12 : "🙂 <b>قائمة المستخدمين المحظورين عالميًا :</b>\n\n"

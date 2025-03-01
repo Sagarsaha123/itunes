@@ -19,8 +19,8 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://fesoxoxe:testingbot@cluster
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 90000))
 
 # Chat id of a group for logging bot's activities
-LOG_ID = int(getenv("LOG_ID", "-1002158109196"))
-LOGGER_ID = int(getenv("LOGGER_ID", "-1002158109196"))
+LOG_ID = int(getenv("LOG_ID", "-1002054900059"))
+LOGGER_ID = int(getenv("LOGGER_ID", "-1002054900059"))
 
 # Get this value from @FallenxBot on Telegram by /id
 OWNER_ID = int(getenv("OWNER_ID", "6603679282"))
